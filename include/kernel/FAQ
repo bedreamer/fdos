@@ -1,0 +1,25 @@
+******
+  about file struct and inode struct. 
+
+.NOTE
+  In Unix all devices ara treated as file, such as a hard disk device will
+be mapped into a file /dev/hd, disk partition will be mapped also. 
+  what I want to say was every device in system is a file. 
+
+***
+  inode struct
+
+  inode struct could be a normal file, directory, device, pipe or fifo 
+etc.
+
+  inode struct will alloced in thess case as fllow:
+  *  a directory be opend.
+  *  a normal file be opend.
+  *  a device node be added into system.
+
+***
+  file struct
+
+  file struct will be treated as an opened file in kernel.
+
+  file struct will be alloced if user call the open syscall methord.

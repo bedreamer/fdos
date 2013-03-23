@@ -1,0 +1,1738 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALT_L	include/drivers/keyboard.h	106;"	d
+ALT_R	include/drivers/keyboard.h	107;"	d
+APPS	include/drivers/keyboard.h	99;"	d
+AR	Makefile	/^AR=ar$/;"	m
+AS	Makefile	/^AS=nasm$/;"	m
+ASM	boot/old/Makefile	/^ASM =nasm$/;"	m
+AT_BASE	include/kernel/elf.h	136;"	d
+AT_EGID	include/kernel/elf.h	143;"	d
+AT_ENTRY	include/kernel/elf.h	138;"	d
+AT_EUID	include/kernel/elf.h	141;"	d
+AT_EXECFD	include/kernel/elf.h	131;"	d
+AT_FLAGS	include/kernel/elf.h	137;"	d
+AT_GID	include/kernel/elf.h	142;"	d
+AT_HWCAP	include/kernel/elf.h	145;"	d
+AT_IGNORE	include/kernel/elf.h	130;"	d
+AT_NOTELF	include/kernel/elf.h	139;"	d
+AT_NULL	include/kernel/elf.h	129;"	d
+AT_PAGESZ	include/kernel/elf.h	135;"	d
+AT_PHDR	include/kernel/elf.h	132;"	d
+AT_PHENT	include/kernel/elf.h	133;"	d
+AT_PHNUM	include/kernel/elf.h	134;"	d
+AT_PLATFORM	include/kernel/elf.h	144;"	d
+AT_UID	include/kernel/elf.h	140;"	d
+AVL_H	include/avl.h	3;"	d
+AVL_MAX_HEIGHT	include/avl.h	10;"	d
+BACKSPACE	include/drivers/keyboard.h	95;"	d
+BREAK_CODE_L_ALT	include/drivers/keyboard.h	220;"	d
+BREAK_CODE_L_CTL	include/drivers/keyboard.h	219;"	d
+BREAK_CODE_L_SHIFT	include/drivers/keyboard.h	217;"	d
+BREAK_CODE_R_SHIFT	include/drivers/keyboard.h	218;"	d
+CAPS_LOCK	include/drivers/keyboard.h	110;"	d
+CAPS_LOCKED	include/drivers/keyboard.h	177;"	d
+CAPS_UNLOCK	include/drivers/keyboard.h	178;"	d
+CASCADE_HWINT2	x86/x86.h	116;"	d
+CBUILDIN	Makefile	/^CBUILDIN=-D_BUILDIN_ $(CFLAGS)$/;"	m
+CC	Makefile	/^CC=gcc$/;"	m
+CC	apps/Makefile	/^CC =gcc$/;"	m
+CCFLAGS	apps/Makefile	/^CCFLAGS =-c -I..\/include -Wall -ffreestanding -fno-builtin \\$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-D_KERNEL_ -I$(WORKDIR)\/$(ARCH) -I$(WORKDIR)\/include -Wall -ffreestanding \\$/;"	m
+CHECK_CAPS	include/drivers/keyboard.h	179;"	d
+CHECK_LALT	include/drivers/keyboard.h	191;"	d
+CHECK_LCTL	include/drivers/keyboard.h	187;"	d
+CHECK_LSHIFT	include/drivers/keyboard.h	183;"	d
+CHECK_RALT	include/drivers/keyboard.h	203;"	d
+CHECK_RCTL	include/drivers/keyboard.h	199;"	d
+CHECK_RSHIFT	include/drivers/keyboard.h	195;"	d
+CLOCK_HWINT0	x86/x86.h	114;"	d
+CMODULE	Makefile	/^CMODULE=-D_MODULE_ $(CFLAGS)$/;"	m
+CMOS_REG_DAY	include/kernel/time.h	18;"	d
+CMOS_REG_HOUR	include/kernel/time.h	16;"	d
+CMOS_REG_MIN	include/kernel/time.h	15;"	d
+CMOS_REG_MONTH	include/kernel/time.h	19;"	d
+CMOS_REG_SEC	include/kernel/time.h	14;"	d
+CMOS_REG_WEEKDAY	include/kernel/time.h	17;"	d
+CMOS_REG_YEAR	include/kernel/time.h	20;"	d
+CMOS_TIME_CTL_PORT	include/kernel/time.h	9;"	d
+CMOS_TIME_DATA_PORT	include/kernel/time.h	10;"	d
+CODE32_START	boot/old/loader.s	/^CODE32_START:$/;"	l
+CORE_CS	x86/x86.h	10;"	d
+CORE_DS	x86/x86.h	11;"	d
+CORE_TSS	x86/x86.h	14;"	d
+CPFLAGS	Makefile	/^CPFLAGS=$/;"	m
+CPFLAGS	x86/Makefile	/^CPFLAGS=-D_DEBUG_$/;"	m
+CTRL_L	include/drivers/keyboard.h	104;"	d
+CTRL_R	include/drivers/keyboard.h	105;"	d
+Code32Len	boot/old/loader.s	/^Code32Len equ $ - CODE32_START$/;"	d
+Core	kernel/schedu.c	/^struct task_struct Core={0};$/;"	v	typeref:struct:task_struct
+DAY	include/kernel/time.h	54;"	d
+DA_32	x86/x86.h	24;"	d
+DA_386CGate	x86/x86.h	40;"	d
+DA_386IGate	x86/x86.h	41;"	d
+DA_386TGate	x86/x86.h	42;"	d
+DA_386TSS	x86/x86.h	39;"	d
+DA_C	x86/x86.h	33;"	d
+DA_CCO	x86/x86.h	35;"	d
+DA_CCOR	x86/x86.h	36;"	d
+DA_CR	x86/x86.h	34;"	d
+DA_DPL0	x86/x86.h	26;"	d
+DA_DPL1	x86/x86.h	27;"	d
+DA_DPL2	x86/x86.h	28;"	d
+DA_DPL3	x86/x86.h	29;"	d
+DA_DR	x86/x86.h	30;"	d
+DA_DRW	x86/x86.h	31;"	d
+DA_DRWA	x86/x86.h	32;"	d
+DA_LDT	x86/x86.h	37;"	d
+DA_LIMIT_4K	x86/x86.h	25;"	d
+DA_TaskGate	x86/x86.h	38;"	d
+DELETE	include/drivers/keyboard.h	132;"	d
+DEVNUM_M	include/kernel/io.h	47;"	d
+DEVNUM_S	include/kernel/io.h	48;"	d
+DOWN	include/drivers/keyboard.h	138;"	d
+DO_MODULE_INIT_END	include/kernel/kmodel.h	486;"	d
+DO_MODULE_INIT_START	include/kernel/kmodel.h	487;"	d
+DT_DEBUG	include/kernel/elf.h	88;"	d
+DT_FINI	include/kernel/elf.h	80;"	d
+DT_HASH	include/kernel/elf.h	71;"	d
+DT_HIPROC	include/kernel/elf.h	92;"	d
+DT_INIT	include/kernel/elf.h	79;"	d
+DT_JMPREL	include/kernel/elf.h	90;"	d
+DT_LOPROC	include/kernel/elf.h	91;"	d
+DT_MIPS_BASE_ADDRESS	include/kernel/elf.h	101;"	d
+DT_MIPS_CONFLICT	include/kernel/elf.h	102;"	d
+DT_MIPS_CONFLICTNO	include/kernel/elf.h	105;"	d
+DT_MIPS_FLAGS	include/kernel/elf.h	97;"	d
+DT_MIPS_GOTSYM	include/kernel/elf.h	109;"	d
+DT_MIPS_HIPAGENO	include/kernel/elf.h	110;"	d
+DT_MIPS_ICHECKSUM	include/kernel/elf.h	95;"	d
+DT_MIPS_IVERSION	include/kernel/elf.h	96;"	d
+DT_MIPS_LIBLIST	include/kernel/elf.h	103;"	d
+DT_MIPS_LIBLISTNO	include/kernel/elf.h	106;"	d
+DT_MIPS_LOCAL_GOTNO	include/kernel/elf.h	104;"	d
+DT_MIPS_RLD_MAP	include/kernel/elf.h	111;"	d
+DT_MIPS_RLD_VERSION	include/kernel/elf.h	93;"	d
+DT_MIPS_SYMTABNO	include/kernel/elf.h	107;"	d
+DT_MIPS_TIME_STAMP	include/kernel/elf.h	94;"	d
+DT_MIPS_UNREFEXTNO	include/kernel/elf.h	108;"	d
+DT_NEEDED	include/kernel/elf.h	68;"	d
+DT_NULL	include/kernel/elf.h	67;"	d
+DT_PLTGOT	include/kernel/elf.h	70;"	d
+DT_PLTREL	include/kernel/elf.h	87;"	d
+DT_PLTRELSZ	include/kernel/elf.h	69;"	d
+DT_REL	include/kernel/elf.h	84;"	d
+DT_RELA	include/kernel/elf.h	74;"	d
+DT_RELAENT	include/kernel/elf.h	76;"	d
+DT_RELASZ	include/kernel/elf.h	75;"	d
+DT_RELENT	include/kernel/elf.h	86;"	d
+DT_RELSZ	include/kernel/elf.h	85;"	d
+DT_RPATH	include/kernel/elf.h	82;"	d
+DT_SONAME	include/kernel/elf.h	81;"	d
+DT_STRSZ	include/kernel/elf.h	77;"	d
+DT_STRTAB	include/kernel/elf.h	72;"	d
+DT_SYMBOLIC	include/kernel/elf.h	83;"	d
+DT_SYMENT	include/kernel/elf.h	78;"	d
+DT_SYMTAB	include/kernel/elf.h	73;"	d
+DT_TEXTREL	include/kernel/elf.h	89;"	d
+EF_ALPHA_32BIT	include/kernel/elf.h	332;"	d
+EF_MIPS_ARCH	include/kernel/elf.h	27;"	d
+EF_MIPS_CPIC	include/kernel/elf.h	26;"	d
+EF_MIPS_NOREORDER	include/kernel/elf.h	24;"	d
+EF_MIPS_PIC	include/kernel/elf.h	25;"	d
+EI_CLASS	include/kernel/elf.h	448;"	d
+EI_DATA	include/kernel/elf.h	449;"	d
+EI_MAG0	include/kernel/elf.h	444;"	d
+EI_MAG1	include/kernel/elf.h	445;"	d
+EI_MAG2	include/kernel/elf.h	446;"	d
+EI_MAG3	include/kernel/elf.h	447;"	d
+EI_NIDENT	include/kernel/elf.h	355;"	d
+EI_PAD	include/kernel/elf.h	451;"	d
+EI_VERSION	include/kernel/elf.h	450;"	d
+ELF32_R_SYM	include/kernel/elf.h	156;"	d
+ELF32_R_TYPE	include/kernel/elf.h	157;"	d
+ELF32_ST_BIND	include/kernel/elf.h	124;"	d
+ELF32_ST_TYPE	include/kernel/elf.h	125;"	d
+ELFCLASS32	include/kernel/elf.h	461;"	d
+ELFCLASS64	include/kernel/elf.h	462;"	d
+ELFCLASSNONE	include/kernel/elf.h	460;"	d
+ELFCLASSNUM	include/kernel/elf.h	463;"	d
+ELFDATA2LSB	include/kernel/elf.h	466;"	d
+ELFDATA2MSB	include/kernel/elf.h	467;"	d
+ELFDATANONE	include/kernel/elf.h	465;"	d
+ELFMAG	include/kernel/elf.h	457;"	d
+ELFMAG0	include/kernel/elf.h	453;"	d
+ELFMAG1	include/kernel/elf.h	454;"	d
+ELFMAG2	include/kernel/elf.h	455;"	d
+ELFMAG3	include/kernel/elf.h	456;"	d
+EM_386	include/kernel/elf.h	42;"	d
+EM_486	include/kernel/elf.h	45;"	d
+EM_68K	include/kernel/elf.h	43;"	d
+EM_860	include/kernel/elf.h	46;"	d
+EM_88K	include/kernel/elf.h	44;"	d
+EM_ALPHA	include/kernel/elf.h	59;"	d
+EM_M32	include/kernel/elf.h	40;"	d
+EM_MIPS	include/kernel/elf.h	47;"	d
+EM_MIPS_RS4_BE	include/kernel/elf.h	48;"	d
+EM_NONE	include/kernel/elf.h	39;"	d
+EM_PARISC	include/kernel/elf.h	49;"	d
+EM_PPC	include/kernel/elf.h	51;"	d
+EM_S390	include/kernel/elf.h	53;"	d
+EM_S390_OLD	include/kernel/elf.h	64;"	d
+EM_SPARC	include/kernel/elf.h	41;"	d
+EM_SPARC32PLUS	include/kernel/elf.h	50;"	d
+EM_SPARCV9	include/kernel/elf.h	52;"	d
+END	include/drivers/keyboard.h	134;"	d
+ENTER	include/drivers/keyboard.h	94;"	d
+EOF	include/kernel/kmodel.h	49;"	d
+EOF	include/stdio.h	40;"	d
+ESC	include/drivers/keyboard.h	92;"	d
+ET_CORE	include/kernel/elf.h	34;"	d
+ET_DYN	include/kernel/elf.h	33;"	d
+ET_EXEC	include/kernel/elf.h	32;"	d
+ET_HIPROC	include/kernel/elf.h	36;"	d
+ET_LOPROC	include/kernel/elf.h	35;"	d
+ET_NONE	include/kernel/elf.h	30;"	d
+ET_REL	include/kernel/elf.h	31;"	d
+EV_CURRENT	include/kernel/elf.h	470;"	d
+EV_NONE	include/kernel/elf.h	469;"	d
+EV_NUM	include/kernel/elf.h	471;"	d
+Elf32_Addr	include/kernel/elf.h	/^typedef unsigned long	Elf32_Addr;$/;"	t
+Elf32_Dyn	include/kernel/elf.h	/^} Elf32_Dyn;$/;"	t	typeref:struct:dynamic
+Elf32_Ehdr	include/kernel/elf.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:elf32_hdr
+Elf32_Half	include/kernel/elf.h	/^typedef unsigned short	Elf32_Half;$/;"	t
+Elf32_Nhdr	include/kernel/elf.h	/^} Elf32_Nhdr;$/;"	t	typeref:struct:elf32_note
+Elf32_Off	include/kernel/elf.h	/^typedef unsigned long	Elf32_Off;$/;"	t
+Elf32_Phdr	include/kernel/elf.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:elf32_phdr
+Elf32_Rel	include/kernel/elf.h	/^} Elf32_Rel;$/;"	t	typeref:struct:elf32_rel
+Elf32_Rela	include/kernel/elf.h	/^} Elf32_Rela;$/;"	t	typeref:struct:elf32_rela
+Elf32_Shdr	include/kernel/elf.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anon2
+Elf32_Sword	include/kernel/elf.h	/^typedef signed long	Elf32_Sword;$/;"	t
+Elf32_Sym	include/kernel/elf.h	/^} Elf32_Sym;$/;"	t	typeref:struct:elf32_sym
+Elf32_Word	include/kernel/elf.h	/^typedef unsigned long	Elf32_Word;$/;"	t
+F1	include/drivers/keyboard.h	115;"	d
+F10	include/drivers/keyboard.h	124;"	d
+F11	include/drivers/keyboard.h	125;"	d
+F12	include/drivers/keyboard.h	126;"	d
+F2	include/drivers/keyboard.h	116;"	d
+F3	include/drivers/keyboard.h	117;"	d
+F4	include/drivers/keyboard.h	118;"	d
+F5	include/drivers/keyboard.h	119;"	d
+F6	include/drivers/keyboard.h	120;"	d
+F7	include/drivers/keyboard.h	121;"	d
+F8	include/drivers/keyboard.h	122;"	d
+F9	include/drivers/keyboard.h	123;"	d
+FDOS_ALLOC_START	include/kernel/config.h	16;"	d
+FDOS_CODE_START	include/kernel/config.h	14;"	d
+FDOS_CONFIG_PATH	include/kernel/config.h	19;"	d
+FDOS_INIT_START	include/kernel/config.h	11;"	d
+FDOS_MODULE_PATH	include/kernel/config.h	23;"	d
+FDOS_PRELOAD	include/kernel/config.h	25;"	d
+FDOS_SUPPORT_DEV	include/kernel/config.h	21;"	d
+FILE	include/stdio.h	/^typedef struct IO_FILE FILE;$/;"	t	typeref:struct:IO_FILE
+FIRST_SERIAL_HWINT4	x86/x86.h	118;"	d
+FLAG_ALT_L	include/drivers/keyboard.h	83;"	d
+FLAG_ALT_R	include/drivers/keyboard.h	84;"	d
+FLAG_BREAK	include/drivers/keyboard.h	77;"	d
+FLAG_CTRL_L	include/drivers/keyboard.h	81;"	d
+FLAG_CTRL_R	include/drivers/keyboard.h	82;"	d
+FLAG_EXT	include/drivers/keyboard.h	78;"	d
+FLAG_PAD	include/drivers/keyboard.h	85;"	d
+FLAG_SHIFT_L	include/drivers/keyboard.h	79;"	d
+FLAG_SHIFT_R	include/drivers/keyboard.h	80;"	d
+FLOPPY_HWINT6	x86/x86.h	120;"	d
+FOOL_STD_	include/foolstd.h	7;"	d
+FPU_EXCEPTION_HWINT13	x86/x86.h	127;"	d
+FS_RO	include/kernel/io.h	62;"	d
+FS_RW	include/kernel/io.h	63;"	d
+GDT_BASE	boot/old/loader.s	/^GDT_BASE: Descriptor 				0	,		  0		,		0$/;"	l
+GDT_CNT	x86/x86.h	7;"	d
+GDT_CODE32	boot/old/loader.s	/^GDT_CODE32: Descriptor				0	,	 0FFFFFh	,	DA_CR |DA_32|DA_LIMIT_4K$/;"	l
+GDT_CODE32_USER	boot/old/loader.s	/^GDT_CODE32_USER: Descriptor			0	,	 0FFFFFh	,	DA_CR |DA_32|DA_LIMIT_4K|DA_DPL3$/;"	l
+GDT_DATE32_USER	boot/old/loader.s	/^GDT_DATE32_USER: Descriptor			0	,	 0FFFFFh	,	DA_DRW|DA_32|DA_LIMIT_4K|DA_DPL3$/;"	l
+GDT_LEN	boot/old/loader.s	/^GDT_LEN equ $ - GDT_BASE$/;"	d
+GDT_NORMAL	boot/old/loader.s	/^GDT_NORMAL: Descriptor				0	,	 0FFFFFh	,	DA_DRW|DA_32|DA_LIMIT_4K$/;"	l
+GDT_PTR	boot/old/loader.s	/^GDT_PTR dw GDT_LEN$/;"	d
+GDT_STACK	boot/old/loader.s	/^GDT_STACK: Descriptor				0	,	 0FFFFFh	,	DA_DRW|DA_32|DA_LIMIT_4K$/;"	l
+GDT_STACK32_USER	boot/old/loader.s	/^GDT_STACK32_USER: Descriptor		0	,	 0FFFFFh	,	DA_DRW|DA_32|DA_LIMIT_4K|DA_DPL3$/;"	l
+GDT_VIDEO	boot/old/loader.s	/^GDT_VIDEO: Descriptor			0B8000h	,	 00FFFFh	,	DA_DRW|DA_DPL3$/;"	l
+GETMAJOR	include/kernel/kmodel.h	413;"	d
+GETSLAVE	include/kernel/kmodel.h	414;"	d
+GET_ERASE_PARAM_CNT	include/drivers/vga.h	31;"	d
+GET_ERASE_PARAM_START	include/drivers/vga.h	30;"	d
+GET_POS_X	include/drivers/vga.h	34;"	d
+GET_POS_Y	include/drivers/vga.h	35;"	d
+GUI_L	include/drivers/keyboard.h	97;"	d
+GUI_R	include/drivers/keyboard.h	98;"	d
+HOME	include/drivers/keyboard.h	133;"	d
+HOUR	include/kernel/time.h	40;"	d
+HWCAP_SPARC_FLUSH	include/kernel/elf.h	264;"	d
+HWCAP_SPARC_MULDIV	include/kernel/elf.h	267;"	d
+HWCAP_SPARC_STBAR	include/kernel/elf.h	265;"	d
+HWCAP_SPARC_SWAP	include/kernel/elf.h	266;"	d
+HWCAP_SPARC_V9	include/kernel/elf.h	268;"	d
+IDE0_INT	x86/x86.h	128;"	d
+IDE1_INT	x86/x86.h	129;"	d
+IDEC_DEV_DIAGNOSTIC	include/drivers/ide.h	49;"	d
+IDEC_IDENTIFY	include/drivers/ide.h	47;"	d
+IDEC_IDENTIFY_PACKET	include/drivers/ide.h	48;"	d
+IDEC_READBUFFER	include/drivers/ide.h	42;"	d
+IDEC_READSECTORS	include/drivers/ide.h	44;"	d
+IDEC_RESET	include/drivers/ide.h	41;"	d
+IDEC_SLEEP	include/drivers/ide.h	46;"	d
+IDEC_WRITEBUFFER	include/drivers/ide.h	43;"	d
+IDEC_WRITESECTORS	include/drivers/ide.h	45;"	d
+IDEE_ABORT	include/drivers/ide.h	32;"	d
+IDEE_CRC_ERROR	include/drivers/ide.h	27;"	d
+IDEE_ENDM	include/drivers/ide.h	33;"	d
+IDEE_IDNOTFOUND	include/drivers/ide.h	30;"	d
+IDEE_ILLEGALLEN	include/drivers/ide.h	34;"	d
+IDEE_OBSOLETE3	include/drivers/ide.h	31;"	d
+IDEE_OBSOLETE5	include/drivers/ide.h	29;"	d
+IDEE_TABLEWRONG	include/drivers/ide.h	28;"	d
+IDES_ALIGNERROR	include/drivers/ide.h	23;"	d
+IDES_BUSY	include/drivers/ide.h	17;"	d
+IDES_CHECKCONDITION	include/drivers/ide.h	25;"	d
+IDES_DATAAVAILABLE	include/drivers/ide.h	24;"	d
+IDES_DEFERREDWRITEERROR	include/drivers/ide.h	21;"	d
+IDES_FAULT	include/drivers/ide.h	19;"	d
+IDES_READY	include/drivers/ide.h	18;"	d
+IDES_REQESTDATA	include/drivers/ide.h	22;"	d
+IDES_STREAMERROR	include/drivers/ide.h	20;"	d
+IDE_GET_INT	include/drivers/ide.h	132;"	d
+IDE_MASTER_MASK	include/drivers/ide.h	86;"	d
+IDE_MAX_IODELAY	include/drivers/ide.h	14;"	d
+IDE_NO_INT	include/drivers/ide.h	131;"	d
+IDE_PRIMARY_MASK	include/drivers/ide.h	82;"	d
+IDE_SECONDY_MASK	include/drivers/ide.h	84;"	d
+IDE_SLAVE_MASK	include/drivers/ide.h	88;"	d
+IDE_WAIT_INT	include/drivers/ide.h	133;"	d
+IDT_CNT	x86/x86.h	8;"	d
+INSERT	include/drivers/keyboard.h	131;"	d
+INT_MAX	include/stddef.h	21;"	d
+INT_MIN	include/stddef.h	22;"	d
+INT_MS_EOI	x86/x86.h	87;"	d
+INT_M_CTL	x86/x86.h	83;"	d
+INT_M_CTLMASK	x86/x86.h	84;"	d
+INT_S_CTL	x86/x86.h	85;"	d
+INT_S_CTLMASK	x86/x86.h	86;"	d
+INT_VCT_BOUNDS	x86/x86.h	99;"	d
+INT_VCT_BREAKPOINT	x86/x86.h	97;"	d
+INT_VCT_COPROC_ERR	x86/x86.h	109;"	d
+INT_VCT_COPROC_NOT	x86/x86.h	101;"	d
+INT_VCT_COPROC_SEG	x86/x86.h	103;"	d
+INT_VCT_DEBUG	x86/x86.h	95;"	d
+INT_VCT_DIVIDE	x86/x86.h	94;"	d
+INT_VCT_DOUBLE_FAULT	x86/x86.h	102;"	d
+INT_VCT_INVAL_OP	x86/x86.h	100;"	d
+INT_VCT_INVAL_TSS	x86/x86.h	104;"	d
+INT_VCT_IRQ0	x86/x86.h	110;"	d
+INT_VCT_IRQ0	x86/x86.h	88;"	d
+INT_VCT_IRQ8	x86/x86.h	111;"	d
+INT_VCT_IRQ8	x86/x86.h	89;"	d
+INT_VCT_NMI	x86/x86.h	96;"	d
+INT_VCT_OVERFLOW	x86/x86.h	98;"	d
+INT_VCT_PAGE_FAULT	x86/x86.h	108;"	d
+INT_VCT_PROTECTION	x86/x86.h	107;"	d
+INT_VCT_SEG_NOT	x86/x86.h	105;"	d
+INT_VCT_STACK_FAULT	x86/x86.h	106;"	d
+INT_VCT_SYSCALL	x86/x86.h	112;"	d
+INVALID	include/kernel/io.h	9;"	d
+INVALID	include/kernel/kmodel.h	47;"	d
+INVALID_PAGE	include/kernel/mm.h	14;"	d
+IO_FILE	include/stdio.h	/^struct IO_FILE$/;"	s
+IRQ10_REDIRECTED_HWINT10	x86/x86.h	124;"	d
+IRQ11_REDIRECTED_HWINT11	x86/x86.h	125;"	d
+IRQ2_REDIRECTED_HWINT9	x86/x86.h	123;"	d
+IRQCNT	x86/system.h	91;"	d
+ITYPE_ALIVE	include/kernel/kmodel.h	91;"	d
+ITYPE_ARCHIVE	include/kernel/kmodel.h	92;"	d
+ITYPE_BLK_DEV	include/kernel/kmodel.h	96;"	d
+ITYPE_CHAR_DEV	include/kernel/kmodel.h	95;"	d
+ITYPE_DEVICE	include/kernel/kmodel.h	94;"	d
+ITYPE_DIR	include/kernel/kmodel.h	93;"	d
+I_BDEV	include/kernel/io.h	28;"	d
+I_CDEV	include/kernel/io.h	27;"	d
+I_DIR	include/kernel/io.h	26;"	d
+I_FILE	include/kernel/io.h	25;"	d
+I_LINK	include/kernel/io.h	30;"	d
+Init	kernel/schedu.c	/^struct task_struct Init;$/;"	v	typeref:struct:task_struct
+KB_IN_BYTES	include/drivers/keyboard.h	73;"	d
+KERNELFILE	Makefile	/^KERNELFILE=KFOOL$/;"	m
+KEYBOARD_HWINT1	x86/x86.h	115;"	d
+K_FS_CATORAY_CNT	include/kernel/kmodel.h	115;"	d
+K_LABLE_MAX_LEN	include/kernel/kmodel.h	117;"	d
+K_MAX_DEV_SUPPORT	include/kernel/kmodel.h	105;"	d
+K_MAX_FILE_OPEN_PPS	include/kernel/kmodel.h	111;"	d
+K_MAX_LEN_NODE_NAME	include/kernel/kmodel.h	68;"	d
+K_MAX_PATH_LEN	include/kernel/kmodel.h	70;"	d
+K_MAX_SLAVE_DEV_SUPPORT	include/kernel/kmodel.h	107;"	d
+K_MAX_THREAD_CNT_PPS	include/kernel/kmodel.h	113;"	d
+K_MNT_MAX_BLK_DEV	include/kernel/kmodel.h	103;"	d
+K_SYS_BLK_DEV_NUM	include/kernel/kmodel.h	109;"	d
+KernelEntry	boot/old/loader.s	/^KernelEntry:	dw	0$/;"	d
+LALT_HOLD	include/drivers/keyboard.h	189;"	d
+LALT_UNHOLD	include/drivers/keyboard.h	190;"	d
+LCTL_HOLD	include/drivers/keyboard.h	185;"	d
+LCTL_UNHOLD	include/drivers/keyboard.h	186;"	d
+LD	Makefile	/^LD=ld$/;"	m
+LD	apps/Makefile	/^LD =ld$/;"	m
+LEDCAPSLOCKON	include/drivers/keyboard.h	62;"	d
+LEDNUMLOCKON	include/drivers/keyboard.h	63;"	d
+LEDSCROLLOCKON	include/drivers/keyboard.h	64;"	d
+LEFT	include/drivers/keyboard.h	139;"	d
+LIST_H_	include/list.h	6;"	d
+LONGLONG_MAX	include/stddef.h	23;"	d
+LONGLONG_MIN	include/stddef.h	24;"	d
+LSHIFT_HOLD	include/drivers/keyboard.h	181;"	d
+LSHIFT_UNHOLD	include/drivers/keyboard.h	182;"	d
+LoaderLoadFaile	boot/old/boot.s	/^LoaderLoadFaile db "unable find loader."$/;"	d
+LoaderLoadFailelen	boot/old/boot.s	/^LoaderLoadFailelen dw LoaderLoadFailelen-LoaderLoadFaile$/;"	d
+LoaderName	boot/old/boot.s	/^LoaderName db 'FOOLLDR '$/;"	d
+MAJOR_HDA	include/kernel/kmodel.h	422;"	d
+MAJOR_HDB	include/kernel/kmodel.h	423;"	d
+MAJOR_HDC	include/kernel/kmodel.h	424;"	d
+MAJOR_HDD	include/kernel/kmodel.h	425;"	d
+MAJOR_KB	include/kernel/kmodel.h	419;"	d
+MAJOR_MAX	include/kernel/kmodel.h	428;"	d
+MAJOR_MS	include/kernel/kmodel.h	420;"	d
+MAJOR_NULL	include/kernel/kmodel.h	427;"	d
+MAJOR_RAM	include/kernel/kmodel.h	418;"	d
+MAJOR_TTY	include/kernel/kmodel.h	426;"	d
+MAJOR_VGA	include/kernel/kmodel.h	421;"	d
+MAJOR_ZERO	include/kernel/kmodel.h	417;"	d
+MAKE	Makefile	/^MAKE=make$/;"	m
+MAKEDATE	include/kernel/time.h	51;"	d
+MAKEDEV	include/drivers/ide.h	125;"	d
+MAKEDEVNUM	include/kernel/kmodel.h	412;"	d
+MAKETIME	include/kernel/time.h	39;"	d
+MAKE_CODE_CAPS_LCK	include/drivers/keyboard.h	208;"	d
+MAKE_CODE_DOWN	include/drivers/keyboard.h	243;"	d
+MAKE_CODE_ENTER	include/drivers/keyboard.h	225;"	d
+MAKE_CODE_ESC	include/drivers/keyboard.h	223;"	d
+MAKE_CODE_F1	include/drivers/keyboard.h	226;"	d
+MAKE_CODE_F10	include/drivers/keyboard.h	235;"	d
+MAKE_CODE_F11	include/drivers/keyboard.h	236;"	d
+MAKE_CODE_F12	include/drivers/keyboard.h	237;"	d
+MAKE_CODE_F2	include/drivers/keyboard.h	227;"	d
+MAKE_CODE_F3	include/drivers/keyboard.h	228;"	d
+MAKE_CODE_F4	include/drivers/keyboard.h	229;"	d
+MAKE_CODE_F5	include/drivers/keyboard.h	230;"	d
+MAKE_CODE_F6	include/drivers/keyboard.h	231;"	d
+MAKE_CODE_F7	include/drivers/keyboard.h	232;"	d
+MAKE_CODE_F8	include/drivers/keyboard.h	233;"	d
+MAKE_CODE_F9	include/drivers/keyboard.h	234;"	d
+MAKE_CODE_LEFT	include/drivers/keyboard.h	240;"	d
+MAKE_CODE_L_ALT	include/drivers/keyboard.h	213;"	d
+MAKE_CODE_L_CTL	include/drivers/keyboard.h	211;"	d
+MAKE_CODE_L_SHIFT	include/drivers/keyboard.h	209;"	d
+MAKE_CODE_PGDWN	include/drivers/keyboard.h	239;"	d
+MAKE_CODE_PGUP	include/drivers/keyboard.h	238;"	d
+MAKE_CODE_RIGHT	include/drivers/keyboard.h	242;"	d
+MAKE_CODE_R_ALT	include/drivers/keyboard.h	214;"	d
+MAKE_CODE_R_CTL	include/drivers/keyboard.h	212;"	d
+MAKE_CODE_R_SHIFT	include/drivers/keyboard.h	210;"	d
+MAKE_CODE_TAB	include/drivers/keyboard.h	224;"	d
+MAKE_CODE_UP	include/drivers/keyboard.h	241;"	d
+MAKE_ERASE_PARAM	include/drivers/vga.h	29;"	d
+MAKE_POSITION	include/drivers/vga.h	33;"	d
+MAP_COLS	include/drivers/keyboard.h	74;"	d
+MASK_LAC	include/kernel/io.h	58;"	d
+MASK_NAME	include/kernel/io.h	57;"	d
+MASK_RAW	include/drivers/keyboard.h	87;"	d
+MASK_SIZE	include/kernel/io.h	59;"	d
+MAX_DEV_NODE_LEN	include/kernel/io.h	53;"	d
+MAX_FS_NAME_LEN	include/kernel/io.h	52;"	d
+MAX_IDE_DEVICE	include/drivers/ide.h	80;"	d
+MAX_NAME_NODE_LEN	include/foolstd.h	30;"	d
+MAX_NODE_LEN	include/kernel/io.h	54;"	d
+MAX_PARTATION_CNT	include/drivers/ide.h	13;"	d
+MAX_PATH_DEEP	include/foolstd.h	32;"	d
+MAX_PATH_LEN	include/foolstd.h	28;"	d
+MINI	include/kernel/time.h	41;"	d
+MK_DEVNUM	include/kernel/io.h	46;"	d
+MNT_DONE	include/kernel/kmodel.h	271;"	d
+MNT_RO	include/kernel/io.h	33;"	d
+MNT_RW	include/kernel/io.h	34;"	d
+MODE_CREATE	include/foolstd.h	18;"	d
+MODE_CREATE	include/kernel/kmodel.h	59;"	d
+MODE_CREATEALWAYS	include/foolstd.h	19;"	d
+MODE_CREATEALWAYS	include/kernel/kmodel.h	60;"	d
+MODE_IOCTL	include/kernel/io.h	14;"	d
+MODE_IOCTL	include/kernel/kmodel.h	61;"	d
+MODE_PRIVATE	include/foolstd.h	20;"	d
+MODE_READ	include/kernel/kmodel.h	57;"	d
+MODE_READWRITE	include/foolstd.h	17;"	d
+MODE_READWRITE	include/kernel/kmodel.h	58;"	d
+MODE_RO	include/foolstd.h	16;"	d
+MODE_RO	include/kernel/io.h	12;"	d
+MODE_RW	include/kernel/io.h	13;"	d
+MODULE_INIT	include/kernel/kmodel.h	485;"	d
+MONTH	include/kernel/time.h	53;"	d
+MOUNT_RO	include/kernel/kmodel.h	64;"	d
+MOUNT_RW	include/kernel/kmodel.h	65;"	d
+MOURSE_DPI	include/drivers/keyboard.h	54;"	d
+MOURSE_ENABLE	include/drivers/keyboard.h	51;"	d
+MOURSE_LBTNDOWN	include/drivers/keyboard.h	52;"	d
+MOURSE_RBTNDOWN	include/drivers/keyboard.h	53;"	d
+MOURSE_RESOLUTION	include/drivers/keyboard.h	55;"	d
+MemCpy	boot/old/loader.s	/^MemCpy:$/;"	l
+NODE______	boot/old/floppy.s	/^NODE______:$/;"	l
+NR_FILE	include/kernel/io.h	17;"	d
+NR_SCAN_CODES	include/drivers/keyboard.h	75;"	d
+NT_PRFPREG	include/kernel/elf.h	475;"	d
+NT_PRPSINFO	include/kernel/elf.h	476;"	d
+NT_PRSTATUS	include/kernel/elf.h	474;"	d
+NT_TASKSTRUCT	include/kernel/elf.h	477;"	d
+NULL	include/stddef.h	15;"	d
+NUM_LOCK	include/drivers/keyboard.h	111;"	d
+PAD_0	include/drivers/keyboard.h	154;"	d
+PAD_1	include/drivers/keyboard.h	155;"	d
+PAD_2	include/drivers/keyboard.h	156;"	d
+PAD_3	include/drivers/keyboard.h	157;"	d
+PAD_4	include/drivers/keyboard.h	158;"	d
+PAD_5	include/drivers/keyboard.h	159;"	d
+PAD_6	include/drivers/keyboard.h	160;"	d
+PAD_7	include/drivers/keyboard.h	161;"	d
+PAD_8	include/drivers/keyboard.h	162;"	d
+PAD_9	include/drivers/keyboard.h	163;"	d
+PAD_DEL	include/drivers/keyboard.h	174;"	d
+PAD_DOT	include/drivers/keyboard.h	153;"	d
+PAD_DOWN	include/drivers/keyboard.h	165;"	d
+PAD_END	include/drivers/keyboard.h	169;"	d
+PAD_ENTER	include/drivers/keyboard.h	152;"	d
+PAD_HOME	include/drivers/keyboard.h	168;"	d
+PAD_INS	include/drivers/keyboard.h	172;"	d
+PAD_LEFT	include/drivers/keyboard.h	166;"	d
+PAD_MID	include/drivers/keyboard.h	173;"	d
+PAD_MINUS	include/drivers/keyboard.h	150;"	d
+PAD_PGDOWN	include/drivers/keyboard.h	171;"	d
+PAD_PGUP	include/drivers/keyboard.h	170;"	d
+PAD_PLUS	include/drivers/keyboard.h	151;"	d
+PAD_RIGHT	include/drivers/keyboard.h	167;"	d
+PAD_SLASH	include/drivers/keyboard.h	148;"	d
+PAD_STAR	include/drivers/keyboard.h	149;"	d
+PAD_UP	include/drivers/keyboard.h	164;"	d
+PAGEDOWN	include/drivers/keyboard.h	136;"	d
+PAGEUP	include/drivers/keyboard.h	135;"	d
+PAGE_KER	include/kernel/mm.h	9;"	d
+PAGE_ROE	include/kernel/mm.h	11;"	d
+PAGE_RW	include/kernel/mm.h	12;"	d
+PAGE_USR	include/kernel/mm.h	10;"	d
+PAUSEBREAK	include/drivers/keyboard.h	130;"	d
+PF_R	include/kernel/elf.h	376;"	d
+PF_W	include/kernel/elf.h	377;"	d
+PF_X	include/kernel/elf.h	378;"	d
+POWER	include/drivers/keyboard.h	143;"	d
+PRINTER_HWINT7	x86/x86.h	121;"	d
+PRINTSCREEN	include/drivers/keyboard.h	129;"	d
+PRIVILEGE_KRNL	x86/x86.h	43;"	d
+PRIVILEGE_TASK	x86/x86.h	44;"	d
+PRIVILEGE_USER	x86/x86.h	45;"	d
+PS2_MOURSE_HWINT12	x86/x86.h	126;"	d
+PT_DYNAMIC	include/kernel/elf.h	14;"	d
+PT_HIPROC	include/kernel/elf.h	20;"	d
+PT_INTERP	include/kernel/elf.h	15;"	d
+PT_LOAD	include/kernel/elf.h	13;"	d
+PT_LOPROC	include/kernel/elf.h	19;"	d
+PT_MIPS_REGINFO	include/kernel/elf.h	21;"	d
+PT_NOTE	include/kernel/elf.h	16;"	d
+PT_NULL	include/kernel/elf.h	12;"	d
+PT_PHDR	include/kernel/elf.h	18;"	d
+PT_SHLIB	include/kernel/elf.h	17;"	d
+Pcore	kernel/schedu.c	/^struct kthread_struct Pcore={{0}};$/;"	v	typeref:struct:kthread_struct
+Pinit	kernel/schedu.c	/^struct kthread_struct Pinit;$/;"	v	typeref:struct:kthread_struct
+RALT_HOLD	include/drivers/keyboard.h	201;"	d
+RALT_UNHOLD	include/drivers/keyboard.h	202;"	d
+RCTL_HOLD	include/drivers/keyboard.h	197;"	d
+RCTL_UNHOLD	include/drivers/keyboard.h	198;"	d
+READ_FLOOPY_ERROR	boot/old/floppy.s	/^READ_FLOOPY_ERROR:$/;"	l
+READ_FLOOPY_NOERROR	boot/old/floppy.s	/^READ_FLOOPY_NOERROR:$/;"	l
+REALTIME_CLOCK_HWINT8	x86/x86.h	122;"	d
+REGISTED	x86/int.c	12;"	d	file:
+REG_FOR_READ	include/drivers/ide.h	52;"	d
+REG_FOR_WRITE	include/drivers/ide.h	54;"	d
+RESOLUTION_100	include/drivers/keyboard.h	48;"	d
+RESOLUTION_200	include/drivers/keyboard.h	49;"	d
+RESOLUTION_25	include/drivers/keyboard.h	46;"	d
+RESOLUtION_50	include/drivers/keyboard.h	47;"	d
+RHF_HARDWAY	include/kernel/elf.h	99;"	d
+RHF_NONE	include/kernel/elf.h	98;"	d
+RHF_NOTPOT	include/kernel/elf.h	100;"	d
+RIGHT	include/drivers/keyboard.h	140;"	d
+RPL_KRNL	x86/x86.h	46;"	d
+RPL_TASK	x86/x86.h	47;"	d
+RPL_USER	x86/x86.h	48;"	d
+RSHIFT_HOLD	include/drivers/keyboard.h	193;"	d
+RSHIFT_UNHOLD	include/drivers/keyboard.h	194;"	d
+R_386_32	include/kernel/elf.h	160;"	d
+R_386_COPY	include/kernel/elf.h	164;"	d
+R_386_GLOB_DAT	include/kernel/elf.h	165;"	d
+R_386_GOT32	include/kernel/elf.h	162;"	d
+R_386_GOTOFF	include/kernel/elf.h	168;"	d
+R_386_GOTPC	include/kernel/elf.h	169;"	d
+R_386_JMP_SLOT	include/kernel/elf.h	166;"	d
+R_386_NONE	include/kernel/elf.h	159;"	d
+R_386_NUM	include/kernel/elf.h	170;"	d
+R_386_PC32	include/kernel/elf.h	161;"	d
+R_386_PLT32	include/kernel/elf.h	163;"	d
+R_386_RELATIVE	include/kernel/elf.h	167;"	d
+R_68K_16	include/kernel/elf.h	276;"	d
+R_68K_32	include/kernel/elf.h	275;"	d
+R_68K_8	include/kernel/elf.h	277;"	d
+R_68K_COPY	include/kernel/elf.h	293;"	d
+R_68K_GLOB_DAT	include/kernel/elf.h	294;"	d
+R_68K_GOT16	include/kernel/elf.h	282;"	d
+R_68K_GOT16O	include/kernel/elf.h	285;"	d
+R_68K_GOT32	include/kernel/elf.h	281;"	d
+R_68K_GOT32O	include/kernel/elf.h	284;"	d
+R_68K_GOT8	include/kernel/elf.h	283;"	d
+R_68K_GOT8O	include/kernel/elf.h	286;"	d
+R_68K_JMP_SLOT	include/kernel/elf.h	295;"	d
+R_68K_NONE	include/kernel/elf.h	274;"	d
+R_68K_PC16	include/kernel/elf.h	279;"	d
+R_68K_PC32	include/kernel/elf.h	278;"	d
+R_68K_PC8	include/kernel/elf.h	280;"	d
+R_68K_PLT16	include/kernel/elf.h	288;"	d
+R_68K_PLT16O	include/kernel/elf.h	291;"	d
+R_68K_PLT32	include/kernel/elf.h	287;"	d
+R_68K_PLT32O	include/kernel/elf.h	290;"	d
+R_68K_PLT8	include/kernel/elf.h	289;"	d
+R_68K_PLT8O	include/kernel/elf.h	292;"	d
+R_68K_RELATIVE	include/kernel/elf.h	296;"	d
+R_ALPHA_BRADDR	include/kernel/elf.h	308;"	d
+R_ALPHA_COPY	include/kernel/elf.h	325;"	d
+R_ALPHA_GLOB_DAT	include/kernel/elf.h	326;"	d
+R_ALPHA_GPDISP	include/kernel/elf.h	307;"	d
+R_ALPHA_GPREL32	include/kernel/elf.h	304;"	d
+R_ALPHA_GPRELHIGH	include/kernel/elf.h	318;"	d
+R_ALPHA_GPRELLOW	include/kernel/elf.h	319;"	d
+R_ALPHA_GPVALUE	include/kernel/elf.h	317;"	d
+R_ALPHA_HINT	include/kernel/elf.h	309;"	d
+R_ALPHA_IMMED_BR_HI32	include/kernel/elf.h	323;"	d
+R_ALPHA_IMMED_GP_16	include/kernel/elf.h	320;"	d
+R_ALPHA_IMMED_GP_HI32	include/kernel/elf.h	321;"	d
+R_ALPHA_IMMED_LO32	include/kernel/elf.h	324;"	d
+R_ALPHA_IMMED_SCN_HI32	include/kernel/elf.h	322;"	d
+R_ALPHA_JMP_SLOT	include/kernel/elf.h	327;"	d
+R_ALPHA_LITERAL	include/kernel/elf.h	305;"	d
+R_ALPHA_LITUSE	include/kernel/elf.h	306;"	d
+R_ALPHA_NONE	include/kernel/elf.h	301;"	d
+R_ALPHA_OP_PRSHIFT	include/kernel/elf.h	316;"	d
+R_ALPHA_OP_PSUB	include/kernel/elf.h	315;"	d
+R_ALPHA_OP_PUSH	include/kernel/elf.h	313;"	d
+R_ALPHA_OP_STORE	include/kernel/elf.h	314;"	d
+R_ALPHA_REFLONG	include/kernel/elf.h	302;"	d
+R_ALPHA_REFQUAD	include/kernel/elf.h	303;"	d
+R_ALPHA_RELATIVE	include/kernel/elf.h	328;"	d
+R_ALPHA_SREL16	include/kernel/elf.h	310;"	d
+R_ALPHA_SREL32	include/kernel/elf.h	311;"	d
+R_ALPHA_SREL64	include/kernel/elf.h	312;"	d
+R_MIPS_16	include/kernel/elf.h	173;"	d
+R_MIPS_26	include/kernel/elf.h	176;"	d
+R_MIPS_32	include/kernel/elf.h	174;"	d
+R_MIPS_64	include/kernel/elf.h	192;"	d
+R_MIPS_CALL16	include/kernel/elf.h	183;"	d
+R_MIPS_CALLHI16	include/kernel/elf.h	212;"	d
+R_MIPS_CALLLO16	include/kernel/elf.h	213;"	d
+R_MIPS_DELETE	include/kernel/elf.h	205;"	d
+R_MIPS_GOT16	include/kernel/elf.h	181;"	d
+R_MIPS_GOTHI16	include/kernel/elf.h	200;"	d
+R_MIPS_GOTLO16	include/kernel/elf.h	201;"	d
+R_MIPS_GOT_DISP	include/kernel/elf.h	193;"	d
+R_MIPS_GOT_OFST	include/kernel/elf.h	195;"	d
+R_MIPS_GOT_PAGE	include/kernel/elf.h	194;"	d
+R_MIPS_GPREL16	include/kernel/elf.h	179;"	d
+R_MIPS_GPREL32	include/kernel/elf.h	184;"	d
+R_MIPS_HI16	include/kernel/elf.h	177;"	d
+R_MIPS_HIGHER	include/kernel/elf.h	206;"	d
+R_MIPS_HIGHEST	include/kernel/elf.h	207;"	d
+R_MIPS_HIVENDOR	include/kernel/elf.h	218;"	d
+R_MIPS_INSERT_A	include/kernel/elf.h	203;"	d
+R_MIPS_INSERT_B	include/kernel/elf.h	204;"	d
+R_MIPS_LITERAL	include/kernel/elf.h	180;"	d
+R_MIPS_LO16	include/kernel/elf.h	178;"	d
+R_MIPS_LOVENDOR	include/kernel/elf.h	217;"	d
+R_MIPS_NONE	include/kernel/elf.h	172;"	d
+R_MIPS_PC16	include/kernel/elf.h	182;"	d
+R_MIPS_REL32	include/kernel/elf.h	175;"	d
+R_MIPS_SHIFT5	include/kernel/elf.h	190;"	d
+R_MIPS_SHIFT6	include/kernel/elf.h	191;"	d
+R_MIPS_SUB	include/kernel/elf.h	202;"	d
+R_MIPS_UNUSED1	include/kernel/elf.h	187;"	d
+R_MIPS_UNUSED2	include/kernel/elf.h	188;"	d
+R_MIPS_UNUSED3	include/kernel/elf.h	189;"	d
+R_SPARC_10	include/kernel/elf.h	254;"	d
+R_SPARC_11	include/kernel/elf.h	255;"	d
+R_SPARC_13	include/kernel/elf.h	235;"	d
+R_SPARC_16	include/kernel/elf.h	226;"	d
+R_SPARC_22	include/kernel/elf.h	234;"	d
+R_SPARC_32	include/kernel/elf.h	227;"	d
+R_SPARC_5	include/kernel/elf.h	259;"	d
+R_SPARC_6	include/kernel/elf.h	260;"	d
+R_SPARC_7	include/kernel/elf.h	258;"	d
+R_SPARC_8	include/kernel/elf.h	225;"	d
+R_SPARC_COPY	include/kernel/elf.h	243;"	d
+R_SPARC_DISP16	include/kernel/elf.h	229;"	d
+R_SPARC_DISP32	include/kernel/elf.h	230;"	d
+R_SPARC_DISP8	include/kernel/elf.h	228;"	d
+R_SPARC_GLOB_DAT	include/kernel/elf.h	244;"	d
+R_SPARC_GOT10	include/kernel/elf.h	237;"	d
+R_SPARC_GOT13	include/kernel/elf.h	238;"	d
+R_SPARC_GOT22	include/kernel/elf.h	239;"	d
+R_SPARC_HI22	include/kernel/elf.h	233;"	d
+R_SPARC_HIPLT22	include/kernel/elf.h	249;"	d
+R_SPARC_JMP_SLOT	include/kernel/elf.h	245;"	d
+R_SPARC_LO10	include/kernel/elf.h	236;"	d
+R_SPARC_LOPLT10	include/kernel/elf.h	250;"	d
+R_SPARC_NONE	include/kernel/elf.h	224;"	d
+R_SPARC_PC10	include/kernel/elf.h	240;"	d
+R_SPARC_PC22	include/kernel/elf.h	241;"	d
+R_SPARC_PCPLT10	include/kernel/elf.h	253;"	d
+R_SPARC_PCPLT22	include/kernel/elf.h	252;"	d
+R_SPARC_PCPLT32	include/kernel/elf.h	251;"	d
+R_SPARC_PLT32	include/kernel/elf.h	248;"	d
+R_SPARC_RELATIVE	include/kernel/elf.h	246;"	d
+R_SPARC_UA32	include/kernel/elf.h	247;"	d
+R_SPARC_WDISP16	include/kernel/elf.h	256;"	d
+R_SPARC_WDISP19	include/kernel/elf.h	257;"	d
+R_SPARC_WDISP22	include/kernel/elf.h	232;"	d
+R_SPARC_WDISP30	include/kernel/elf.h	231;"	d
+R_SPARC_WPLT30	include/kernel/elf.h	242;"	d
+RepeatRead	boot/old/floppy.s	/^RepeatRead: ;��ȡ�����͵�������¶�ȡ$/;"	l
+ReplaceKernel	boot/old/loader.s	/^ReplaceKernel:$/;"	l
+SA_RPL0	x86/x86.h	17;"	d
+SA_RPL1	x86/x86.h	18;"	d
+SA_RPL2	x86/x86.h	19;"	d
+SA_RPL3	x86/x86.h	20;"	d
+SA_RPL_MASK	x86/x86.h	16;"	d
+SA_TIG	x86/x86.h	22;"	d
+SA_TIL	x86/x86.h	23;"	d
+SA_TI_MASK	x86/x86.h	21;"	d
+SCROLL_LOCK	include/drivers/keyboard.h	112;"	d
+SECOND	include/kernel/time.h	42;"	d
+SECOND_SERIAL_HWINT3	x86/x86.h	117;"	d
+SECTOR_SIZE	include/drivers/ide.h	12;"	d
+SECTOR_SIZE	include/kernel/kmodel.h	119;"	d
+SEEK_CURR	include/foolstd.h	24;"	d
+SEEK_SET	include/foolstd.h	23;"	d
+SEEK_TAIL	include/foolstd.h	25;"	d
+SELFMAG	include/kernel/elf.h	458;"	d
+SHF_ALLOC	include/kernel/elf.h	416;"	d
+SHF_EXECINSTR	include/kernel/elf.h	417;"	d
+SHF_MASKPROC	include/kernel/elf.h	418;"	d
+SHF_MIPS_GPREL	include/kernel/elf.h	419;"	d
+SHF_WRITE	include/kernel/elf.h	415;"	d
+SHIFT_L	include/drivers/keyboard.h	102;"	d
+SHIFT_R	include/drivers/keyboard.h	103;"	d
+SHN_ABS	include/kernel/elf.h	426;"	d
+SHN_COMMON	include/kernel/elf.h	427;"	d
+SHN_HIPROC	include/kernel/elf.h	425;"	d
+SHN_HIRESERVE	include/kernel/elf.h	428;"	d
+SHN_LOPROC	include/kernel/elf.h	424;"	d
+SHN_LORESERVE	include/kernel/elf.h	423;"	d
+SHN_MIPS_ACCOMON	include/kernel/elf.h	429;"	d
+SHN_UNDEF	include/kernel/elf.h	422;"	d
+SHT_DYNAMIC	include/kernel/elf.h	398;"	d
+SHT_DYNSYM	include/kernel/elf.h	403;"	d
+SHT_HASH	include/kernel/elf.h	397;"	d
+SHT_HIPROC	include/kernel/elf.h	406;"	d
+SHT_HIUSER	include/kernel/elf.h	408;"	d
+SHT_LOPROC	include/kernel/elf.h	405;"	d
+SHT_LOUSER	include/kernel/elf.h	407;"	d
+SHT_MIPS_CONFLICT	include/kernel/elf.h	410;"	d
+SHT_MIPS_GPTAB	include/kernel/elf.h	411;"	d
+SHT_MIPS_LIST	include/kernel/elf.h	409;"	d
+SHT_MIPS_UCODE	include/kernel/elf.h	412;"	d
+SHT_NOBITS	include/kernel/elf.h	400;"	d
+SHT_NOTE	include/kernel/elf.h	399;"	d
+SHT_NULL	include/kernel/elf.h	392;"	d
+SHT_NUM	include/kernel/elf.h	404;"	d
+SHT_PROGBITS	include/kernel/elf.h	393;"	d
+SHT_REL	include/kernel/elf.h	401;"	d
+SHT_RELA	include/kernel/elf.h	396;"	d
+SHT_SHLIB	include/kernel/elf.h	402;"	d
+SHT_STRTAB	include/kernel/elf.h	395;"	d
+SHT_SYMTAB	include/kernel/elf.h	394;"	d
+SLAVA_NUM_STDERR	include/drivers/console.h	17;"	d
+SLAVE_MAX	include/kernel/kmodel.h	429;"	d
+SLAVE_NUM_STDIN	include/drivers/console.h	15;"	d
+SLAVE_NUM_STDOUT	include/drivers/console.h	16;"	d
+SLAVE_NUM_TTY1	include/drivers/console.h	11;"	d
+SLAVE_NUM_TTY2	include/drivers/console.h	12;"	d
+SLAVE_NUM_TTY3	include/drivers/console.h	13;"	d
+SLAVE_NUM_TTY4	include/drivers/console.h	14;"	d
+SLEEP	include/drivers/keyboard.h	144;"	d
+SPIN_LOCKED	include/kernel/signal.h	17;"	d
+SPIN_UNLOCKED	include/kernel/signal.h	18;"	d
+STASTUS_THREAD_RUNNING	include/kernel/schedu.h	21;"	d
+STATUS_THREAD_CREATED	include/kernel/schedu.h	15;"	d
+STATUS_THREAD_CREATING	include/kernel/schedu.h	13;"	d
+STATUS_THREAD_HANGUP	include/kernel/schedu.h	17;"	d
+STATUS_THREAD_IOHANGUP	include/kernel/schedu.h	19;"	d
+STATUS_THREAD_KILLED	include/kernel/schedu.h	27;"	d
+STATUS_THREAD_KILLING	include/kernel/schedu.h	25;"	d
+STATUS_THREAD_SIGNAL_KILL	include/kernel/schedu.h	23;"	d
+STB_GLOBAL	include/kernel/elf.h	115;"	d
+STB_LOCAL	include/kernel/elf.h	114;"	d
+STB_WEAK	include/kernel/elf.h	116;"	d
+STT_FILE	include/kernel/elf.h	122;"	d
+STT_FUNC	include/kernel/elf.h	120;"	d
+STT_NOTYPE	include/kernel/elf.h	118;"	d
+STT_OBJECT	include/kernel/elf.h	119;"	d
+STT_SECTION	include/kernel/elf.h	121;"	d
+SUB-DIRS	Makefile	/^SUB-DIRS=kernel lib $(ARCH) boot$/;"	m
+SelectorCode32	boot/old/loader.s	/^SelectorCode32	equ	GDT_CODE32 - GDT_BASE$/;"	d
+SelectorNormal	boot/old/loader.s	/^SelectorNormal 	equ	GDT_NORMAL - GDT_BASE$/;"	d
+SelectorStack	boot/old/loader.s	/^SelectorStack	equ	GDT_STACK  - GDT_BASE$/;"	d
+SelectorVideo	boot/old/loader.s	/^SelectorVideo	equ	GDT_VIDEO  - GDT_BASE + SA_RPL3$/;"	d
+TAB	include/drivers/keyboard.h	93;"	d
+UNREGISTED	x86/int.c	11;"	d	file:
+UP	include/drivers/keyboard.h	137;"	d
+USER_CS	x86/x86.h	12;"	d
+USER_DS	x86/x86.h	13;"	d
+VALID	include/kernel/kmodel.h	48;"	d
+VCT_EXP	x86/system.h	93;"	d
+VCT_HW	x86/system.h	92;"	d
+VCT_SYSCALL	x86/system.h	94;"	d
+VGA_CMD_ERASE_LINES	include/drivers/vga.h	28;"	d
+VGA_CMD_SET_CURSOR	include/drivers/vga.h	32;"	d
+VGA_CMD_SET_CURSOR_DIS	include/drivers/vga.h	37;"	d
+VGA_CMD_SET_CURSOR_HIDE	include/drivers/vga.h	36;"	d
+VGA_CMD_SET_DIS_LINE	include/drivers/vga.h	27;"	d
+VGA_CMD_SET_RESET	include/drivers/vga.h	26;"	d
+VGA_CURSOR_STATUS_HIDE	include/drivers/vga.h	56;"	d
+VGA_CURSOR_STATUS_SHOW	include/drivers/vga.h	57;"	d
+VGA_DEFAULT_BASE	include/drivers/vga.h	14;"	d
+VGA_GRIPH_BASE	include/drivers/vga.h	15;"	d
+VGA_INDEX_CURSOR_HIGH	include/drivers/vga.h	87;"	d
+VGA_INDEX_CURSOR_LOW	include/drivers/vga.h	88;"	d
+VGA_INDEX_DIS_ADDR_HIGH	include/drivers/vga.h	85;"	d
+VGA_INDEX_DIS_ADDR_LOW	include/drivers/vga.h	86;"	d
+VGA_MAX_DIS_LINE	include/drivers/vga.h	61;"	d
+VGA_MAX_LINE	include/drivers/vga.h	60;"	d
+VGA_MAX_WIDTH	include/drivers/vga.h	62;"	d
+VGA_REG_ADDR	include/drivers/vga.h	83;"	d
+VGA_REG_DATA	include/drivers/vga.h	84;"	d
+VGA_TXT_BASE	include/drivers/vga.h	13;"	d
+VGA_TXT_MAX_ADDR	include/drivers/vga.h	16;"	d
+VK_BACK	include/stdio.h	64;"	d
+VK_RETURN	include/stdio.h	62;"	d
+VK_TAB	include/stdio.h	63;"	d
+VMDIR	Makefile	/^VMDIR=\/home\/cup\/VBoxVMs\/fdos\/fdos.vbox$/;"	m
+WAKE	include/drivers/keyboard.h	145;"	d
+WEEKDAY	include/kernel/time.h	55;"	d
+WORKDIR	Makefile	/^WORKDIR=$(shell pwd)$/;"	m
+XT_WINCHERSTER_HWINT5	x86/x86.h	119;"	d
+YEAR	include/kernel/time.h	52;"	d
+_8042CMDMOURSE	include/drivers/keyboard.h	13;"	d
+_8042CMD_DETECT_REFLECT	include/drivers/keyboard.h	21;"	d
+_8042CMD_GETKEYBORADID	include/drivers/keyboard.h	23;"	d
+_8042CMD_GETMOURSEID	include/drivers/keyboard.h	24;"	d
+_8042CMD_GETMOURSE_INFO	include/drivers/keyboard.h	19;"	d
+_8042CMD_KEYBOARDOPEN	include/drivers/keyboard.h	27;"	d
+_8042CMD_MOURSERESTART	include/drivers/keyboard.h	39;"	d
+_8042CMD_RESEND	include/drivers/keyboard.h	37;"	d
+_8042CMD_RESTART	include/drivers/keyboard.h	38;"	d
+_8042CMD_SETALLPRESS	include/drivers/keyboard.h	32;"	d
+_8042CMD_SETALLPRESSORRELEASE	include/drivers/keyboard.h	31;"	d
+_8042CMD_SETALLREPEAT	include/drivers/keyboard.h	30;"	d
+_8042CMD_SETALLREPEATPRESS	include/drivers/keyboard.h	33;"	d
+_8042CMD_SETDEFAULTDISABLEKEY	include/drivers/keyboard.h	28;"	d
+_8042CMD_SETDEFAULTDISABLEMOUESE	include/drivers/keyboard.h	29;"	d
+_8042CMD_SETKEYTRASLATE	include/drivers/keyboard.h	35;"	d
+_8042CMD_SETMOURSE_1X1_	include/drivers/keyboard.h	16;"	d
+_8042CMD_SETMOURSE_2X1_	include/drivers/keyboard.h	17;"	d
+_8042CMD_SETMOURSE_RESOLUTION	include/drivers/keyboard.h	18;"	d
+_8042CMD_SETMOUSESIMPLE	include/drivers/keyboard.h	26;"	d
+_8042CMD_SETONEREPEAT	include/drivers/keyboard.h	34;"	d
+_8042CMD_SETONLYPRESS	include/drivers/keyboard.h	36;"	d
+_8042CMD_SETREPEATINPUT	include/drivers/keyboard.h	25;"	d
+_8042CMD_SETSWITCHSCANCODE	include/drivers/keyboard.h	22;"	d
+_8042CMD_WRITE_LED	include/drivers/keyboard.h	20;"	d
+_8042CTLREG	include/drivers/keyboard.h	12;"	d
+_8042INPUTBYF	include/drivers/keyboard.h	10;"	d
+_8042OUTPUTBUF	include/drivers/keyboard.h	9;"	d
+_8042STATUSREG	include/drivers/keyboard.h	11;"	d
+_BITS_	include/bits.h	8;"	d
+_CONFIG_H_	include/kernel/config.h	8;"	d
+_CONSOLE_	include/drivers/console.h	7;"	d
+_CRT_	include/stdio.h	8;"	d
+_HD_	include/drivers/ide.h	7;"	d
+_IO_H_	include/kernel/io.h	6;"	d
+_KERNEL_INCLUDE_	include/kernel/kernel.h	6;"	d
+_KEYBOARD_	include/drivers/keyboard.h	7;"	d
+_KMODEL_	include/kernel/kmodel.h	44;"	d
+_KPRINTF_	include/kernel/printk.h	7;"	d
+_MALLOC_	include/malloc.h	5;"	d
+_MASTER_ELF_H	include/kernel/elf.h	2;"	d
+_MEM_	include/drivers/mem.h	7;"	d
+_MM_	include/kernel/mm.h	7;"	d
+_P	include/kernel/signal.h	93;"	d
+_SCHEDU_	include/kernel/schedu.h	7;"	d
+_SETCURSOR_INVALID_PARAM	boot/old/output.s	/^_SETCURSOR_INVALID_PARAM:$/;"	l
+_SIGNAL_H_	include/kernel/signal.h	8;"	d
+_STDDEF_	include/stddef.h	6;"	d
+_STDIO_	include/stdio.h	7;"	d
+_STDLIB_INCLUDE_	include/stdlib.h	6;"	d
+_STD_STRING_INCLUDE_H_	include/string.h	6;"	d
+_SYSTEM_H_	x86/x86.h	2;"	d
+_TAR_H_	include/tar.h	7;"	d
+_TASK_H_	include/kernel/task.h	2;"	d
+_TIME_	include/kernel/time.h	7;"	d
+_V	include/kernel/signal.h	95;"	d
+_VGA_	include/drivers/vga.h	8;"	d
+_X86_SYSTEM_	x86/system.h	7;"	d
+__FPU_exception_hwint13	x86/entry.s	/^__FPU_exception_hwint13:$/;"	l
+__IDE0_hwint14	x86/entry.s	/^__IDE0_hwint14:$/;"	l
+__IDE1_hwint15	x86/entry.s	/^__IDE1_hwint15:$/;"	l
+__PS_2_mourse_hwint12	x86/entry.s	/^__PS_2_mourse_hwint12:$/;"	l
+__XT_winchester_hwint05	x86/entry.s	/^__XT_winchester_hwint05:$/;"	l
+___register_exp_irq	x86/int.c	/^int ___register_exp_irq(u8 vn, irqhandle prc)$/;"	f
+___register_hw_irq	x86/int.c	/^int ___register_hw_irq(u8 vn, irqhandle prc)$/;"	f
+___register_irq	x86/int.c	/^int (*___register_irq[])(u8 vn, irqhandle prc)={$/;"	v
+___register_syscall_irq	x86/int.c	/^int ___register_syscall_irq(u8 vn, irqhandle prc)$/;"	f
+__alloc_free_page	x86/x86mm.c	/^u32  __alloc_free_page(void)$/;"	f
+__asm_sys_call	x86/entry.s	/^__asm_sys_call:$/;"	l
+__bounds_check	x86/entry.s	/^__bounds_check:$/;"	l
+__breakpoint_exception	x86/entry.s	/^__breakpoint_exception:$/;"	l
+__cascade_hwint02	x86/entry.s	/^__cascade_hwint02:$/;"	l
+__clock_hwint00	x86/entry.s	/^__clock_hwint00:$/;"	l
+__copr_error	x86/entry.s	/^__copr_error:$/;"	l
+__copr_not_available	x86/entry.s	/^__copr_not_available:$/;"	l
+__copr_seg_overrun	x86/entry.s	/^__copr_seg_overrun:$/;"	l
+__divide_error	x86/entry.s	/^__divide_error:$/;"	l
+__double_fault	x86/entry.s	/^__double_fault:$/;"	l
+__first_serial_hwint04	x86/entry.s	/^__first_serial_hwint04:$/;"	l
+__floppy_hwint06	x86/entry.s	/^__floppy_hwint06:$/;"	l
+__free_page	x86/x86mm.c	/^void __free_page(u32 pn)$/;"	f
+__general_protection	x86/entry.s	/^__general_protection:$/;"	l
+__inb	x86/entry.s	/^__inb:$/;"	l
+__indw	x86/entry.s	/^__indw:$/;"	l
+__inval_opcode	x86/entry.s	/^__inval_opcode:$/;"	l
+__inval_tss	x86/entry.s	/^__inval_tss:$/;"	l
+__inw	x86/entry.s	/^__inw:$/;"	l
+__irq_10_hwint10	x86/entry.s	/^__irq_10_hwint10:$/;"	l
+__irq_11_hwint11	x86/entry.s	/^__irq_11_hwint11:$/;"	l
+__irq_2_redirected_hwint09	x86/entry.s	/^__irq_2_redirected_hwint09:$/;"	l
+__keyboard_hwint01	x86/entry.s	/^__keyboard_hwint01:$/;"	l
+__memset	lib/string.c	/^size_t __memset(void * des,int tom,size_t cnt)$/;"	f
+__nmi	x86/entry.s	/^__nmi:$/;"	l
+__outb	x86/entry.s	/^__outb:$/;"	l
+__outdw	x86/entry.s	/^__outdw:$/;"	l
+__outw	x86/entry.s	/^__outw:$/;"	l
+__overflow	x86/entry.s	/^__overflow:$/;"	l
+__page_fault	x86/entry.s	/^__page_fault:$/;"	l
+__printer_hwint07	x86/entry.s	/^__printer_hwint07:$/;"	l
+__realtime_clock_hwint08	x86/entry.s	/^__realtime_clock_hwint08:$/;"	l
+__register_irq	x86/int.c	/^int __register_irq(u8 vn, irqhandle prc, u8 type)$/;"	f
+__second_serial_hwint03	x86/entry.s	/^__second_serial_hwint03:$/;"	l
+__segment_not_present	x86/entry.s	/^__segment_not_present:$/;"	l
+__single_step_exception	x86/entry.s	/^__single_step_exception:$/;"	l
+__stack_exception	x86/entry.s	/^__stack_exception:$/;"	l
+__unregister_irq	x86/int.c	/^int __unregister_irq(u8 vn, irqhandle prc, u8 type)$/;"	f
+_asm_findfile	boot/old/floppy.s	/^_asm_findfile:$/;"	l
+_asm_output_return	boot/old/output.s	/^_asm_output_return:$/;"	l
+_asm_outputchar	boot/old/output.s	/^_asm_outputchar:$/;"	l
+_asm_outputdigit16	boot/old/output.s	/^_asm_outputdigit16:$/;"	l
+_asm_outputspace	boot/old/output.s	/^_asm_outputspace:$/;"	l
+_asm_outputstring	boot/old/output.s	/^_asm_outputstring:$/;"	l
+_asm_setcursorpos	boot/old/output.s	/^_asm_setcursorpos:$/;"	l
+_asm_str_cmp	boot/old/string.s	/^_asm_str_cmp:$/;"	l
+_boot_start	boot/old/boot.s	/^_boot_start:$/;"	l
+_c_i_	include/kernel/kernel.h	25;"	d
+_c_io_	include/kernel/kernel.h	27;"	d
+_c_o_	include/kernel/kernel.h	26;"	d
+_ci	include/kernel/kernel.h	34;"	d
+_ci_	include/kernel/kernel.h	33;"	d
+_cio	include/kernel/kernel.h	37;"	d
+_co	include/kernel/kernel.h	36;"	d
+_co_	include/kernel/kernel.h	35;"	d
+_core_	include/kernel/kernel.h	9;"	d
+_core_in_	include/kernel/kernel.h	15;"	d
+_core_inout_	include/kernel/kernel.h	17;"	d
+_core_out_	include/kernel/kernel.h	16;"	d
+_in_	include/kernel/kernel.h	19;"	d
+_inout_	include/kernel/kernel.h	21;"	d
+_kexpstack	x86/entry.s	/^_kexpstack:$/;"	l
+_kintstack	x86/entry.s	/^_kintstack:$/;"	l
+_kstack	x86/entry.s	/^_kstack:$/;"	l
+_lck	include/kernel/signal.h	/^	volatile int _lck;$/;"	m	struct:spin_lock
+_mutex	include/kernel/signal.h	/^	volatile int _mutex;$/;"	m	struct:mutex
+_noloader	boot/old/boot.s	/^_noloader:$/;"	l
+_out_	include/kernel/kernel.h	20;"	d
+_start	apps/cstart.s	/^_start:$/;"	l
+_start	x86/entry.s	/^_start:$/;"	l
+_stderr	include/stdio.h	37;"	d
+_stdin	include/stdio.h	35;"	d
+_stdout	include/stdio.h	36;"	d
+_u_i_	include/kernel/kernel.h	23;"	d
+_u_o_	include/kernel/kernel.h	24;"	d
+_ui	include/kernel/kernel.h	30;"	d
+_ui_	include/kernel/kernel.h	29;"	d
+_uo	include/kernel/kernel.h	32;"	d
+_uo_	include/kernel/kernel.h	31;"	d
+_user_	include/kernel/kernel.h	8;"	d
+_user_in_	include/kernel/kernel.h	11;"	d
+_user_inout_	include/kernel/kernel.h	13;"	d
+_user_out_	include/kernel/kernel.h	12;"	d
+alloc_free_page	x86/system.h	82;"	d
+arch_x86_reconfig	x86/x86.c	/^void arch_x86_reconfig(void)$/;"	f
+atoi	lib/stdlib.c	/^int atoi(const char * strz)$/;"	f
+attr	x86/x86.h	/^    u8     attr;$/;"	m	struct:gate_struct
+attrib1	x86/x86.h	/^    u8  attrib1;$/;"	m	struct:seg_descriptor
+avl_balance	include/avl.h	/^    signed char avl_balance;       \/* Balance factor. *\/$/;"	m	struct:avl_node
+avl_compare	include/avl.h	/^    avl_comparison_func *avl_compare;   \/* Comparison function. *\/$/;"	m	struct:avl_table
+avl_comparison_func	include/avl.h	/^typedef int avl_comparison_func (const void *avl_a, const void *avl_b,void *avl_param);$/;"	t
+avl_count	include/avl.h	/^    size_t avl_count;                   \/* Number of items in tree. *\/$/;"	m	struct:avl_table
+avl_data	include/avl.h	/^	void *avl_data;                \/* Pointer to data. *\/$/;"	m	struct:avl_node
+avl_delete	lib/avl.c	/^struct avl_node *avl_delete (struct avl_table *tree, const void * item)$/;"	f
+avl_find	lib/avl.c	/^struct avl_node *avl_find (const struct avl_table *tree, const void *item)$/;"	f
+avl_generation	include/avl.h	/^    unsigned long avl_generation;       \/* Generation number. *\/$/;"	m	struct:avl_table
+avl_insert	lib/avl.c	/^void * avl_insert (struct avl_table *table, struct avl_node* item)$/;"	f
+avl_link	include/avl.h	/^    struct avl_node *avl_link[2];  \/* Subtrees. *\/$/;"	m	struct:avl_node	typeref:struct:avl_node::avl_node
+avl_node	include/avl.h	/^struct avl_node$/;"	s
+avl_param	include/avl.h	/^    void *avl_param;                    \/* Extra argument to |avl_compare|. *\/$/;"	m	struct:avl_table
+avl_probe	lib/avl.c	/^void **avl_probe (struct avl_table *tree, struct avl_node* item)$/;"	f
+avl_replace	lib/avl.c	/^void * avl_replace (struct avl_table *table, struct avl_node *item)$/;"	f
+avl_root	include/avl.h	/^    struct avl_node *avl_root;          \/* Tree's root. *\/$/;"	m	struct:avl_table	typeref:struct:avl_table::avl_node
+avl_table	include/avl.h	/^struct avl_table$/;"	s
+base_high	x86/x86.h	/^    u8  base_high;$/;"	m	struct:seg_descriptor
+base_low	x86/x86.h	/^    u16 base_low;$/;"	m	struct:seg_descriptor
+base_mid	x86/x86.h	/^    u8  base_mid;$/;"	m	struct:seg_descriptor
+bdev	include/kernel/io.h	/^struct bdev$/;"	s
+bitclean	lib/bits.c	/^void bitclean(size_t index,volatile void *buf)$/;"	f
+bitread	lib/bits.c	/^int bitread(size_t index,volatile void *buf)$/;"	f
+bitrevers	lib/bits.c	/^void bitrevers(size_t index,volatile void *buf)$/;"	f
+bitset	lib/bits.c	/^void bitset(size_t index,volatile void *buf)$/;"	f
+bus	kernel/cache.c	/^char bus;char device;$/;"	v
+byte	lib/string.c	7;"	d	file:
+c_cur_status	include/drivers/vga.h	/^	unsigned short c_cur_status;$/;"	m	struct:vga_private
+c_dis_line	include/drivers/vga.h	/^	unsigned short c_dis_line;$/;"	m	struct:vga_private
+c_max_line	include/drivers/vga.h	/^	unsigned short c_max_line;$/;"	m	struct:vga_private
+c_x_y	include/drivers/vga.h	/^	unsigned int c_x_y;$/;"	m	struct:vga_private
+call_cnt	x86/int.c	/^    volatile u32 call_cnt;$/;"	m	struct:irq_struct	file:
+calloc	apps/alloc.c	/^extern void *calloc(unsigned int bn,unsigned int bs)$/;"	f
+cdev	include/kernel/io.h	/^struct cdev$/;"	s
+chksum	include/tar.h	/^	char chksum[8];$/;"	m	struct:tar_head_struct
+cli	x86/system.h	47;"	d
+close	apps/io.c	/^int close(int fd)$/;"	f
+close	include/kernel/io.h	/^    int (*close )(struct file *);$/;"	m	struct:fops_struct
+close	include/kernel/kmodel.h	/^	int (*close)(struct file *,struct inode *);$/;"	m	struct:file_op
+closedir	include/kernel/io.h	/^    int (*closedir)(struct inode *);$/;"	m	struct:iops_struct
+closedir	include/kernel/kmodel.h	/^	int (*closedir)(struct dir *,struct itemdata *);$/;"	m	struct:dir_op
+closeinode	include/kernel/kmodel.h	/^	int (*closeinode)(struct dir *,_co struct inode *);$/;"	m	struct:dir_op
+cnt	include/kernel/kmodel.h	/^	unsigned short cnt;$/;"	m	struct:ioport_region
+console_struct	include/drivers/console.h	/^struct console_struct$/;"	s
+corefilename	boot/old/loader.s	/^corefilename	db "KFOOL   " 		; 鏍稿績鏂囦欢鍚�$/;"	d
+cpu_regs	x86/system.h	/^struct cpu_regs$/;"	s
+cr3	x86/system.h	/^    u32  cr3;$/;"	m	struct:cpu_regs
+createmutex	kernel/signal.c	/^struct mutex* createmutex(const char *mutexname,bool owner)$/;"	f
+cs	include/kernel/schedu.h	/^	_u32		cs;			\/\/13$/;"	m	struct:stack_regs_struct
+cs	x86/system.h	/^    u32  eip, cs, eflags;$/;"	m	struct:cpu_regs
+curr_pid	include/kernel/schedu.h	125;"	d
+curr_tid	include/kernel/schedu.h	122;"	d
+d	x86/x86.h	/^    unsigned char d[6];$/;"	m	union:dptr
+d_brother	include/kernel/kmodel.h	/^	struct list_head d_brother;$/;"	m	struct:dir	typeref:struct:dir::list_head
+d_child	include/kernel/kmodel.h	/^	struct dir *d_child;$/;"	m	struct:dir	typeref:struct:dir::dir
+d_create	include/kernel/io.h	/^	date_t d_create; \/* can not be modify since created. *\/$/;"	m	struct:metadata
+d_create	include/kernel/kmodel.h	/^	date_t d_create;$/;"	m	struct:itemattrib
+d_data	include/kernel/kmodel.h	/^	struct itemdata d_data;$/;"	m	struct:dir	typeref:struct:dir::itemdata
+d_lastaccess	include/kernel/kmodel.h	/^	date_t d_lastaccess;$/;"	m	struct:itemattrib
+d_lstacc	include/kernel/io.h	/^	date_t d_lstacc;$/;"	m	struct:metadata
+d_op	include/kernel/kmodel.h	/^	struct dir_op *d_op;$/;"	m	struct:driver	typeref:struct:driver::dir_op
+d_op	include/kernel/kmodel.h	/^	struct dir_op *d_op;$/;"	m	struct:fs_struct	typeref:struct:fs_struct::dir_op
+d_op	include/kernel/kmodel.h	/^	struct dir_op *d_op;$/;"	m	struct:itemdata	typeref:struct:itemdata::dir_op
+d_parent	include/kernel/kmodel.h	/^	struct dir *d_parent;$/;"	m	struct:itemdata	typeref:struct:itemdata::dir
+d_ptr	include/kernel/elf.h	/^    Elf32_Addr	d_ptr;$/;"	m	union:dynamic::__anon1
+d_tag	include/kernel/elf.h	/^  Elf32_Sword d_tag;$/;"	m	struct:dynamic
+d_un	include/kernel/elf.h	/^  } d_un;$/;"	m	struct:dynamic	typeref:union:dynamic::__anon1
+d_val	include/kernel/elf.h	/^    Elf32_Sword	d_val;$/;"	m	union:dynamic::__anon1
+date_t	x86/system.h	/^typedef unsigned int date_t;$/;"	t
+dcount	x86/x86.h	/^    u8     dcount;$/;"	m	struct:gate_struct
+destroymutex	kernel/signal.c	/^int destroymutex(struct mutex *pmt)$/;"	f
+detach_node	lib/stdlib.c	/^int detach_node(unsigned int index,const char *ptr,char *buf,int *flg,unsigned int max)$/;"	f
+dev	include/kernel/io.h	/^    struct device *dev;$/;"	m	struct:cdev	typeref:struct:cdev::device
+dev	include/kernel/io.h	/^    struct device dev;$/;"	m	struct:bdev	typeref:struct:bdev::device
+dev_cnt	include/kernel/kmodel.h	/^	size_t dev_cnt;$/;"	m	struct:device
+dev_major_num	include/kernel/kmodel.h	/^	unsigned int dev_major_num;$/;"	m	struct:driver
+dev_name	include/kernel/kmodel.h	/^	const char *dev_name;$/;"	m	struct:device_base
+dev_num	include/kernel/kmodel.h	/^	dev_t dev_num;$/;"	m	struct:device_base
+dev_t	x86/system.h	/^typedef unsigned int dev_t;$/;"	t
+device	include/kernel/io.h	/^struct device$/;"	s
+device	include/kernel/kmodel.h	/^struct device$/;"	s
+device	kernel/cache.c	/^char bus;char device;$/;"	v
+device_base	include/kernel/kmodel.h	/^struct device_base$/;"	s
+device_driver	include/kernel/io.h	/^struct device_driver$/;"	s
+device_head	kernel/kmodel.c	/^struct device device_head[K_MAX_DEV_SUPPORT]={{{0}}};$/;"	v	typeref:struct:device
+devmajor	include/tar.h	/^	char devmajor[8];$/;"	m	struct:tar_head_struct
+devminor	include/tar.h	/^	char devminor[8];$/;"	m	struct:tar_head_struct
+devname	include/kernel/io.h	/^   const char *devname;$/;"	m	struct:device
+devnum	include/drivers/ide.h	/^	size_t devnum;$/;"	m	struct:ide_device_status
+devnum	include/kernel/io.h	/^   dev_t devnum;$/;"	m	struct:device
+devroot	kernel/kmodel.c	/^struct mntpnt_struct devroot[K_MNT_MAX_BLK_DEV]={{0}};$/;"	v	typeref:struct:mntpnt_struct
+dir	include/kernel/kmodel.h	/^struct dir$/;"	s
+dir_check_coredir	kernel/kmodel.c	/^int dir_check_coredir(struct dir *pdir,_co struct dir **ppdir,_ci const char *name)$/;"	f
+dir_check_coreinode	kernel/kmodel.c	/^int dir_check_coreinode(struct dir *pdir,_co struct inode **ppi,_ci const char *name)$/;"	f
+dir_check_coreitem	kernel/kmodel.c	/^int dir_check_coreitem(struct dir *pdir,_co struct itemdata **ppitm,_ci const char *nodename)$/;"	f
+dir_check_dir	kernel/kmodel.c	/^int dir_check_dir(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_check_fsdir	kernel/kmodel.c	/^int dir_check_fsdir(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_check_fsinode	kernel/kmodel.c	/^int dir_check_fsinode(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_check_fsitem	kernel/kmodel.c	/^int dir_check_fsitem(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_check_inode	kernel/kmodel.c	/^int dir_check_inode(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_check_item	kernel/kmodel.c	/^int dir_check_item(struct dir *pdir,_co struct itemattrib *pitr,_ci const char *nodename)$/;"	f
+dir_close_dir	kernel/kmodel.c	/^int dir_close_dir(struct dir *pdir,_ci struct dir *ppdir)$/;"	f
+dir_close_inode	kernel/kmodel.c	/^int dir_close_inode(struct dir *pdir,_ci struct inode *pi)$/;"	f
+dir_do_opendir	kernel/kmodel.c	/^int dir_do_opendir(struct dir *pdir,_co struct dir **ppdir,_ci const char *nodename)$/;"	f
+dir_do_openinode	kernel/kmodel.c	/^int dir_do_openinode(struct dir *pdir,_co struct inode **ppi,_ci const char *nodename)$/;"	f
+dir_do_opennewinode	kernel/kmodel.c	/^int dir_do_opennewinode(struct dir *pdir,_co struct inode **ppi,_ci const char *nodename)$/;"	f
+dir_op	include/kernel/kmodel.h	/^struct dir_op$/;"	s
+dir_opendir_done	kernel/kmodel.c	/^int dir_opendir_done(struct dir *pdir,_ci struct dir *ppdir)$/;"	f
+dir_openinode_done	kernel/kmodel.c	/^int dir_openinode_done(struct dir *pdir,_ci struct inode *pi)$/;"	f
+div	boot/old/floppy.s	/^	div 	dl  ;�̴�����AL������������AH��$/;"	d
+do_execl	kernel/exec.c	/^pid_t do_execl(_ci const char *filename,_ci const char param)$/;"	f
+do_execv	kernel/exec.c	/^pid_t do_execv(_ci const char *filename,_ci const char param)$/;"	f
+doshift	x86/x86.c	/^void doshift()$/;"	f
+dptr	x86/x86.h	/^union dptr$/;"	u
+driver	include/kernel/kmodel.h	/^struct driver$/;"	s
+driver_head	kernel/kmodel.c	/^struct driver *driver_head[K_MAX_DEV_SUPPORT]={NULL};$/;"	v	typeref:struct:driver
+ds	include/kernel/schedu.h	/^	_u32		ds;			\/\/3$/;"	m	struct:stack_regs_struct
+ds	x86/system.h	/^    u32  gs, fs, es, ds;$/;"	m	struct:cpu_regs
+dw	boot/old/boot.s	/^dw 0xaa55				; do not modify there$/;"	l
+dynamic	include/kernel/elf.h	/^typedef struct dynamic{$/;"	s
+e_ehsize	include/kernel/elf.h	/^  Elf32_Half	e_ehsize;$/;"	m	struct:elf32_hdr
+e_entry	include/kernel/elf.h	/^  Elf32_Addr	e_entry;  \/* Entry point *\/$/;"	m	struct:elf32_hdr
+e_flags	include/kernel/elf.h	/^  Elf32_Word	e_flags;$/;"	m	struct:elf32_hdr
+e_ident	include/kernel/elf.h	/^  unsigned char	e_ident[EI_NIDENT];$/;"	m	struct:elf32_hdr
+e_machine	include/kernel/elf.h	/^  Elf32_Half	e_machine;$/;"	m	struct:elf32_hdr
+e_phentsize	include/kernel/elf.h	/^  Elf32_Half	e_phentsize;$/;"	m	struct:elf32_hdr
+e_phnum	include/kernel/elf.h	/^  Elf32_Half	e_phnum;$/;"	m	struct:elf32_hdr
+e_phoff	include/kernel/elf.h	/^  Elf32_Off		e_phoff;$/;"	m	struct:elf32_hdr
+e_shentsize	include/kernel/elf.h	/^  Elf32_Half	e_shentsize;$/;"	m	struct:elf32_hdr
+e_shnum	include/kernel/elf.h	/^  Elf32_Half	e_shnum;$/;"	m	struct:elf32_hdr
+e_shoff	include/kernel/elf.h	/^  Elf32_Off		e_shoff;$/;"	m	struct:elf32_hdr
+e_shstrndx	include/kernel/elf.h	/^  Elf32_Half	e_shstrndx;$/;"	m	struct:elf32_hdr
+e_type	include/kernel/elf.h	/^  Elf32_Half	e_type;$/;"	m	struct:elf32_hdr
+e_version	include/kernel/elf.h	/^  Elf32_Word	e_version;$/;"	m	struct:elf32_hdr
+eax	include/kernel/schedu.h	/^	_u32		eax;		\/\/11$/;"	m	struct:stack_regs_struct
+eax	x86/system.h	/^    u32  ebx, edx, ecx, eax;$/;"	m	struct:cpu_regs
+ebp	include/kernel/schedu.h	/^	_u32		ebp;		\/\/6$/;"	m	struct:stack_regs_struct
+ebp	x86/system.h	/^    u32  edi, esi, ebp;$/;"	m	struct:cpu_regs
+ebx	include/kernel/schedu.h	/^	_u32		ebx;		\/\/8$/;"	m	struct:stack_regs_struct
+ebx	x86/system.h	/^    u32  ebx, edx, ecx, eax;$/;"	m	struct:cpu_regs
+ecx	include/kernel/schedu.h	/^	_u32		ecx;		\/\/10$/;"	m	struct:stack_regs_struct
+ecx	x86/system.h	/^    u32  ebx, edx, ecx, eax;$/;"	m	struct:cpu_regs
+edi	include/kernel/schedu.h	/^	_u32		edi;		\/\/4$/;"	m	struct:stack_regs_struct
+edi	x86/system.h	/^    u32  edi, esi, ebp;$/;"	m	struct:cpu_regs
+edx	include/kernel/schedu.h	/^	_u32		edx;		\/\/9$/;"	m	struct:stack_regs_struct
+edx	x86/system.h	/^    u32  ebx, edx, ecx, eax;$/;"	m	struct:cpu_regs
+eflags	include/kernel/schedu.h	/^	_u32		eflags;		\/\/14$/;"	m	struct:stack_regs_struct
+eflags	x86/system.h	/^    u32  eip, cs, eflags;$/;"	m	struct:cpu_regs
+eip	include/kernel/schedu.h	/^	_u32		eip;		\/\/12$/;"	m	struct:stack_regs_struct
+eip	x86/system.h	/^    u32  eip, cs, eflags;$/;"	m	struct:cpu_regs
+elf32_hdr	include/kernel/elf.h	/^typedef struct elf32_hdr{$/;"	s
+elf32_note	include/kernel/elf.h	/^typedef struct elf32_note {$/;"	s
+elf32_phdr	include/kernel/elf.h	/^typedef struct elf32_phdr{$/;"	s
+elf32_rel	include/kernel/elf.h	/^typedef struct elf32_rel {$/;"	s
+elf32_rela	include/kernel/elf.h	/^typedef struct elf32_rela{$/;"	s
+elf32_sym	include/kernel/elf.h	/^typedef struct elf32_sym{$/;"	s
+end	include/kernel/kmodel.h	/^	unsigned short end;$/;"	m	struct:ioport_region
+eoi_m	x86/x86.h	90;"	d
+eoi_s	x86/x86.h	91;"	d
+es	include/kernel/schedu.h	/^	_u32		es;			\/\/2$/;"	m	struct:stack_regs_struct
+es	x86/system.h	/^    u32  gs, fs, es, ds;$/;"	m	struct:cpu_regs
+esi	include/kernel/schedu.h	/^	_u32		esi;		\/\/5$/;"	m	struct:stack_regs_struct
+esi	x86/system.h	/^    u32  edi, esi, ebp;$/;"	m	struct:cpu_regs
+esp	include/kernel/schedu.h	/^	_u32		esp;		\/\/15$/;"	m	struct:stack_regs_struct
+esp	x86/system.h	/^    u32  esp, ss;$/;"	m	struct:cpu_regs
+exec	apps/ps.c	/^int exec(char *filename,int argc,char **argv)$/;"	f
+exit	apps/ps.c	/^void exit(int errcode)$/;"	f
+exphandle	x86/system.h	/^   int (*exphandle)(u8,int,u32,u16,u32);$/;"	m	union:__anon9
+extern	apps/cstart.s	/^extern exit$/;"	l
+extern	apps/cstart.s	/^extern main$/;"	l
+extern	boot/old/floppy.s	/^extern _asm_outputchar$/;"	l
+extern	x86/entry.s	/^extern x86_irq_handle, x86_exp_handle$/;"	l
+extern	x86/entry.s	/^extern x86_main, doshift, gdt_ptr, idt_ptr$/;"	l
+f	boot/Makefile	/^	dd if=.\/old\/BOOTSECTOR of=..\/floppy.img bs=512 count=1$/;"	m
+f	boot/Makefile	/^	dd if=\/dev\/zero of=..\/floppy.img seek=1 bs=512 count=2879 oflag=append$/;"	m
+f_lock	include/kernel/io.h	/^    struct file *f_lock;$/;"	m	struct:inode	typeref:struct:inode::file
+f_lst	include/kernel/kmodel.h	/^	struct file *f_lst;$/;"	m	struct:inode	typeref:struct:inode::file
+f_lst	include/kernel/kmodel.h	/^	struct list_head f_lst;$/;"	m	struct:file	typeref:struct:file::list_head
+f_mode	include/kernel/io.h	/^typedef unsigned int f_mode;$/;"	t
+f_mode	include/kernel/kmodel.h	/^	unsigned int f_mode;$/;"	m	struct:file
+f_op	include/kernel/kmodel.h	/^	struct file_op *f_op;$/;"	m	struct:driver	typeref:struct:driver::file_op
+f_op	include/kernel/kmodel.h	/^	struct file_op *f_op;$/;"	m	struct:fs_struct	typeref:struct:fs_struct::file_op
+f_op	include/kernel/kmodel.h	/^	struct file_op *f_op;$/;"	m	struct:itemdata	typeref:struct:itemdata::file_op
+f_owner	include/kernel/kmodel.h	/^	struct owner_struct f_owner;$/;"	m	struct:file	typeref:struct:file::owner_struct
+f_pi	include/kernel/kmodel.h	/^	struct inode *f_pi;$/;"	m	struct:file	typeref:struct:file::inode
+f_priva	include/kernel/io.h	/^    void *f_priva;$/;"	m	struct:file
+f_private	include/kernel/kmodel.h	/^	void *f_private;	\/*For TTY driver.*\/$/;"	m	struct:file
+fd	include/kernel/io.h	/^    struct inode *fd;$/;"	m	struct:file	typeref:struct:file::inode
+file	include/kernel/io.h	/^struct file$/;"	s
+file	include/kernel/kmodel.h	/^struct file$/;"	s
+file_op	include/kernel/kmodel.h	/^struct file_op$/;"	s
+file_threadregister	kernel/schedu.c	/^void file_threadregister(struct stack_regs_struct *reg,size_t esp,size_t eip,int argc,const char *argv[])$/;"	f
+filenamelen	boot/old/loader.s	/^filenamelen		dw 8$/;"	d
+find	include/kernel/io.h	/^    struct inode *(*find  )(struct inode *, _ci const char *nodename);$/;"	m	struct:iops_struct	typeref:struct:iops_struct::find
+find_device	kernel/kmodel.c	/^struct device_base * find_device(dev_t devnum)$/;"	f
+find_driver	kernel/kmodel.c	/^struct driver * find_driver(dev_t devnum)$/;"	f
+flock	include/kernel/io.h	/^    struct list_head flock;$/;"	m	struct:file	typeref:struct:file::list_head
+floopopbufoffset	boot/old/floppy.s	/^floopopbufoffset  equ 0x0000$/;"	d
+floopopbufsection	boot/old/floppy.s	/^floopopbufsection equ 0x1000$/;"	d
+flst	include/kernel/io.h	/^    struct file *flst;$/;"	m	struct:inode	typeref:struct:inode::file
+flst	include/kernel/io.h	/^    struct list_head flst;$/;"	m	struct:file	typeref:struct:file::list_head
+flush	include/kernel/io.h	/^    int (*flush )(struct file *);$/;"	m	struct:fops_struct
+fo_nr	include/kernel/io.h	/^    size_t fo_nr; \/\/ file opened counter.$/;"	m	struct:mntpt_struct
+foff_t	x86/system.h	/^typedef int foff_t;$/;"	t
+fopen	apps/file.c	/^FILE* fopen(const char *filaneme,const char *mode)$/;"	f
+fops	include/kernel/io.h	/^    const struct  fops_struct *fops;$/;"	m	struct:fs_struct	typeref:struct:fs_struct::fops_struct
+fops	include/kernel/io.h	/^    const struct fops_struct *fops;$/;"	m	struct:file	typeref:struct:file::fops_struct
+fops	include/kernel/io.h	/^    const struct fops_struct *fops;$/;"	m	struct:inode	typeref:struct:inode::fops_struct
+fops	include/kernel/io.h	/^    struct fops_struct *fops;$/;"	m	struct:cdev	typeref:struct:cdev::fops_struct
+fops_struct	include/kernel/io.h	/^struct fops_struct$/;"	s
+fread	apps/file.c	/^int fread(char *ptr,size_t bn,size_t bs,FILE *fp)$/;"	f
+free	apps/alloc.c	/^void free(void *ptr)$/;"	f
+free_page	x86/system.h	84;"	d
+fs	include/kernel/io.h	/^    struct fs_struct *fs;$/;"	m	struct:mntpt_struct	typeref:struct:mntpt_struct::fs_struct
+fs	include/kernel/schedu.h	/^	_u32		fs;			\/\/1$/;"	m	struct:stack_regs_struct
+fs	x86/system.h	/^    u32  gs, fs, es, ds;$/;"	m	struct:cpu_regs
+fs_id	include/kernel/kmodel.h	/^	unsigned char fs_id;$/;"	m	struct:fs_struct
+fs_name	include/kernel/kmodel.h	/^	const char *fs_name;$/;"	m	struct:fs_struct
+fs_struct	include/kernel/io.h	/^struct fs_struct$/;"	s
+fs_struct	include/kernel/kmodel.h	/^struct fs_struct$/;"	s
+fs_table	kernel/kmodel.c	/^struct fs_struct *fs_table[K_FS_CATORAY_CNT]={0};$/;"	v	typeref:struct:fs_struct
+fsattrib	include/kernel/io.h	/^    unsigned char fsattrib;$/;"	m	struct:fs_struct
+fsid	include/kernel/io.h	/^    unsigned char fsid;$/;"	m	struct:fs_struct
+fslot	apps/file.c	/^static FILE fslot[256]={{.io_index=-1}};$/;"	v	file:
+fsmount	include/kernel/io.h	/^    int (*fsmount )(struct inode *dev, struct inode *dir, unsigned int mode);$/;"	m	struct:sbops_struct
+fsname	include/kernel/io.h	/^    const    char fsname[MAX_FS_NAME_LEN];$/;"	m	struct:fs_struct
+fsumount	include/kernel/io.h	/^    int (*fsumount)(void);$/;"	m	struct:sbops_struct
+gate_struct	x86/x86.h	/^struct gate_struct$/;"	s
+gbase	x86/x86.h	/^       struct gate_struct *gbase;$/;"	m	union:dptr::__anon7::__anon8	typeref:struct:dptr::__anon7::__anon8::gate_struct
+gdt	x86/x86.c	/^struct seg_descriptor gdt[GDT_CNT];$/;"	v	typeref:struct:seg_descriptor
+gdt_ptr	x86/x86.c	/^union dptr gdt_ptr;$/;"	v	typeref:union:dptr
+get_spinlock	include/kernel/signal.h	27;"	d
+getchar	apps/file.c	/^int getchar(void)$/;"	f
+getdate	kernel/time.c	/^date_t getdate(void)$/;"	f
+gets	apps/file.c	/^int gets(char *ptr)$/;"	f
+getsystime	kernel/time.c	/^void getsystime(struct sys_time *st)$/;"	f
+gettime	kernel/time.c	/^time_t gettime(void)$/;"	f
+gid	include/tar.h	/^	char gid[8];$/;"	m	struct:tar_head_struct
+global	apps/cstart.s	/^global _start$/;"	l
+global	apps/entry.s	/^global syscall$/;"	l
+global	boot/old/floppy.s	/^global readwritesector$/;"	l
+global	boot/old/floppy.s	/^global reset$/;"	l
+global	x86/entry.s	/^global __IDE0_hwint14, __IDE1_hwint15, __page_fault$/;"	l
+global	x86/entry.s	/^global __PS_2_mourse_hwint12, __FPU_exception_hwint13$/;"	l
+global	x86/entry.s	/^global __asm_sys_call$/;"	l
+global	x86/entry.s	/^global __clock_hwint00, __keyboard_hwint01$/;"	l
+global	x86/entry.s	/^global __copr_error, __inval_tss, __segment_not_present$/;"	l
+global	x86/entry.s	/^global __copr_not_available, __nmi, __breakpoint_exception$/;"	l
+global	x86/entry.s	/^global __divide_error, __single_step_exception$/;"	l
+global	x86/entry.s	/^global __double_fault, __copr_seg_overrun$/;"	l
+global	x86/entry.s	/^global __floppy_hwint06, __printer_hwint07$/;"	l
+global	x86/entry.s	/^global __inb, __inw, __indw$/;"	l
+global	x86/entry.s	/^global __irq_11_hwint11, __XT_winchester_hwint05$/;"	l
+global	x86/entry.s	/^global __irq_2_redirected_hwint09, __irq_10_hwint10$/;"	l
+global	x86/entry.s	/^global __outb, __outw, __outdw$/;"	l
+global	x86/entry.s	/^global __overflow, __bounds_check, __inval_opcode$/;"	l
+global	x86/entry.s	/^global __realtime_clock_hwint08, __cascade_hwint02$/;"	l
+global	x86/entry.s	/^global __second_serial_hwint03, __first_serial_hwint04$/;"	l
+global	x86/entry.s	/^global __stack_exception, __general_protection$/;"	l
+global	x86/entry.s	/^global _start, kstacktop, _kstack, _kintstack$/;"	l
+global	x86/entry.s	/^global kintstacktop, _kexpstack, kexpstacktop$/;"	l
+gname	include/tar.h	/^	char gname[32];$/;"	m	struct:tar_head_struct
+gs	include/kernel/schedu.h	/^	_u32		gs;			\/\/0$/;"	m	struct:stack_regs_struct
+gs	x86/system.h	/^    u32  gs, fs, es, ds;$/;"	m	struct:cpu_regs
+hexcode	boot/old/output.s	/^hexcode:$/;"	l
+i_attrib	include/kernel/kmodel.h	/^	struct itemattrib i_attrib;$/;"	m	struct:itemdata	typeref:struct:itemdata::itemattrib
+i_brother	include/kernel/kmodel.h	/^	struct list_head i_brother;$/;"	m	struct:inode	typeref:struct:inode::list_head
+i_child	include/kernel/kmodel.h	/^	struct inode *i_child;$/;"	m	struct:dir	typeref:struct:dir::inode
+i_data	include/kernel/kmodel.h	/^	struct itemdata i_data;$/;"	m	struct:inode	typeref:struct:inode::itemdata
+i_devnum	include/kernel/io.h	/^	dev_t i_devnum;      \/* same as t_create. *\/$/;"	m	struct:metadata
+i_devnum	include/kernel/kmodel.h	/^	dev_t i_devnum;$/;"	m	struct:itemattrib
+i_name	include/kernel/io.h	/^    char i_name[MAX_NODE_LEN];$/;"	m	struct:metadata
+i_name	include/kernel/kmodel.h	/^	char i_name[K_MAX_LEN_NODE_NAME];$/;"	m	struct:itemattrib
+i_parent	include/kernel/io.h	/^    struct inode *i_parent;$/;"	m	struct:inode	typeref:struct:inode::inode
+i_priva	include/kernel/io.h	/^    void *i_priva;$/;"	m	struct:inode
+i_private	include/kernel/kmodel.h	/^	void *i_private;$/;"	m	struct:itemdata
+i_rcnt	include/kernel/kmodel.h	/^	unsigned int i_rcnt;$/;"	m	struct:itemdata
+i_root	include/kernel/io.h	/^    struct inode *i_root;$/;"	m	struct:inode	typeref:struct:inode::inode
+i_root	include/kernel/kmodel.h	/^	struct mntpnt_struct *i_root;$/;"	m	struct:itemdata	typeref:struct:itemdata::mntpnt_struct
+i_size	include/kernel/io.h	/^	size_t i_size;$/;"	m	struct:metadata
+i_size	include/kernel/kmodel.h	/^	size_t i_size;$/;"	m	struct:itemattrib
+i_type	include/kernel/io.h	/^	unsigned int i_type; \/* same as t_create. *\/$/;"	m	struct:metadata
+i_type	include/kernel/kmodel.h	/^	unsigned int i_type;$/;"	m	struct:itemattrib
+i_volnum	include/kernel/kmodel.h	/^	unsigned char i_volnum; \/* 0 ~ 25 *\/$/;"	m	struct:itemdata
+idata	include/kernel/io.h	/^    struct medadata idata;$/;"	m	struct:inode	typeref:struct:inode::medadata
+ide_cmd_struct	include/drivers/ide.h	/^struct ide_cmd_struct $/;"	s
+ide_ctl_ioport	include/drivers/ide.h	/^struct ide_ctl_ioport $/;"	s
+ide_dev_mask	include/drivers/ide.h	/^	_u16 ide_dev_mask;$/;"	m	struct:ide_device_status
+ide_device_status	include/drivers/ide.h	/^struct ide_device_status $/;"	s
+ide_port_r	include/drivers/ide.h	/^	const struct ide_ctl_ioport *ide_port_r;$/;"	m	struct:ide_device_status	typeref:struct:ide_device_status::ide_ctl_ioport
+ide_port_w	include/drivers/ide.h	/^	const struct ide_ctl_ioport *ide_port_w;$/;"	m	struct:ide_device_status	typeref:struct:ide_device_status::ide_ctl_ioport
+idev	include/kernel/io.h	/^    struct inode *idev;$/;"	m	struct:mntpt_struct	typeref:struct:mntpt_struct::inode
+idev	include/kernel/io.h	/^   struct inode *idev;$/;"	m	struct:device	typeref:struct:device::inode
+idir	include/kernel/io.h	/^    struct inode *idir;$/;"	m	struct:mntpt_struct	typeref:struct:mntpt_struct::inode
+idt	x86/x86.c	/^struct gate_struct idt[IDT_CNT];$/;"	v	typeref:struct:gate_struct
+idt_ptr	x86/x86.c	/^union dptr idt_ptr;$/;"	v	typeref:union:dptr
+inb	x86/system.h	56;"	d
+inc	boot/old/string.s	/^	inc 	di$/;"	d
+indw	x86/system.h	60;"	d
+init_idt_desc	x86/x86.c	/^void init_idt_desc$/;"	f
+init_mutex	include/kernel/signal.h	/^static inline void init_mutex(struct mutex *pm,char *mname)$/;"	f
+inode	include/kernel/io.h	/^struct inode$/;"	s
+inode	include/kernel/kmodel.h	/^struct inode$/;"	s
+inw	x86/system.h	58;"	d
+io_base	include/stdio.h	/^	void *io_base;$/;"	m	struct:IO_FILE
+io_index	include/stdio.h	/^	size_t io_index;$/;"	m	struct:IO_FILE
+io_nr	include/kernel/io.h	/^    size_t io_nr; \/\/ inode opened counter.$/;"	m	struct:mntpt_struct
+io_ptr	include/stdio.h	/^	void *io_ptr;$/;"	m	struct:IO_FILE
+io_size	include/stdio.h	/^	size_t io_size;$/;"	m	struct:IO_FILE
+io_t_size	include/stdio.h	/^	size_t io_t_size;$/;"	m	struct:IO_FILE
+ioa0	kernel/cache.c	/^unsigned int ioa0,iod0;$/;"	v
+ioctl	apps/io.c	/^size_t ioctl(int fd,int cmd,int param)$/;"	f
+ioctl	include/kernel/io.h	/^    int (*ioctl )(struct file *, int cmd, int param);$/;"	m	struct:fops_struct
+ioctl	include/kernel/kmodel.h	/^	int (*ioctl)(struct file *,int,int);$/;"	m	struct:file_op
+iod0	kernel/cache.c	/^unsigned int ioa0,iod0;$/;"	v
+ioport_region	include/kernel/kmodel.h	/^struct ioport_region $/;"	s
+ioport_region_check	kernel/kmodel.c	/^int ioport_region_check(unsigned short start,unsigned short end)$/;"	f
+ioport_region_register	kernel/kmodel.c	/^int ioport_region_register(struct ioport_region *pio)$/;"	f
+ioport_region_unregister	kernel/kmodel.c	/^ioport_region_unregister(unsigned short start,unsigned short end)$/;"	f
+iops	include/kernel/io.h	/^    const struct  iops_struct *iops;$/;"	m	struct:fs_struct	typeref:struct:fs_struct::iops_struct
+iops	include/kernel/io.h	/^    const struct iops_struct *iops;$/;"	m	struct:inode	typeref:struct:inode::iops_struct
+iops_struct	include/kernel/io.h	/^struct iops_struct$/;"	s
+irhead	kernel/kmodel.c	/^struct ioport_region *irhead=NULL;$/;"	v	typeref:struct:ioport_region
+irlck	kernel/kmodel.c	/^struct spin_lock irlck={._lck=SPIN_UNLOCKED};$/;"	v	typeref:struct:spin_lock
+irq_struct	x86/int.c	/^struct irq_struct$/;"	s	file:
+irqhandle	x86/system.h	/^   int (*irqhandle)(u8);$/;"	m	union:__anon9
+irqhandle	x86/system.h	/^}irqhandle;$/;"	t	typeref:union:__anon9
+irqrouter_init	x86/x86.c	/^void irqrouter_init(void)$/;"	f
+irqvct	x86/int.c	/^}irqvct[IRQCNT];$/;"	v	typeref:struct:irq_struct
+isdigit	include/stddef.h	16;"	d
+ishex	include/stddef.h	17;"	d
+islower	include/stddef.h	18;"	d
+isupper	include/stddef.h	19;"	d
+itemattrib	include/kernel/kmodel.h	/^struct itemattrib$/;"	s
+itemdata	include/kernel/kmodel.h	/^struct itemdata$/;"	s
+itoa	lib/stdlib.c	/^int itoa(char *strz,int dec)$/;"	f
+itob	lib/stdlib.c	/^void itob(char *buf,int data)$/;"	f
+itox	lib/stdlib.c	/^int itox(char *strz,int dec)$/;"	f
+jmp	boot/old/boot.s	/^jmp 		_boot_start$/;"	l
+jmp	boot/old/loader.s	/^jmp loader_start			; 9000:0000h$/;"	l
+kbuf	kernel/printk.c	/^char kbuf[1024]={0};$/;"	v
+kernel_cmdline	x86/x86.c	/^char kernel_cmdline[]="root=\/dev\/hda1;tty=\/dev\/ttyUSB0;debug;";$/;"	v
+kernel_esp	include/kernel/schedu.h	/^	_u32		kernel_esp;	\/\/7$/;"	m	struct:stack_regs_struct
+kernel_esp	x86/system.h	/^    u32  kernel_esp;$/;"	m	struct:cpu_regs
+kexpstacktop	x86/entry.s	/^kexpstacktop:$/;"	l
+kintstacktop	x86/entry.s	/^kintstacktop:$/;"	l
+kprintf	kernel/printk.c	/^int kprintf(const char *fmt,...)$/;"	f
+kread	include/kernel/io.h	/^    int (*kread )(struct inode *, _co char *, foff_t, _co foff_t *);$/;"	m	struct:fops_struct
+kread	include/kernel/kmodel.h	/^	int (*kread)(struct itemdata *,_co char *,foff_t,int);$/;"	m	struct:file_op
+kschedu	kernel/schedu.c	/^void kschedu(void)$/;"	f
+kscheduinit	kernel/schedu.c	/^void kscheduinit(void)$/;"	f
+kstacktop	x86/entry.s	/^kstacktop:$/;"	l
+kthread_struct	include/kernel/schedu.h	/^struct kthread_struct $/;"	s
+kwrite	include/kernel/io.h	/^    int (*kwrite)(struct inode *, _ci char *, foff_t, _co foff_t *);$/;"	m	struct:fops_struct
+kwrite	include/kernel/kmodel.h	/^	int (*kwrite)(struct itemdata *,_ci const char *,foff_t,int);$/;"	m	struct:file_op
+kx	kernel/printk.c	/^char kx=0,ky=0;$/;"	v
+ky	kernel/printk.c	/^char kx=0,ky=0;$/;"	v
+lba_cnt	include/drivers/ide.h	/^	size_t lba_cnt;$/;"	m	struct:ide_device_status
+lba_end	include/drivers/ide.h	/^	size_t lba_end;$/;"	m	struct:ide_device_status
+lba_start	include/drivers/ide.h	/^	size_t lba_start;$/;"	m	struct:ide_device_status
+lck_d_child	include/kernel/kmodel.h	/^	struct spin_lock lck_d_child;$/;"	m	struct:dir	typeref:struct:dir::spin_lock
+lck_device	kernel/kmodel.c	/^struct spin_lock lck_device={SPIN_UNLOCKED};$/;"	v	typeref:struct:spin_lock
+lck_f_lst	include/kernel/kmodel.h	/^	struct spin_lock lck_f_lst;$/;"	m	struct:inode	typeref:struct:inode::spin_lock
+lck_i_child	include/kernel/kmodel.h	/^	struct spin_lock lck_i_child;$/;"	m	struct:dir	typeref:struct:dir::spin_lock
+lck_module_head	kernel/kmodel.c	/^struct spin_lock lck_module_head={0};$/;"	v	typeref:struct:spin_lock
+limit	x86/x86.h	/^    struct { u16 limit;$/;"	m	struct:dptr::__anon7
+limit_high_attr2	x86/x86.h	/^    u8  limit_high_attr2;$/;"	m	struct:seg_descriptor
+limit_low	x86/x86.h	/^    u16 limit_low;$/;"	m	struct:seg_descriptor
+line_to_addr	include/drivers/vga.h	/^static inline int line_to_addr(unsigned short line,unsigned short ** p)$/;"	f
+linkname	include/tar.h	/^	char linkname[100];$/;"	m	struct:tar_head_struct
+list_head	include/list.h	/^struct list_head{$/;"	s
+list_ini	include/list.h	16;"	d
+list_insert	include/list.h	/^static inline struct list_head* list_insert(struct list_head *entry,struct list_head *new_){$/;"	f
+list_inserttail	include/list.h	/^static inline struct list_head* list_inserttail(struct list_head *entry,struct list_head *new_){$/;"	f
+list_load	include/list.h	17;"	d
+list_remove	include/list.h	/^static inline struct list_head* list_remove(struct list_head *entry){$/;"	f
+load_driver	kernel/kmodel.c	/^struct inode *load_driver(dev_t devnum,const char *devnodename)$/;"	f
+loader_start	boot/old/loader.s	/^loader_start:$/;"	l
+lockmask	include/kernel/io.h	/^    unsigned int lockmask;$/;"	m	struct:inode
+lockme	include/kernel/io.h	/^    int (*lockme)(struct file *, int mask);$/;"	m	struct:fops_struct
+lookup	include/kernel/io.h	/^    int (*lookup )(struct inode *, _co struct metadata *, _ci const char *nodename);$/;"	m	struct:iops_struct
+m-objs	Makefile	/^m-objs=$/;"	m
+m_lst	include/kernel/kmodel.h	/^	struct list_head m_lst;$/;"	m	struct:module	typeref:struct:module::list_head
+magic	include/tar.h	/^	char magic[6];$/;"	m	struct:tar_head_struct
+main	apps/Init.c	/^int main()$/;"	f
+mainthrd	include/kernel/task.h	/^    struct thread_context *mainthrd;$/;"	m	struct:task_context	typeref:struct:task_context::thread_context
+malloc	apps/alloc.c	/^void *malloc(unsigned int bs)$/;"	f
+member_load	include/list.h	19;"	d
+memcpy	lib/string.c	/^size_t memcpy(void *des,const void *src,size_t cnt)$/;"	f
+memcpy	x86/system.h	31;"	d
+memmove	lib/string.c	/^size_t memmove(void * des,const void * src,size_t cnt)$/;"	f
+memory_startup	x86/x86mm.c	/^void memory_startup()$/;"	f
+memset	lib/string.c	32;"	d	file:
+memset	x86/system.h	34;"	d
+message	include/kernel/signal.h	/^struct message{$/;"	s
+metadata	include/kernel/io.h	/^struct metadata$/;"	s
+mkdescriptor	x86/x86.c	/^void mkdescriptor$/;"	f
+mkdir	include/kernel/io.h	/^    struct inode *(*mkdir )(struct inode *, const char *nodename);$/;"	m	struct:iops_struct	typeref:struct:iops_struct::mkdir
+mkdir	include/kernel/kmodel.h	/^	int (*mkdir)(struct dir *,_co struct itemattrib *,_ci const char *);$/;"	m	struct:dir_op
+mkfs	include/kernel/kmodel.h	/^	int (*mkfs)(struct inode *,const char *);$/;"	m	struct:fs_struct
+mknode	include/kernel/io.h	/^    struct inode *(*mknode)(struct inode *, dev_t, unsigned int);$/;"	m	struct:iops_struct	typeref:struct:iops_struct::mknode
+mknode	include/kernel/kmodel.h	/^	int (*mknode)(struct dir *,struct itemattrib *,_ci const char *);$/;"	m	struct:dir_op
+mlst	include/kernel/signal.h	/^	struct list_head mlst;$/;"	m	struct:message	typeref:struct:message::list_head
+mlst	include/kernel/signal.h	/^	struct list_head mlst;$/;"	m	struct:mutex	typeref:struct:mutex::list_head
+mnt_dev	include/kernel/kmodel.h	/^	struct inode *mnt_dev;$/;"	m	struct:mntpnt_struct	typeref:struct:mntpnt_struct::inode
+mnt_flg	include/kernel/kmodel.h	/^	unsigned char mnt_flg;$/;"	m	struct:mntpnt_struct
+mnt_mode	include/kernel/io.h	/^    unsigned int mnt_mode;$/;"	m	struct:mntpt_struct
+mnt_mode	include/kernel/kmodel.h	/^	unsigned int mnt_mode;$/;"	m	struct:mntpnt_struct
+mnt_num	include/kernel/kmodel.h	/^	unsigned char mnt_num;$/;"	m	struct:mntpnt_struct
+mnt_pfs	include/kernel/kmodel.h	/^	struct fs_struct *mnt_pfs;$/;"	m	struct:mntpnt_struct	typeref:struct:mntpnt_struct::fs_struct
+mnt_private	include/kernel/kmodel.h	/^	void *mnt_private;$/;"	m	struct:mntpnt_struct
+mnt_rcnt	include/kernel/kmodel.h	/^	unsigned int mnt_rcnt;$/;"	m	struct:mntpnt_struct
+mnt_root	include/kernel/kmodel.h	/^	struct dir mnt_root;$/;"	m	struct:mntpnt_struct	typeref:struct:mntpnt_struct::dir
+mnt_superblk	include/kernel/kmodel.h	/^	struct superblk mnt_superblk;$/;"	m	struct:mntpnt_struct	typeref:struct:mntpnt_struct::superblk
+mntlst	include/kernel/io.h	/^    struct list_head mntlst; \/\/ mount point list.$/;"	m	struct:mntpt_struct	typeref:struct:mntpt_struct::list_head
+mntpnt_struct	include/kernel/kmodel.h	/^struct mntpnt_struct$/;"	s
+mntpt_struct	include/kernel/io.h	/^struct mntpt_struct$/;"	s
+mode	include/tar.h	/^	char mode[8];$/;"	m	struct:tar_head_struct
+model_startup	kernel/kmodel.c	/^int model_startup(void)$/;"	f
+module	include/kernel/kmodel.h	/^struct module$/;"	s
+module_cleanup	include/kernel/kmodel.h	/^	void (*module_cleanup)(void);$/;"	m	struct:module
+module_head	kernel/kmodel.c	/^struct module *module_head=NULL;$/;"	v	typeref:struct:module
+module_init	kernel/kmodel.c	/^int module_init(void)$/;"	f
+module_startup	include/kernel/kmodel.h	/^	int (*module_startup)(void);$/;"	m	struct:module
+moudule_cnt	kernel/kmodel.c	/^unsigned int moudule_cnt=0;$/;"	v
+mount	include/kernel/kmodel.h	/^	int (*mount)(struct inode *,struct itemdata *,void **);$/;"	m	struct:fs_struct
+moursedpi	include/drivers/keyboard.h	59;"	d
+mourseenable	include/drivers/keyboard.h	56;"	d
+mourselbtndown	include/drivers/keyboard.h	57;"	d
+mourserbtndown	include/drivers/keyboard.h	58;"	d
+mourseresolution	include/drivers/keyboard.h	60;"	d
+mtime	include/tar.h	/^	char mtime[12];$/;"	m	struct:tar_head_struct
+mutex	include/kernel/signal.h	/^struct mutex {$/;"	s
+mutex_waiter	include/kernel/signal.h	/^struct mutex_waiter{$/;"	s
+mutex_waitercnt	include/kernel/signal.h	/^	size_t mutex_waitercnt;$/;"	m	struct:mutex
+mutexname	include/kernel/signal.h	/^	char *mutexname;$/;"	m	struct:mutex
+mwlst	include/kernel/signal.h	/^	struct list_head mwlst;$/;"	m	struct:mutex_waiter	typeref:struct:mutex_waiter::list_head
+n_descsz	include/kernel/elf.h	/^  Elf32_Word	n_descsz;	\/* Content size *\/$/;"	m	struct:elf32_note
+n_namesz	include/kernel/elf.h	/^  Elf32_Word	n_namesz;	\/* Name size *\/$/;"	m	struct:elf32_note
+n_type	include/kernel/elf.h	/^  Elf32_Word	n_type;		\/* Content type *\/$/;"	m	struct:elf32_note
+name	include/tar.h	/^	char name[100];$/;"	m	struct:tar_head_struct
+next	include/list.h	/^struct list_head* next,*pre;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+nr_cnt	include/kernel/io.h	/^    size_t nr_cnt;$/;"	m	struct:fs_struct
+o_mode	include/kernel/io.h	/^    unsigned int o_mode;$/;"	m	struct:file
+offset	include/stddef.h	/^	int offset;$/;"	m	struct:__anon6
+offset_hight	x86/x86.h	/^    u16    offset_hight;$/;"	m	struct:gate_struct
+offset_low	x86/x86.h	/^    u16    offset_low;$/;"	m	struct:gate_struct
+open	apps/io.c	/^int open(const char *filename,int mode)$/;"	f
+open	include/kernel/io.h	/^    int (*open  )(struct inode *, struct file *, unsigned int mode);$/;"	m	struct:fops_struct
+open	include/kernel/kmodel.h	/^	int (*open)(struct file *,struct inode *);$/;"	m	struct:file_op
+opendir	include/kernel/io.h	/^    struct inode *(*opendir)(struct inode *, _ci const char *nodename);$/;"	m	struct:iops_struct	typeref:struct:iops_struct::opendir
+opendir	include/kernel/kmodel.h	/^	int (*opendir)(struct dir *,_co struct itemdata *,_ci const char *);$/;"	m	struct:dir_op
+openinode	include/kernel/kmodel.h	/^	int (*openinode)(struct dir *,_co struct inode *,_ci const char *);$/;"	m	struct:dir_op
+org	boot/old/boot.s	/^org 07c00h$/;"	l
+org	boot/old/loader.s	/^org OFFSET_LDR_FILE_SECTOR	;$/;"	l
+outb	x86/system.h	62;"	d
+outdw	x86/system.h	66;"	d
+outw	x86/system.h	64;"	d
+owner_struct	include/kernel/kmodel.h	/^struct owner_struct$/;"	s
+p_align	include/kernel/elf.h	/^  Elf32_Word	p_align;$/;"	m	struct:elf32_phdr
+p_filesz	include/kernel/elf.h	/^  Elf32_Word	p_filesz;$/;"	m	struct:elf32_phdr
+p_flags	include/kernel/elf.h	/^  Elf32_Word	p_flags;$/;"	m	struct:elf32_phdr
+p_memsz	include/kernel/elf.h	/^  Elf32_Word	p_memsz;$/;"	m	struct:elf32_phdr
+p_offset	include/kernel/elf.h	/^  Elf32_Off		p_offset;$/;"	m	struct:elf32_phdr
+p_paddr	include/kernel/elf.h	/^  Elf32_Addr	p_paddr;$/;"	m	struct:elf32_phdr
+p_type	include/kernel/elf.h	/^  Elf32_Word	p_type;$/;"	m	struct:elf32_phdr
+p_vaddr	include/kernel/elf.h	/^  Elf32_Addr	p_vaddr;$/;"	m	struct:elf32_phdr
+paging_startup	x86/x86mm.c	/^void paging_startup()$/;"	f
+paras_cmdline	kernel/cache.c	/^void paras_cmdline(char *cmdline)$/;"	f
+pci_bus	include/kernel/io.h	/^struct pci_bus$/;"	s
+pid_t	include/foolstd.h	/^typedef size_t pid_t;$/;"	t
+pid_t	x86/system.h	/^typedef unsigned int pid_t;$/;"	t
+pmdl	include/kernel/kmodel.h	/^	struct module_struct *pmdl;$/;"	m	struct:ioport_region	typeref:struct:ioport_region::module_struct
+pmw	include/kernel/signal.h	/^	struct mutex_waiter* pmw;$/;"	m	struct:mutex	typeref:struct:mutex::mutex_waiter
+pop	boot/old/floppy.s	/^	pop		ds$/;"	d
+pop	boot/old/string.s	/^	pop		di$/;"	d
+pop	boot/old/string.s	/^	pop		ds$/;"	d
+pop	boot/old/string.s	/^	pop		dx$/;"	d
+pop	boot/old/string.s	/^	pop 	di$/;"	d
+prc	x86/int.c	/^    irqhandle prc;$/;"	m	struct:irq_struct	file:
+pre	include/list.h	/^struct list_head* next,*pre;$/;"	m	struct:list_head	typeref:struct:list_head::
+prefix	include/tar.h	/^	char prefix[155];$/;"	m	struct:tar_head_struct
+printf	apps/file.c	/^int printf(const char *fmt,...)$/;"	f
+printk	kernel/printk.c	/^int printk(const char *fmt,...)$/;"	f
+pthsk	include/kernel/kmodel.h	/^	struct kthread_struct *pthsk;$/;"	m	struct:owner_struct	typeref:struct:owner_struct::kthread_struct
+ptr	x86/x86.h	/^    }ptr;$/;"	m	union:dptr	typeref:struct:dptr::__anon7
+ptsk	include/kernel/kmodel.h	/^	struct task_struct *ptsk;$/;"	m	struct:owner_struct	typeref:struct:owner_struct::task_struct
+ptsk	include/kernel/signal.h	/^	struct kthread_struct *ptsk;$/;"	m	struct:mutex_waiter	typeref:struct:mutex_waiter::kthread_struct
+ptsk	include/kernel/signal.h	/^	struct task_struct *ptsk;	\/*owner who tack this mutex now.*\/$/;"	m	struct:mutex	typeref:struct:mutex::task_struct
+ptsk	include/kernel/task.h	/^    struct task_context *ptsk;$/;"	m	struct:thread_context	typeref:struct:thread_context::task_context
+push	boot/old/floppy.s	/^	push 	ds$/;"	d
+push	boot/old/string.s	/^	push	di$/;"	d
+push	boot/old/string.s	/^	push	ds$/;"	d
+push	boot/old/string.s	/^	push	dx$/;"	d
+push	boot/old/string.s	/^	push 	di$/;"	d
+putchar	apps/file.c	/^int putchar(char ch)$/;"	f
+puts	apps/file.c	/^unsigned int puts(const char *str)$/;"	f
+pvga	kernel/printk.c	/^short *pvga=(short*)0xb8000;$/;"	v
+r_addend	include/kernel/elf.h	/^  Elf32_Sword	r_addend;$/;"	m	struct:elf32_rela
+r_cnt	include/kernel/io.h	/^    int r_cnt;$/;"	m	struct:inode
+r_info	include/kernel/elf.h	/^  Elf32_Word	r_info;$/;"	m	struct:elf32_rel
+r_info	include/kernel/elf.h	/^  Elf32_Word	r_info;$/;"	m	struct:elf32_rela
+r_offset	include/kernel/elf.h	/^  Elf32_Addr	r_offset;$/;"	m	struct:elf32_rel
+r_offset	include/kernel/elf.h	/^  Elf32_Addr	r_offset;$/;"	m	struct:elf32_rela
+read	apps/io.c	/^size_t read(int fd,char *buf,size_t size)$/;"	f
+read	include/kernel/io.h	/^    int (*read  )(struct file *, _uo char *, foff_t, _uo foff_t *);$/;"	m	struct:fops_struct
+read	include/kernel/kmodel.h	/^	int (*read)(struct file *,_uo char *,foff_t,_uo foff_t *,int);$/;"	m	struct:file_op
+read_cpu_counter	x86/system.h	76;"	d
+read_floopy	boot/old/floppy.s	/^read_floopy equ 02h$/;"	d
+readattrib	include/kernel/kmodel.h	/^	int (*readattrib)(struct dir *,_co struct itemattrib *,_ci const char *);$/;"	m	struct:dir_op
+readitem	include/kernel/kmodel.h	/^	int (*readitem)(struct dir *,_co struct itemattrib *,int);$/;"	m	struct:dir_op
+readwritesector	boot/old/floppy.s	/^readwritesector:$/;"	l
+reg_ad	include/drivers/ide.h	/^	}reg_ad;$/;"	m	struct:ide_ctl_ioport	typeref:union:ide_ctl_ioport::__anon5
+reg_altstatus	include/drivers/ide.h	/^	_u16 reg_altstatus;$/;"	m	union:ide_ctl_ioport::__anon5
+reg_cmd	include/drivers/ide.h	/^		_u16 reg_cmd;$/;"	m	union:ide_ctl_ioport::__anon4
+reg_cmd	include/drivers/ide.h	/^	_u8 reg_cmd;$/;"	m	struct:ide_cmd_struct
+reg_count	include/drivers/ide.h	/^	_u16 reg_count;$/;"	m	struct:ide_ctl_ioport
+reg_count	include/drivers/ide.h	/^	_u8 reg_count;$/;"	m	struct:ide_cmd_struct
+reg_data	include/drivers/ide.h	/^	_u16 reg_data;$/;"	m	struct:ide_ctl_ioport
+reg_dev_ctl	include/drivers/ide.h	/^	_u16 reg_dev_ctl;$/;"	m	union:ide_ctl_ioport::__anon5
+reg_dev_ctl	include/drivers/ide.h	/^	_u8 reg_dev_ctl;$/;"	m	struct:ide_cmd_struct
+reg_device	include/drivers/ide.h	/^	_u16 reg_device;$/;"	m	struct:ide_ctl_ioport
+reg_device	include/drivers/ide.h	/^	_u8 reg_device;$/;"	m	struct:ide_cmd_struct
+reg_ef	include/drivers/ide.h	/^	}reg_ef;$/;"	m	struct:ide_ctl_ioport	typeref:union:ide_ctl_ioport::__anon3
+reg_error	include/drivers/ide.h	/^		_u16 reg_error;$/;"	m	union:ide_ctl_ioport::__anon3
+reg_features	include/drivers/ide.h	/^		_u16 reg_features;$/;"	m	union:ide_ctl_ioport::__anon3
+reg_features	include/drivers/ide.h	/^	_u8 reg_features;$/;"	m	struct:ide_cmd_struct
+reg_indentify	include/drivers/ide.h	/^	int  reg_indentify;$/;"	m	struct:ide_ctl_ioport
+reg_lba_high	include/drivers/ide.h	/^	_u16 reg_lba_high;$/;"	m	struct:ide_ctl_ioport
+reg_lba_high	include/drivers/ide.h	/^	_u8 reg_lba_high;$/;"	m	struct:ide_cmd_struct
+reg_lba_low	include/drivers/ide.h	/^	_u16 reg_lba_low;$/;"	m	struct:ide_ctl_ioport
+reg_lba_low	include/drivers/ide.h	/^	_u8 reg_lba_low;$/;"	m	struct:ide_cmd_struct
+reg_lba_mid	include/drivers/ide.h	/^	_u16 reg_lba_mid;$/;"	m	struct:ide_ctl_ioport
+reg_lba_mid	include/drivers/ide.h	/^	_u8 reg_lba_mid;$/;"	m	struct:ide_cmd_struct
+reg_sc	include/drivers/ide.h	/^	}reg_sc;$/;"	m	struct:ide_ctl_ioport	typeref:union:ide_ctl_ioport::__anon4
+reg_status	include/drivers/ide.h	/^		_u16 reg_status;$/;"	m	union:ide_ctl_ioport::__anon4
+registed	x86/int.c	/^    volatile u8  registed;$/;"	m	struct:irq_struct	file:
+register_device	kernel/kmodel.c	/^int register_device(struct device_base *dev)$/;"	f
+register_driver	kernel/kmodel.c	/^int register_driver(struct driver *drv)$/;"	f
+register_fs	kernel/kmodel.c	/^int register_fs(struct fs_struct *fs)$/;"	f
+register_irq	x86/system.h	101;"	d
+release_spinlock	include/kernel/signal.h	30;"	d
+releasemutex	kernel/signal.c	/^int releasemutex(struct mutex *pmt)$/;"	f
+rename	include/kernel/kmodel.h	/^	int (*rename)(struct dir *,struct itemattrib *,_ci const char *);$/;"	m	struct:dir_op
+reset	boot/old/floppy.s	/^reset:$/;"	l
+restor_stack_fram	kernel/schedu.c	/^void restor_stack_fram(_u32 *esp)$/;"	f
+restore_cpu_context	x86/system.h	73;"	d
+restore_flags	x86/system.h	51;"	d
+returnstr	boot/old/output.s	/^returnstr: db 10$/;"	d
+rlst	include/kernel/kmodel.h	/^	struct list_head rlst;$/;"	m	struct:ioport_region	typeref:struct:ioport_region::list_head
+rm	include/kernel/io.h	/^    int (*rm     )(struct inode *, _ci const char *nodename);$/;"	m	struct:iops_struct
+rm	include/kernel/kmodel.h	/^	int (*rm   )(struct dir *,_ci const char *);$/;"	m	struct:dir_op
+rmdir	include/kernel/io.h	/^    int (*rmdir  )(struct inode *, _ci const char *nodename);$/;"	m	struct:iops_struct
+rmdir	include/kernel/kmodel.h	/^	int (*rmdir)(struct dir *,_ci const char *);$/;"	m	struct:dir_op
+rmnode	include/kernel/io.h	/^    int (*rmnode )(struct inode *, _ci const char *nodename);$/;"	m	struct:iops_struct
+root_debug	kernel/cache.c	/^int   root_debug=0;$/;"	v
+root_dev	kernel/cache.c	/^char *root_dev=NULL;$/;"	v
+root_tty	kernel/cache.c	/^char *root_tty=NULL;$/;"	v
+s-objs	Makefile	/^s-objs=$/;"	m
+s-objs	lib/Makefile	/^s-objs=string.o stdlib.o avl.o bits.o$/;"	m
+save_cpu_context	x86/system.h	70;"	d
+save_flags	x86/system.h	49;"	d
+save_stack_fram	kernel/schedu.c	/^void save_stack_fram(_u32 *esp)$/;"	f
+sbase	x86/x86.h	/^       struct seg_descriptor *sbase;$/;"	m	union:dptr::__anon7::__anon8	typeref:struct:dptr::__anon7::__anon8::seg_descriptor
+sbop	include/kernel/io.h	/^    const struct  sbop_struct *sbop;$/;"	m	struct:fs_struct	typeref:struct:fs_struct::sbop_struct
+sbops_struct	include/kernel/io.h	/^struct sbops_struct$/;"	s
+scan	kernel/cache.c	/^int scan( )$/;"	f
+scanf	apps/file.c	/^int scanf(const char *fmt,...)$/;"	f
+search_driver	kernel/kmodel.c	/^struct driver * search_driver(unsigned int major)$/;"	f
+seek	apps/io.c	/^size_t seek(int fd,int offset,int base)$/;"	f
+seek	include/kernel/io.h	/^    int (*seek  )(struct file *, int offset, int base);$/;"	m	struct:fops_struct
+seg_descriptor	x86/x86.h	/^struct seg_descriptor$/;"	s
+selector	x86/x86.h	/^    u16    selector;$/;"	m	struct:gate_struct
+semaphore	include/kernel/signal.h	/^struct semaphore{$/;"	s
+setcursor	kernel/printk.c	/^void setcursor(int x,int y)$/;"	f
+sh_addr	include/kernel/elf.h	/^  Elf32_Addr	sh_addr;$/;"	m	struct:__anon2
+sh_addralign	include/kernel/elf.h	/^  Elf32_Word	sh_addralign;$/;"	m	struct:__anon2
+sh_entsize	include/kernel/elf.h	/^  Elf32_Word	sh_entsize;$/;"	m	struct:__anon2
+sh_flags	include/kernel/elf.h	/^  Elf32_Word	sh_flags;$/;"	m	struct:__anon2
+sh_info	include/kernel/elf.h	/^  Elf32_Word	sh_info;$/;"	m	struct:__anon2
+sh_link	include/kernel/elf.h	/^  Elf32_Word	sh_link;$/;"	m	struct:__anon2
+sh_name	include/kernel/elf.h	/^  Elf32_Word	sh_name;$/;"	m	struct:__anon2
+sh_offset	include/kernel/elf.h	/^  Elf32_Off	sh_offset;$/;"	m	struct:__anon2
+sh_size	include/kernel/elf.h	/^  Elf32_Word	sh_size;$/;"	m	struct:__anon2
+sh_type	include/kernel/elf.h	/^  Elf32_Word	sh_type;$/;"	m	struct:__anon2
+signal	kernel/signal.c	/^int signal(struct semaphore *psp)$/;"	f
+size	include/tar.h	/^	char size[12];$/;"	m	struct:tar_head_struct
+size_t	include/stddef.h	/^typedef unsigned int size_t;$/;"	t
+slave_dev	include/kernel/kmodel.h	/^	struct device_base *slave_dev[K_MAX_SLAVE_DEV_SUPPORT];$/;"	m	struct:device	typeref:struct:device::device_base
+spin_lock	include/kernel/signal.h	/^struct spin_lock$/;"	s
+spinlock	include/kernel/signal.h	21;"	d
+spinlock_init	include/kernel/signal.h	25;"	d
+spinunlock	include/kernel/signal.h	23;"	d
+sprintf	lib/stdlib.c	/^int sprintf(char *buf,const char *fmt,...)$/;"	f
+ss	include/kernel/schedu.h	/^	_u32		ss;			\/\/16$/;"	m	struct:stack_regs_struct
+ss	x86/system.h	/^    u32  esp, ss;$/;"	m	struct:cpu_regs
+st_info	include/kernel/elf.h	/^  unsigned char	st_info;$/;"	m	struct:elf32_sym
+st_name	include/kernel/elf.h	/^  Elf32_Word	st_name;$/;"	m	struct:elf32_sym
+st_other	include/kernel/elf.h	/^  unsigned char	st_other;$/;"	m	struct:elf32_sym
+st_shndx	include/kernel/elf.h	/^  Elf32_Half	st_shndx;$/;"	m	struct:elf32_sym
+st_size	include/kernel/elf.h	/^  Elf32_Word	st_size;$/;"	m	struct:elf32_sym
+st_value	include/kernel/elf.h	/^  Elf32_Addr	st_value;$/;"	m	struct:elf32_sym
+stack_regs_struct	include/kernel/schedu.h	/^struct stack_regs_struct$/;"	s
+start	include/kernel/kmodel.h	/^	unsigned short start;$/;"	m	struct:ioport_region
+start_kernel	kernel/cache.c	/^void start_kernel(char *cmdline)$/;"	f
+stderr	apps/file.c	/^FILE *stdin=NULL,*stdout=NULL,*stderr=NULL;$/;"	v
+stderr	include/kernel/io.h	22;"	d
+stderr	include/kernel/kmodel.h	54;"	d
+stdin	apps/file.c	/^FILE *stdin=NULL,*stdout=NULL,*stderr=NULL;$/;"	v
+stdin	include/kernel/io.h	20;"	d
+stdin	include/kernel/kmodel.h	52;"	d
+stdin_buf	apps/file.c	/^unsigned short stdin_buf[1024];$/;"	v
+stdout	apps/file.c	/^FILE *stdin=NULL,*stdout=NULL,*stderr=NULL;$/;"	v
+stdout	include/kernel/io.h	21;"	d
+stdout	include/kernel/kmodel.h	53;"	d
+stdout_buf	apps/file.c	/^unsigned short stdout_buf[25*80];$/;"	v
+sti	x86/system.h	48;"	d
+strcat	lib/string.c	/^size_t strcat(char * des,const char * src)$/;"	f
+strcmp	lib/string.c	/^int strcmp(const char * des,const char * src)$/;"	f
+strcmp	x86/system.h	43;"	d
+strcpy	lib/string.c	/^size_t strcpy(char * des,const char * src)$/;"	f
+strcpy	x86/system.h	37;"	d
+strlen	lib/string.c	/^size_t strlen(const char* des)$/;"	f
+strncmp	lib/string.c	/^int strncmp(const char * des,const char * src,size_t max_)$/;"	f
+strncpy	lib/string.c	/^size_t strncpy(char *des,const char *src,size_t max_)$/;"	f
+strncpy	x86/system.h	40;"	d
+strnlen	lib/string.c	/^size_t strnlen(const char *des,size_t max_)$/;"	f
+strstr	lib/string.c	/^const char * strstr(const char * des,const char * src)$/;"	f
+superblk	include/kernel/kmodel.h	/^struct superblk$/;"	s
+sys_check_taskfile	kernel/kmodel.c	/^int sys_check_taskfile(struct task_struct *ptsk,const struct inode *pi)$/;"	f
+sys_do_open	kernel/kmodel.c	/^int sys_do_open(struct dir *root,unsigned int mode,const char *ufilename)$/;"	f
+sys_do_openfile	kernel/kmodel.c	/^int sys_do_openfile(struct inode *pi,struct file **ppf,unsigned int mode)$/;"	f
+sys_set_taskfile	kernel/kmodel.c	/^int sys_set_taskfile(struct task_struct *ptsk,struct file *pf)$/;"	f
+sys_time	include/kernel/time.h	/^struct sys_time$/;"	s
+syscall	apps/entry.s	/^syscall:$/;"	l
+sysfilename	boot/old/loader.s	/^sysfilename 	db "KSYSTEM "		; 鎵撳寘鐨勬枃浠�$/;"	d
+t_cr3	include/kernel/schedu.h	/^	size_t t_cr3;$/;"	m	struct:task_struct
+t_create	include/kernel/io.h	/^	time_t t_create; \/* can not be modify since created. *\/$/;"	m	struct:metadata
+t_create	include/kernel/kmodel.h	/^	time_t t_create;$/;"	m	struct:itemattrib
+t_day	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_fcnt	include/kernel/schedu.h	/^	size_t t_fcnt;$/;"	m	struct:task_struct
+t_file	include/kernel/schedu.h	/^	struct file *t_file[K_MAX_FILE_OPEN_PPS];$/;"	m	struct:task_struct	typeref:struct:task_struct::file
+t_flck	include/kernel/schedu.h	/^	struct spin_lock t_flck;$/;"	m	struct:task_struct	typeref:struct:task_struct::spin_lock
+t_hour	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_lastaccess	include/kernel/kmodel.h	/^	time_t t_lastaccess;$/;"	m	struct:itemattrib
+t_level	include/kernel/schedu.h	/^	int		t_level;$/;"	m	struct:task_struct
+t_lst	include/kernel/schedu.h	/^	struct list_head t_lst;$/;"	m	struct:task_struct	typeref:struct:task_struct::list_head
+t_lstacc	include/kernel/io.h	/^	time_t t_lstacc;$/;"	m	struct:metadata
+t_mavlsize	x86/x86mm.c	/^u32 t_mavlsize=0;$/;"	v
+t_memsize	x86/x86mm.c	/^u32 t_memsize=0;$/;"	v
+t_min	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_month	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_msglck	include/kernel/schedu.h	/^	struct spin_lock t_msglck;$/;"	m	struct:task_struct	typeref:struct:task_struct::spin_lock
+t_name	include/kernel/schedu.h	/^	char t_name[32];$/;"	m	struct:task_struct
+t_pagecnt	x86/x86mm.c	/^u32 t_pagecnt=0;$/;"	v
+t_pavlcnt	x86/x86mm.c	/^u32 t_pavlcnt=0;$/;"	v
+t_pcommitcnt	x86/x86mm.c	/^u32 t_pcommitcnt=0;$/;"	v
+t_pid	include/kernel/schedu.h	/^	pid_t	t_pid;	$/;"	m	struct:task_struct
+t_pid	include/kernel/schedu.h	/^	pid_t	t_pid;$/;"	m	struct:kthread_struct
+t_pmsgq	include/kernel/schedu.h	/^	struct message *t_pmsgq;$/;"	m	struct:task_struct	typeref:struct:task_struct::message
+t_pparent	include/kernel/schedu.h	/^	struct task_struct *t_pparent;$/;"	m	struct:task_struct	typeref:struct:task_struct::task_struct
+t_ppid	include/kernel/schedu.h	/^	pid_t	t_ppid;$/;"	m	struct:task_struct
+t_sec	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_thrd	include/kernel/schedu.h	/^	struct kthread_struct *t_thrd[K_MAX_THREAD_CNT_PPS];$/;"	m	struct:task_struct	typeref:struct:task_struct::kthread_struct
+t_threadcnt	include/kernel/schedu.h	/^	size_t t_threadcnt;$/;"	m	struct:task_struct
+t_weekday	include/kernel/time.h	/^	_u8 t_sec,t_min,t_hour,t_weekday,t_day,t_month;$/;"	m	struct:sys_time
+t_year	include/kernel/time.h	/^	_u16 t_year;$/;"	m	struct:sys_time
+tar_head_struct	include/tar.h	/^struct tar_head_struct{$/;"	s
+task_context	include/kernel/task.h	/^struct task_context$/;"	s
+task_struct	include/kernel/schedu.h	/^struct task_struct$/;"	s
+test0andset	lib/bits.c	/^int test0andset(size_t index,volatile void *buf)$/;"	f
+test1andset	lib/bits.c	/^int test1andset(size_t index,volatile void *buf)$/;"	f
+th_id	include/kernel/schedu.h	/^	pid_t 	th_id;$/;"	m	struct:kthread_struct
+th_kstack	include/kernel/schedu.h	/^	_u32 	th_kstack[0x400]; \/\/ 4K byte,1024 items,涓嶈淇敼杩欎釜鎴愬憳鐨勪綅缃�$/;"	m	struct:kthread_struct
+th_ptsk	include/kernel/schedu.h	/^	struct task_struct *th_ptsk;$/;"	m	struct:kthread_struct	typeref:struct:kthread_struct::task_struct
+th_regs	include/kernel/schedu.h	/^	struct stack_regs_struct th_regs;$/;"	m	struct:kthread_struct	typeref:struct:kthread_struct::stack_regs_struct
+th_status	include/kernel/schedu.h	/^	_u16	th_status;$/;"	m	struct:kthread_struct
+th_tckremain	include/kernel/schedu.h	/^	_u32	th_tckremain;$/;"	m	struct:kthread_struct
+th_tckused	include/kernel/schedu.h	/^	_u64	th_tckused;$/;"	m	struct:kthread_struct
+thr_running	kernel/schedu.c	/^struct kthread_struct *thr_running=NULL;$/;"	v	typeref:struct:kthread_struct
+thrd_context	include/kernel/task.h	/^    struct cpu_regs thrd_context;$/;"	m	struct:thread_context	typeref:struct:thread_context::cpu_regs
+thrd_id	include/kernel/task.h	/^    pid_t  thrd_id;$/;"	m	struct:thread_context
+thrd_lst	include/kernel/task.h	/^    struct list_head thrd_lst;$/;"	m	struct:thread_context	typeref:struct:thread_context::list_head
+thrd_pid	include/kernel/task.h	/^    pid_t  thrd_pid;$/;"	m	struct:thread_context
+thread_context	include/kernel/task.h	/^struct thread_context$/;"	s
+time_t	x86/system.h	/^typedef unsigned int time_t;$/;"	t
+times	boot/old/boot.s	/^times 510-($-$$) db 0	; do not modify there$/;"	l
+tolower	lib/string.c	/^size_t tolower(char * des)$/;"	f
+tonlower	lib/string.c	/^size_t tonlower(char * des,size_t max_)$/;"	f
+tonupper	lib/string.c	/^size_t tonupper(char * des,size_t max_)$/;"	f
+touch	include/kernel/io.h	/^    struct inode *(*touch )(struct inode *, const char *nodename);$/;"	m	struct:iops_struct	typeref:struct:iops_struct::touch
+touch	include/kernel/kmodel.h	/^	int (*touch)(struct dir *,_co struct itemattrib *,_ci const char *);$/;"	m	struct:dir_op
+toupper	lib/string.c	/^size_t toupper(char * des)$/;"	f
+tsk_running	kernel/schedu.c	/^struct task_struct *tsk_running=NULL;$/;"	v	typeref:struct:task_struct
+type	x86/int.c	/^    u8  type;$/;"	m	struct:irq_struct	file:
+typeflag	include/tar.h	/^	char typeflag;$/;"	m	struct:tar_head_struct
+u	x86/x86.h	/^       }u;$/;"	m	struct:dptr::__anon7	typeref:union:dptr::__anon7::__anon8
+u16	include/stddef.h	/^typedef unsigned short u16;$/;"	t
+u32	include/stddef.h	/^typedef unsigned int u32;$/;"	t
+u64	include/stddef.h	/^typedef unsigned long long u64;$/;"	t
+u8	include/stddef.h	/^typedef unsigned char u8;$/;"	t
+uid	include/tar.h	/^	char uid[8];$/;"	m	struct:tar_head_struct
+umount	include/kernel/kmodel.h	/^	int (*umount)(struct inode *,void **);$/;"	m	struct:fs_struct
+uname	include/tar.h	/^	char uname[32];$/;"	m	struct:tar_head_struct
+unkown	include/tar.h	/^	char unkown[12];$/;"	m	struct:tar_head_struct
+unload_driver	kernel/kmodel.c	/^int unload_driver(dev_t devnum)$/;"	f
+unlock	include/kernel/io.h	/^    int (*unlock)(struct file *);$/;"	m	struct:fops_struct
+unregister_device	kernel/kmodel.c	/^struct device_base * unregister_device(dev_t devnum)$/;"	f
+unregister_driver	kernel/kmodel.c	/^struct driver *unregister_driver(unsigned int major)$/;"	f
+unregister_irq	x86/system.h	104;"	d
+update	include/kernel/io.h	/^    int (*update )(struct inode *, const struct metadata *, unsigned int mask);$/;"	m	struct:iops_struct
+v_lable	include/kernel/kmodel.h	/^	char v_lable[K_LABLE_MAX_LEN];$/;"	m	struct:superblk
+v_lbacnt	include/kernel/kmodel.h	/^	size_t v_lbacnt;$/;"	m	struct:superblk
+v_lbastart	include/kernel/kmodel.h	/^	size_t v_lbastart;$/;"	m	struct:superblk
+va_arg	include/stddef.h	37;"	d
+va_end	include/stddef.h	36;"	d
+va_start	include/stddef.h	31;"	d
+value	include/kernel/signal.h	/^	volatile int value;$/;"	m	struct:semaphore
+var_arg	lib/stdlib.c	/^void* var_arg(var_list* vl,unsigned int size)$/;"	f
+var_list	include/stddef.h	/^}var_list;$/;"	t	typeref:struct:__anon6
+vct	x86/int.c	/^struct irq_struct vct[IRQCNT];$/;"	v	typeref:struct:irq_struct
+version	include/tar.h	/^	char version[2];$/;"	m	struct:tar_head_struct
+vga_mem_base	include/drivers/vga.h	/^	unsigned short *vga_mem_base;$/;"	m	struct:vga_private
+vga_private	include/drivers/vga.h	/^struct vga_private$/;"	s
+vprintk	kernel/printk.c	/^int vprintk(char *buf)$/;"	f
+vsprintf	lib/stdlib.c	/^int vsprintf(char *buf,const char *fmt,var_list vl)$/;"	f
+wait	kernel/signal.c	/^int wait(struct semaphore *psp)$/;"	f
+waitchild	apps/ps.c	/^int waitchild(void)$/;"	f
+waitformutex	kernel/signal.c	/^int waitformutex(struct mutex *pmt)$/;"	f
+write	apps/io.c	/^size_t write(int fd,const char *buf,size_t size)$/;"	f
+write	include/kernel/io.h	/^    int (*write )(struct file *, _ui char *, foff_t, _uo foff_t *);$/;"	m	struct:fops_struct
+write	include/kernel/kmodel.h	/^	int (*write)(struct file *,_ui const char *,foff_t,_uo foff_t *,int);$/;"	m	struct:file_op
+write_floopy	boot/old/floppy.s	/^write_floopy equ 03h$/;"	d
+wstrcat	lib/string.c	/^size_t wstrcat(wchar_t * des,const wchar_t * src)$/;"	f
+wstrcmp	lib/string.c	/^int wstrcmp(const wchar_t * des,const wchar_t * src)$/;"	f
+wstrcpy	lib/string.c	/^size_t wstrcpy(wchar_t * des,const wchar_t * src)$/;"	f
+wstrlen	lib/string.c	/^size_t wstrlen(const wchar_t* des)$/;"	f
+wstrncmp	lib/string.c	/^int wstrncmp(const wchar_t * des,const wchar_t * src,size_t max_)$/;"	f
+wstrncpy	lib/string.c	/^size_t wstrncpy(wchar_t *des,const wchar_t *src,size_t max_)$/;"	f
+wstrnlen	lib/string.c	/^size_t wstrnlen(const wchar_t *des,size_t max_)$/;"	f
+wstrstr	lib/string.c	/^const wchar_t * wstrstr(const wchar_t * des,const wchar_t * src)$/;"	f
+wtolower	lib/string.c	/^size_t wtolower(wchar_t * des)$/;"	f
+wtonlower	lib/string.c	/^size_t wtonlower(wchar_t * des,size_t max_)$/;"	f
+wtonupper	lib/string.c	/^size_t wtonupper(wchar_t * des,size_t max_)$/;"	f
+wtoupper	lib/string.c	/^size_t wtoupper(wchar_t * des)$/;"	f
+x86_exp_handle	x86/int.c	/^int x86_exp_handle(u8 vct, int ercode, u16 cs, u32 eip, u32 eflags)$/;"	f
+x86_exp_unhandle	x86/int.c	/^int x86_exp_unhandle$/;"	f
+x86_irq_handle	x86/int.c	/^int x86_irq_handle(u8 vct)$/;"	f
+x86_irq_unhandle	x86/int.c	/^int x86_irq_unhandle(u8 vct)$/;"	f
+x86_main	x86/x86.c	/^void x86_main()$/;"	f
+y-objs	Makefile	/^y-objs=$/;"	m
+y-objs	x86/Makefile	/^y-objs=entry.o int.o x86.o x86mm.o$/;"	m

@@ -1,0 +1,112 @@
+10
+
+dir
+0
+svn://192.168.1.103/fdos/include
+svn://192.168.1.103/fdos
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+56235b99-f7d1-4452-b320-9fbb25dae676
+
+stddef.h
+file
+
+
+
+add
+
+foolstd.h
+file
+
+
+
+add
+
+kernel
+dir
+
+
+
+add
+
+list.h
+file
+
+
+
+add
+
+bits.h
+file
+
+
+
+add
+
+stdlib.h
+file
+
+
+
+add
+
+avl.h
+file
+
+
+
+add
+
+stdio.h
+file
+
+
+
+add
+
+tar.h
+file
+
+
+
+add
+
+string.h
+file
+
+
+
+add
+
+malloc.h
+file
+
+
+
+add
+
+drivers
+dir
+
+
+
+add
+

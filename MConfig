@@ -1,0 +1,14 @@
+[config]
+ARCH
+    string
+    default x86
+    comment "fdos archive configure."
+
+[config]
+KENTRY
+    string
+    default 0x00100100
+    comment "fdos kernel code entry address."
+
+[config]
+MFS-CONFIG

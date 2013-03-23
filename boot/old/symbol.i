@@ -1,0 +1,33 @@
+; symbol.inc
+; bedreamer@163.com
+
+%macro EXPORTSYMBOL 1
+	global %1
+%endmacro
+
+%macro IMPORTSYMBOL 1
+	extern %1
+%endmacro
+
+%macro define 2
+	%1	equ		%2
+%endmacro
+
+SELECTOR_DUMMY		equ	0x00
+SELECTOR_KERNEL_CS	equ	0x08
+SELECTOR_KERNEL_DS	equ	0x10
+SELECTOR_KERNEL_GS	equ	0x10
+SELECTOR_KERNEL_FS	equ	0x10
+SELECTOR_KERNEL_ES	equ	0x10
+SELECTOR_KERNEL_SS	equ	0x18
+SELECTOR_CS_USER	equ	0x20
+SELECTOR_DS_USER	equ	0x28
+SELECTOR_GS_USER	equ	0x28
+SELECTOR_ES_USER	equ	0x28
+SELECTOR_FS_USER	equ	0x28
+SELECTOR_SS_USER	equ	0x30
+SELECTOR_TSS		equ	0x38
+
+
+
+

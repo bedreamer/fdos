@@ -1,0 +1,90 @@
+WHAT'S THE WORK OF THIS MODULE?
+===============================
+
+This directory should complire seperate.
+
+DO WHAT
+===================
+   1. SET CPU GDT and IDT. 
+   2. Initlize interrupt manage unit.
+   3. Initlize page manage unit.
+   4. Jump to fdos kernel main function.
+
+DETAILE
+===================
+start.s ------- kernel image start entry code put here. 
+x86.c   ------- CPU initlize code put here.
+irq.s   ------- stack and heap switch code put here.
+int.c   ------- interrupt manage code put here.
+x86mm.c ------- page manage unit code put here.
+
+start.s    Intel Assembly
+--------------------------
+   code in start.s is the first instruction will be excuted, 
+   it is jump from loader code at earlyer time. 
+   these code do steps as follow:
+   1. call a C-language function to initilize GDT, IDT and TSS
+      then reload them.
+   2. call x86_main then do x86 plateform initlize.
+
+x86.c      C Language
+--------------------------
+   code in x86.c do some specilize action, such as make a GDT,
+   GDTPTR, IDT, IDTPTR and other descriptors then put these 
+   data into given memory and wait for used. 
+   these code do steps as follow also:
+   1. Initlize interrupt manage uint.
+   2. Initlize page manage unit. 
+   3. start fdos kernel. 
+
+irq.s      Intel Assembly
+--------------------------
+   code in irq.s do some stack switch action, such as stor CPU
+   context, CPU privellige switch, such as switch from RING0 
+   to RING3, switch from SYSCALL to UER-MODE, switch from INT 
+   to RING0 or RING3 etc.
+   Althoug this file do many things but it also do something
+   as following steps:
+   1. save current CPU context into some place.
+   2. set CPU contex as needed enviroment.
+   3. turn to needed code.
+   4. restor CPU context. 
+   5. return to needed context.
+
+int.c      C Language
+---------------------------
+   code in int.c do interrupt route and some default procedure
+   this module route IRQ to driver procedure.
+   If driver need some IRQ, then the driver need register a 
+   interrupt procedure function into this module.
+   thie module works as fllowing:
+   1. call registed function if interrupt comes. 
+   2. set some system flag.
+
+   functions:
+   1> offer a interrupt interface.
+   2> interrupt route. 
+
+x86mm.c    C Language
+----------------------------
+    code in x86mm.c was page manage unit. 
+    this module offer interrface as follow:
+    1: page alloc methord.
+    2: page free methord.
+    3: page swap methord.
+
+
+HOW TO WORK
+============================
+
+INTERRUPT
+----------------------------
+   CPU run as manage mode (core) until run first APP. 
+There are some case could set cpu into interrupt mode as follow:
+1. running in user mode (ring3) but a hardware interrupt come;
+2. running in core mode (ring0) but a hardware interrupt come;
+3. running in core mode (interrupt mode) but other hardware interrupt comes;
+4. running in core mode (system call mode) but other hardware interrupt come;
+
+ENJOY IT
+============================

@@ -1,0 +1,20 @@
+FDOS
+========
+   FDOS 是一个类似于DOS的小程序，为了自由的控制计算机周边设备而编写。
+
+ENVIROMENT
+========
+   你需要有适当的gcc 编译器（版本未定）套件,连接器，汇编器（NASM），
+调试器bochs搭配kdbg、或VirtualBox，使用linux兼容系统，bash，
+make。
+
+COMPLIRE
+========
+> make
+
+DEBUG
+========
+> make & make debug
+
+CONTACT ME <cuplision@163.com>
+
