@@ -17,21 +17,24 @@ AS=nasm
 LD=ld
 AR=ar
 MAKE=make
-#MAKEPARAM=--no-print-directory
-MAKEPARAM=
+MAKEPARAM=--no-print-directory
+#MAKEPARAM=
 OMIT=-
 PWD=pwd
 WORKDIR=$(shell pwd)
 IMGFILE=$(WORKDIR)/floppy.img
 Q=@
 #Q=
-CFLAGS=-D_KERNEL_ -D_VERSION_=$(RELEASE) -I$(WORKDIR)/$(ARCH) -I$(WORKDIR)/include -Wall -ffreestanding \
-       -fno-builtin -fno-builtin-function -fno-stack-protector -z nodefaultlib -I$(WORKDIR)/include/drivers -c 
+CFLAGS=-D_KERNEL_ -D_VERSION_=$(RELEASE) -I$(WORKDIR)/$(ARCH)\
+        -I$(WORKDIR)/include -Wall -ffreestanding \
+       -fno-builtin -fno-builtin-function -fno-stack-protector\
+         -z nodefaultlib -I$(WORKDIR)/include/drivers -c 
 CCFLAGS+=-D_ARCH_$(ARCH)_
 CBUILDIN=-D_BUILDIN_ $(CFLAGS)
 # used for some directory.
 CPFLAGS=
 ASFLAGS+=-I $(WORKDIR)/include/ -I $(WORKDIR)/$(ARCH) -f elf
+BINASFLAGS=
 # build-in objects.
 y-objs=
 yobjs-list=$(WORKDIR)/.yobjs
@@ -41,9 +44,13 @@ mobjs-list=$(WORKDIR)/.mobjs
 # separate objects.
 s-objs=
 sobjs-list=$(WORKDIR)/.sobjs
-PHONY+=y-objs m-objs s-objs
-EXPORTS+=KERNELFILE VERSION CC AS LD AR MAKE MAKEPARAM OMIT PWD ARCH WORKDIR IMGFILE Q CFLAGS CCFLAGS CMODULE CBUILDIN ASFLAGS \
-         CPFLAGS yobjs-list mobjs-list sobjs-list
+# binary objects.
+b-objs=
+PHONY+=y-objs m-objs s-objs b-objs
+EXPORTS+=KERNELFILE VERSION CC AS LD AR MAKE MAKEPARAM OMIT \
+        PWD ARCH WORKDIR IMGFILE Q CFLAGS CCFLAGS CMODULE \
+        CBUILDIN ASFLAGS BINASFLAGS CPFLAGS yobjs-list mobjs-list\
+         sobjs-list
 SEP-DIRS=kernel lib $(ARCH)
 # must be the last one.
 LAST-DIR=boot

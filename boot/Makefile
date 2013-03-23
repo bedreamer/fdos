@@ -1,16 +1,13 @@
 # Makefile for boot image.
-boot-file:=./old/boot.bin
-loader-file:=./old/loader.bin
-s-deps:=$(WORKDIR)/$(KERNELFILE) $(boot-file) $(loader-file)
-#sub-dirs:=old
-
-#all:$(WORKDIR)/$(KERNELFILE) $(boot-loader)
-clean:
-	$(Q)$(MAKE) -C old clean 2>/dev/null
+use-boot:=old
+boot-files:=./$(use-boot)/boot.bin
+loader-file:=./$(use-boot)/loader.bin
+nothing:=boot-img
+sub-dirs:=old
 
 # FIXME. You may need root permision.
-boot-img: $(boot-loader)
-	$(Q)echo "    MAKE     image.";
+boot-img: $(WORKDIR)/$(KERNELFILE)
+	$(Q)echo "    MAKE      image.";
 	$(Q)dd if=$(boot-files) of=$(IMGFILE) bs=512 count=1 2>/dev/null
 	$(Q)dd if=/dev/zero of=$(IMGFILE) seek=1 bs=512 count=2879 oflag=append 2>/dev/null
 	$(Q)sudo rm .tmp -rf
@@ -26,12 +23,13 @@ boot-img: $(boot-loader)
 	$(Q)echo "+   `date -R`"
 	$(Q)echo "+-----------------------------------------------------------------------------"
 
-#$(boot-loader): 
-#	$(Q)$(MAKE) -C old all 2>/dev/null
+boot-loader: 
+	$(Q)$(MAKE) -C old all 2>/dev/null
 
 $(WORKDIR)/$(KERNELFILE):
-	$(Q)echo "    LD       $(KERNELFILE)";
+	$(Q)echo "    LD        $(KERNELFILE)";
 	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list)` `cat $(sobjs-list)`
 	$(Q)echo "> Build $(KERNELFILE) done. `date -R`"
 
-.PHONY : all boot-img
+.PHONY : boot-loader boot-img
+include $(WORKDIR)/Rule.make

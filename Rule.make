@@ -27,7 +27,7 @@ endif
 # for module complire.
 $(m-objs) : $(m-deps)
 
-all : $(s-deps) $(y-deps) $(m-objs) $(suball)
+all : $(b-objs) $(s-deps) $(y-deps) $(m-objs) $(suball) $(nothing)
 	$(Q)$(OMIT)for o in $(y-deps); do PWD=`pwd`; echo $$PWD/$$o >> $(yobjs-list); done;
 	$(Q)$(OMIT)for o in $(s-deps); do PWD=`pwd`; echo $$PWD/$$o >> $(sobjs-list); done
 PHONY+=all
@@ -42,16 +42,16 @@ PHONY+=clean
 	$(Q)$(CC) $(CFLAGS) $(CCFLAGS) $(CPFLAGS) -o $@ $<
 
 %.o : %.s Makefile
-	$(Q)echo "    NASM        `pwd`/$<"
+	$(Q)echo "    ASM         `pwd`/$<"
 	$(Q)$(AS) $(ASFLAGS) -o $@ $<
 
-%.bin : %s Makefile
-	$(Q)echo "    NASM [BIN]  `pwd`/$<"
-	$(Q)$(AS) -o $@ $<
+%.bin : %.s Makefile
+	$(Q)echo "    ASM [BIN]  `pwd`/$<"
+	$(Q)$(AS) $(BINASFLAGS) -o $@ $<
 
 # kernel module file is a share libary file.
 %.ko : $(m-deps) Makefile
-	$(Q)echo "    LD [M]   $@"
+	$(Q)echo "    LD [M]    $@"
 	$(Q)$(LD) --shared $(m-deps) -o $@
 	$(Q)echo "`pwd`/$@" >> $(mobjs-list); done
 
