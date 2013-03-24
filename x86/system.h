@@ -30,7 +30,7 @@ struct cpu_regs
 extern size_t __memcopy(char *, const char *, size_t);
 #define memcpy(des, src, cnt) \
    __memcopy(des, (const char*)src, (size_t)cnt)
-extern size_t __memset(char *, const char *, size_t);
+extern size_t __memset(char *, int, size_t);
 #define memset(des, f, cnt) \
    __memset(des, f, (size_t)cnt)
 extern size_t __strcpy(char *, const char *);
