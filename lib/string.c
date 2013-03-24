@@ -28,7 +28,7 @@ size_t memmove(void * des,const void * src,size_t cnt)
 	}else return 0;
 }
 
-size_t __memset(void * des,int tom,size_t cnt)
+size_t __memset(char * des,int tom,size_t cnt)
 #define memset __memset
 {
 	auto void *tmp = des;

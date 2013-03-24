@@ -32,7 +32,7 @@ extern size_t __memcopy(char *, const char *, size_t);
    __memcopy(des, (const char*)src, (size_t)cnt)
 extern size_t __memset(char *, const char *, size_t);
 #define memset(des, f, cnt) \
-   __memset(des, (const char*)f, (size_t)cnt)
+   __memset(des, f, (size_t)cnt)
 extern size_t __strcpy(char *, const char *);
 #define strcpy(des, src) \
    __strcpy(des, (const char*)src)

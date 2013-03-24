@@ -68,7 +68,7 @@ extern size_t
 	size_t/*length to move in byte*/);
 extern size_t 
 	memset(
-	void */*denation*/,
+	char */*denation*/,
 	int/*fill data*/,
 	size_t/*size of memory to set.*/);
 
