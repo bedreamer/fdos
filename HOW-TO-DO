@@ -1,0 +1,36 @@
+*****
+  How to add a new directory into workspace and how to compire source in it?
+    ** assume you want add a directory named `dir-a`, source path is `SOURCEDIR`;
+       STEP 1. create the directory.
+       STEP 2. Modify '`SOURCEDIR`/Makefile':
+               case for complire normal:
+                    SUB-DIRS:=dir-list `dir-a`
+               case for complire separate:
+                    SEP-DIRS+=dir-list `dir-a`;
+       STEP 3. change directory into `dir-a` and touch Makefile.
+       STEP 4. write some pre-define values:
+               case 1 for module complire:
+                    m-objs:=`module.ko`
+                    m-deps:=`module-objs-list ...`
+                    include $(WORKDIR)/Rule.make
+               case 2 for build-in module:
+                    y-deps:=`objs-list ...`
+                    include $(WORKDIR)/Rule.make
+               case 3 for sub-directory complire:
+                (.NOTE you can complire some objects in current directory use case 1, 2.)
+                    m-objs:=`module.ko`
+                    m-deps:=`module-objs-list ...`
+                    y-deps:=`objs-list ...`
+                    s-deps:=`objs-list ...`
+                    sub-dirs:=`dirs-list ...`
+                    include $(WORKDIR)/Rule.make
+        STEP 5. enjoy your-self.
+
+*****
+  How to config some macro?
+    ** assume there is a file `.config`, `.exports`. 
+    ** you want to export macro named MY-CONFIG.
+       add MY-CONFIG=[m|y|s] into .config
+       add EXPORTS+=MY-CONFIG into .exports.
+
+
