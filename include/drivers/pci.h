@@ -5,6 +5,8 @@
  */
 #ifndef _PCI_H_
 #define _PCI_H_
+#include <kernel/kernel.h>
+#include <kernel/printk.h>
 #include <kernel/list.h>
 
 /**
@@ -85,9 +87,22 @@
  */
 struct pci_bus;
 
+struct pci_controller
+{
+};
+
+struct pci_config_struct
+{
+    unsigned short id_vendor;
+    unsigned short id_device;
+    unsigned short cmd;
+    unsigned short status;
+}__align(char);
+
 struct pci_dev
 {
     unsigned char n_bus, n_dev, n_func;
+    struct pci_config_struct config;
 
     struct pci_bus *p_bus;
     struct list_head devlst;
@@ -105,16 +120,76 @@ struct pci_bus
 
 #define PCI_CFG_ADDR 0xCF8
 #define PCI_CFG_DATA 0xCFC
+#define PCI_INVALID_ID 0xFFFFFFFF
 void pci_bus_init(void);
 void pci_bus_scan(unsigned char);
 void pci_dev_scan(unsigned char, unsigned char);
+void pci_bridge_scan(unsigned char, unsigned char, unsigned char);
 int pci_func_scan(unsigned char, unsigned char, unsigned char);
 void pci_bus_probe(unsigned char);
 void pci_dev_probe(unsigned char, unsigned char);
 void pci_dev_ioremap(struct pci_dev *, unsigned int, unsigned int);
-void pci_cfg_read_dw(unsigned char, unsigned char, unsigned char, unsigned char, unsigned int *);
-void pci_cfg_write_dw(unsigned char, unsigned char, unsigned char, unsigned char, unsigned int);
 unsigned int pci_alloc_memory(unsigned int);
+
+static inline void __pci_cfg_read_dw(unsigned char n_bus, unsigned char n_dev, unsigned char n_func, unsigned char offset, unsigned int *dw)
+{
+    unsigned int ioa0;
+
+    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 12 ) | ( n_func << 8 ) | offset ;
+    outdw( ioa0, PCI_CFG_ADDR );
+    * dw = indw( PCI_CFG_DATA );
+}
+
+static inline void __pci_cfg_write_dw(unsigned char n_bus, unsigned char n_dev, unsigned char n_func, unsigned char offset, unsigned int dw)
+{
+    unsigned int ioa0;
+
+    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 12 ) | ( n_func << 8 ) | offset;
+    outdw( ioa0, PCI_CFG_ADDR );
+    outdw( dw,  PCI_CFG_DATA );
+}
+
+#define __pci_exsit __pci_get_id
+static inline unsigned int __pci_get_id(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
+{
+    unsigned int dw;
+
+    __pci_cfg_read_dw(n_bus, n_dev, n_func, 0x00, &dw);
+
+    return dw;
+}
+
+static inline unsigned int __pci_get_classid(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
+{
+    unsigned int dw;
+
+    __pci_cfg_read_dw(n_bus, n_dev, n_func, 0x08, &dw);
+
+    return dw >> 8;
+}
+
+static inline unsigned int __pci_is_bridge(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
+{
+    unsigned int dw;
+
+    dw = __pci_get_classid(n_bus, n_dev, n_func);
+
+#ifndef _PCI_DEBUG_
+    printk("[%02X:%02X.%X]--> %06X", n_bus, n_dev, n_func, dw);
+#endif
+
+    return (0x00060000^(0x00060000&dw)) ? 0 : 1;
+}
+
+static inline void pci_cfg_read_dw(struct pci_dev *d, unsigned char offset, unsigned int *dw)
+{
+    __pci_cfg_read_dw(d->n_bus, d->n_dev, d->n_func, offset, dw);
+}
+
+static inline void pci_cfg_write_dw(struct pci_dev *d, unsigned char offset, unsigned int dw)
+{
+    __pci_cfg_write_dw(d->n_bus, d->n_dev, d->n_func, offset, dw);
+}
 
 struct pci_class_struct
 {
