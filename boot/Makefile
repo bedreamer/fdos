@@ -26,10 +26,13 @@ boot-img: $(WORKDIR)/$(KERNELFILE)
 boot-loader: 
 	$(Q)$(MAKE) -C old all 2>/dev/null
 
-$(WORKDIR)/$(KERNELFILE):
+cleanme:
+	$(Q)$(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE)
+
+$(WORKDIR)/$(KERNELFILE):cleanme
 	$(Q)echo "    LD        $(KERNELFILE)";
 	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list)` `cat $(sobjs-list)`
 	$(Q)echo "> Build $(KERNELFILE) done. `date -R`"
 
-.PHONY : boot-loader boot-img
+.PHONY : boot-loader boot-img cleanme
 include $(WORKDIR)/Rule.make

@@ -113,7 +113,8 @@ void pci_bus_probe(unsigned char);
 void pci_dev_probe(unsigned char, unsigned char);
 void pci_dev_ioremap(struct pci_dev *, unsigned int, unsigned int);
 void pci_cfg_read_dw(unsigned char, unsigned char, unsigned char, unsigned char, unsigned int *);
-void pci_cfg_write_dw(unsigned char, unsigned char, unsigned char, unsigned char, unsigned int *);
+void pci_cfg_write_dw(unsigned char, unsigned char, unsigned char, unsigned char, unsigned int);
+unsigned int pci_alloc_memory(unsigned int);
 
 struct pci_class_struct
 {

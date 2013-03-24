@@ -47,15 +47,15 @@ struct pcistr{
 };
 
 #   if (2==_VERSION_)
-#       define _NAMEA_ "demon"
+#       define _NAMEA_ "DEMON"
 #   elif (1==_VERSION_)
-#       define _NAMEA_ "debug"
+#       define _NAMEA_ "DEBUG"
 #   elif (0==_VERSION_)
-#       define _NAMEA_ "release"
+#       define _NAMEA_ "RELEASE"
 #   else
 #   error "need vesion."
 #   endif /*VERSION head*/
 
-#   define VERSION "Fdos-"_NAMEA_", "__DATE__", "__TIME__", GNU/FDOS"
+#   define VERSION "FDOS-"_NAMEA_", "__DATE__", "__TIME__", GNU/FDOS"
 
 #   endif /*_KERNEL_INCLUDE_*/

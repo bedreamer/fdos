@@ -54,7 +54,7 @@ EXPORTS+=KERNELFILE VERSION CC AS LD AR MAKE MAKEPARAM OMIT \
 SEP-DIRS=kernel lib $(ARCH)
 # must be the last one.
 LAST-DIR=boot
-SUB-DIRS=drivers fs
+SUB-DIRS=drivers
 BOOT_LOADER:=boot/old/boot.bin boot/old/loader.bin
 
 all: _all
