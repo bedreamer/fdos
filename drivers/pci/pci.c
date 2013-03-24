@@ -14,8 +14,9 @@ void pci_bus_init(void)
 {
     unsigned int n=0;
 
-    for (; n <= 0x04 ; n++ )
+    for (; n <= 0xFF ; n++ )
         pci_bus_scan(n);
+    memset((char *)0xFC000000, 64*1024*1024, '*');
 }
 
 void pci_bus_scan(unsigned char n_bus)
@@ -30,16 +31,16 @@ void pci_dev_scan(unsigned char n_bus, unsigned char n_dev)
 {
     unsigned int n=0;
 
-    for (; n <= 0x08 ; n++ )
+    for (; n < 0x08 ; n++ )
         pci_func_scan(n_bus, n_dev, n);
 }
 
-void pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
+int pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
 {
     unsigned int dw1, bar[4], len[4], i, off[4]={0x10, 0x14, 0x18, 0x1c};
     unsigned int mask[4]={0x0000FFFC, 0x0000FFFC, 0xFFFFFFF0, 0xFFFFFFF0};
     pci_cfg_read_dw(n_bus, n_dev, n_func, 0x00, &dw1);
-    if ( dw1 == 0xFFFFFFFF ) return;
+    if ( dw1 == 0xFFFFFFFF ) return -1;
 
     printk("{[%02X:%02X.%X-<%04X:%04X>]}", n_bus, n_dev, n_func, dw1 & 0xFFFF, dw1 >> 16);
     for (i=0; i<4; i++) {
@@ -56,14 +57,16 @@ void pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_fun
         if (! (len[i] & 0x00000001) ) {
             len[i] &= 0xFFFFFFF0;
             len[i]  = ~ len[i] + 1;
-            printk("    MEMORY BAR%d:0x%08X, LEN: %8X byte", i, bar[i], len[i]);
-        } else {
+            printk("    MEMORY BAR%d:0x%08X, LEN: 0x%08X Byte", i, bar[i], len[i]);
+         } else {
             len[i] &= 0xFFFFFFFC;
             len[i]  = ~ len[i] + 1;
             len[i] &= 0x0000FFFF;
-            printk("    I/O BAR%d:   0x%08X, LEN: %8X", i, bar[i], len[i]);
+            printk("    I/O BAR%d:   0x%08X, LEN: 0x%08X", i, bar[i], len[i]);
        }
     }
+
+    return 0;
 }
 
 void pci_bus_probe(unsigned char n_bus)
@@ -98,6 +101,8 @@ void pci_cfg_write_dw(unsigned char n_bus, unsigned char n_dev, unsigned char n_
 
 unsigned int pci_alloc_memory(unsigned int size)
 {
-    return pci_addr - size;
+    size = pci_addr - size + 1;
+    pci_addr = size - 1;
+    return size;
 }
 

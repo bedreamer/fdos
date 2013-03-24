@@ -108,7 +108,7 @@ struct pci_bus
 void pci_bus_init(void);
 void pci_bus_scan(unsigned char);
 void pci_dev_scan(unsigned char, unsigned char);
-void pci_func_scan(unsigned char, unsigned char, unsigned char);
+int pci_func_scan(unsigned char, unsigned char, unsigned char);
 void pci_bus_probe(unsigned char);
 void pci_dev_probe(unsigned char, unsigned char);
 void pci_dev_ioremap(struct pci_dev *, unsigned int, unsigned int);
