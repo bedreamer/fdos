@@ -37,13 +37,13 @@ ASFLAGS+=-I $(WORKDIR)/include/ -I $(WORKDIR)/$(ARCH) -f elf
 BINASFLAGS=
 # build-in objects.
 y-objs=
-yobjs-list=$(WORKDIR)/.yobjs
+yobjs-list:=$(WORKDIR)/.yobjs
 # module objects.
 m-objs=
-mobjs-list=$(WORKDIR)/.mobjs
+mobjs-list:=$(WORKDIR)/.mobjs
 # separate objects.
 s-objs=
-sobjs-list=$(WORKDIR)/.sobjs
+sobjs-list:=$(WORKDIR)/.sobjs
 # binary objects.
 b-objs=
 PHONY+=y-objs m-objs s-objs b-objs
@@ -55,6 +55,7 @@ SEP-DIRS=kernel lib $(ARCH)
 # must be the last one.
 LAST-DIR=boot
 SUB-DIRS=drivers fs
+BOOT_LOADER:=boot/old/boot.bin boot/old/loader.bin
 
 all: _all
 
@@ -68,10 +69,9 @@ _all:
      done
 PHONY+=all
 clean:
-	$(Q)$(OMIT)rm $(WORKDIR)/$(KERNELFILE) 2>/dev/null;
+	$(Q)$(OMIT)rm $(WORKDIR)/$(KERNELFILE) $(yobjs-list) $(mobjs-list) $(sobjs-list) $(IMGFILE) $(BOOT_LOADER) 2>/dev/null;
 	$(Q)$(OMIT)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR); do\
-        $(MAKE) $(MAKEPARAM) -C $$d clean 2>/dev/null;\
-     done
+        $(MAKE) $(MAKEPARAM) -C $$d clean 2>/dev/null;done;
 PHONY+=clean
 image:
 	$(Q)$(MAKE) $(MAKEPARAM) -C boot boot-img

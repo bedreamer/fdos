@@ -42,7 +42,7 @@ PHONY+=clean
 	$(Q)$(CC) $(CFLAGS) $(CCFLAGS) $(CPFLAGS) -o $@ $<
 
 %.o : %.s Makefile
-	$(Q)echo "    ASM         `pwd`/$<"
+	$(Q)echo "    ASM       `pwd`/$<"
 	$(Q)$(AS) $(ASFLAGS) -o $@ $<
 
 %.bin : %.s Makefile

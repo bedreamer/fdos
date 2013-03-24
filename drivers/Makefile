@@ -1,2 +1,2 @@
-sub-dirs:=pci ide keyboard mouse
+sub-dirs:=pci
 include $(WORKDIR)/Rule.make
