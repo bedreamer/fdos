@@ -28,6 +28,7 @@ boot-loader:
 
 cleanme:
 	$(Q)$(OMIT) if [ -e $(WORKDIR)/$(KERNELFILE) ];then $(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE) 2>/dev/null;fi;
+	$(Q)$(OMIT) true
 
 $(WORKDIR)/$(KERNELFILE):cleanme
 	$(Q)echo "    LD        $(KERNELFILE)";
