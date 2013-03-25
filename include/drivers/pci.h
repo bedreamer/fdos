@@ -118,6 +118,19 @@ struct pci_bus
     struct list_head buslst;
 };
 
+struct pci_class_struct
+{
+	unsigned char	baseclass ;
+	unsigned char	subclass ;
+	unsigned char	progif ;
+	const char *	basedesc ;
+	const char *	subdesc ;
+	const char *	progdesc ;
+};
+
+extern struct pci_class_struct pcs[];
+extern char *classname[];
+
 #define PCI_CFG_ADDR 0xCF8
 #define PCI_CFG_DATA 0xCFC
 #define PCI_INVALID_ID 0xFFFFFFFF
@@ -135,7 +148,7 @@ static inline void __pci_cfg_read_dw(unsigned char n_bus, unsigned char n_dev, u
 {
     unsigned int ioa0;
 
-    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 12 ) | ( n_func << 8 ) | offset ;
+    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 11 ) | ( n_func << 8 ) | offset ;
     outdw( ioa0, PCI_CFG_ADDR );
     * dw = indw( PCI_CFG_DATA );
 }
@@ -144,7 +157,7 @@ static inline void __pci_cfg_write_dw(unsigned char n_bus, unsigned char n_dev, 
 {
     unsigned int ioa0;
 
-    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 12 ) | ( n_func << 8 ) | offset;
+    ioa0 = ( 1 << 31 ) | ( n_bus << 16 ) | ( n_dev << 11 ) | ( n_func << 8 ) | offset ;
     outdw( ioa0, PCI_CFG_ADDR );
     outdw( dw,  PCI_CFG_DATA );
 }
@@ -175,10 +188,10 @@ static inline unsigned int __pci_is_bridge(unsigned char n_bus, unsigned char n_
     dw = __pci_get_classid(n_bus, n_dev, n_func);
 
 #ifndef _PCI_DEBUG_
-    printk("[%02X:%02X.%X]--> %06X", n_bus, n_dev, n_func, dw);
+    printk("[%02X:%02X.%X]--> %s", n_bus, n_dev, n_func, classname[0x1F&(dw>>16)]);
 #endif
 
-    return (0x00060000^(0x00060000&dw)) ? 0 : 1;
+    return (0x06==(dw>>8)) ? 0 : 1;
 }
 
 static inline void pci_cfg_read_dw(struct pci_dev *d, unsigned char offset, unsigned int *dw)
@@ -190,16 +203,4 @@ static inline void pci_cfg_write_dw(struct pci_dev *d, unsigned char offset, uns
 {
     __pci_cfg_write_dw(d->n_bus, d->n_dev, d->n_func, offset, dw);
 }
-
-struct pci_class_struct
-{
-	unsigned char	baseclass ;
-	unsigned char	subclass ;
-	unsigned char	progif ;
-	const char *	basedesc ;
-	const char *	subdesc ;
-	const char *	progdesc ;
-};
-extern struct pci_class_struct pcs[];
-
 #endif /*_PCI_H_*/
