@@ -1,0 +1,15 @@
+# config for archive plateform.
+name=ARCH
+options="x86"
+default=0
+comment=
+
+# config for mfs file-system
+name=MFS-CONFIG
+options="m" "y" "s"
+default=0
+
+
+
+
+
