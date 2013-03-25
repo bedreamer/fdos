@@ -8,16 +8,21 @@ include $(WORKDIR)/.config
 # this is for sub-dirs Make rule.
 ifdef sub-dirs
 suball:=sub_all
+submodules:=sub_modules
 subclean:=sub_clean
-
+submodules-clean:=sub-modules-clean
 sub_all:
 	$(Q)$(OMIT)for d in $(sub-dirs); do $(MAKE) $(MAKEPARAM) -C $$d all;done;
 PHONY+=sub_all
-
+sub_modules:
+	$(Q)$(OMIT)for d in $(sub-dirs); do $(MAKE) $(MAKEPARAM) -C $$d modules;done;
+PHONY+=sub_modules
 sub_clean:
 	$(Q)$(OMIT)for d in $(sub-dirs); do $(MAKE) $(MAKEPARAM) -C $$d clean;done;
 PHONY+=sub_clean
-
+sub-modules-clean:
+	$(Q)$(OMIT)for d in $(sub-dirs); do $(MAKE) $(MAKEPARAM) -C $$d modules-clean;done;
+PHONY+=sub-modules-clean
 endif
 
 ifdef m-objs
@@ -31,27 +36,38 @@ all : $(b-objs) $(s-deps) $(y-deps) $(m-objs) $(suball) $(nothing)
 	$(Q)$(OMIT)for o in $(y-deps); do PWD=`pwd`; echo $$PWD/$$o >> $(yobjs-list); done;
 	$(Q)$(OMIT)for o in $(s-deps); do PWD=`pwd`; echo $$PWD/$$o >> $(sobjs-list); done
 PHONY+=all
-
+modules: $(m-objs) $(submodules)
+	$(Q)true;
+PHONY+=modules
 clean: $(subclean)
-	$(Q)$(OMIT)echo "    RM        `pwd`/{m-objs m-deps y-deps s-deps}"
+	$(Q)$(OMIT)echo "    RM        `pwd`/*.(o|ko)"
 	$(Q)$(OMIT)rm build-in.a $(m-objs) $(m-deps) $(y-deps) $(s-deps);
 PHONY+=clean
-
+ifdef m-objs
+modules-clean:$(submodules-clean)
+	$(Q)$(OMIT)echo "    RM        `pwd`/*.ko"
+	$(Q)$(OMIT)$(RM) build-in.a $(m-objs) $(m-deps);
+PHONY+=modules-clean
+else
+modules-clean:$(submodules-clean)
+	$(Q)true;
+PHONY+=modules-clean
+endif
 %.o : %.c Makefile
 	$(Q)echo "    CC        `pwd`/$<"
 	$(Q)$(CC) $(CFLAGS) $(CCFLAGS) $(CPFLAGS) -o $@ $<
 
 %.o : %.s Makefile
-	$(Q)echo "    ASM       `pwd`/$<"
+	$(Q)echo "    AS        `pwd`/$<"
 	$(Q)$(AS) $(ASFLAGS) -o $@ $<
 
 %.bin : %.s Makefile
-	$(Q)echo "    ASM [BIN]  `pwd`/$<"
+	$(Q)echo "    AS [BIN]  `pwd`/$<"
 	$(Q)$(AS) $(BINASFLAGS) -o $@ $<
 
 # kernel module file is a share libary file.
 %.ko : $(m-deps) Makefile
-	$(Q)echo "    LD [M]    $@"
+	$(Q)echo "    LD [M]    `pwd`/$@"
 	$(Q)$(LD) --shared $(m-deps) -o $@
 	$(Q)echo "`pwd`/$@" >> $(mobjs-list); done
 

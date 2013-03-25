@@ -16,6 +16,7 @@ CC=gcc
 AS=nasm
 LD=ld
 AR=ar
+RM=rm
 MAKE=make
 MAKEPARAM=--no-print-directory
 #MAKEPARAM=
@@ -47,7 +48,7 @@ sobjs-list:=$(WORKDIR)/.sobjs
 # binary objects.
 b-objs=
 PHONY+=y-objs m-objs s-objs b-objs
-EXPORTS+=KERNELFILE VERSION CC AS LD AR MAKE MAKEPARAM OMIT \
+EXPORTS+=KERNELFILE VERSION CC AS LD AR RM MAKE MAKEPARAM OMIT \
         PWD ARCH WORKDIR IMGFILE Q CFLAGS CCFLAGS CMODULE \
         CBUILDIN ASFLAGS BINASFLAGS CPFLAGS yobjs-list mobjs-list\
          sobjs-list
@@ -68,14 +69,50 @@ _all:
 	   $(MAKE) $(MAKEPARAM) -C $$d all;\
      done
 PHONY+=all
+drivers:
+	$(Q)$(MAKE) $(MAKEPARAM) -C drivers all 2>/dev/null
+PHONY+=drivers
+fs:
+	$(Q)$(MAKE) $(MAKEPARAM) -C fs all 2>/dev/null
+PHONY+=fs
+kernel:
+	$(Q)$(MAKE) $(MAKEPARAM) -C kernel all 2>/dev/null
+PHONY+=kernel
+modules:
+	$(Q)echo ''> $(mobjs-list);
+	$(Q)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR); do\
+	   $(MAKE) $(MAKEPARAM) -C $$d modules;\
+     done
+PHONY+=modules
 clean:
 	$(Q)$(OMIT)rm $(WORKDIR)/$(KERNELFILE) $(yobjs-list) $(mobjs-list) $(sobjs-list) $(IMGFILE) $(BOOT_LOADER) 2>/dev/null;
 	$(Q)$(OMIT)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR); do\
         $(MAKE) $(MAKEPARAM) -C $$d clean 2>/dev/null;done;
 PHONY+=clean
+list-clean:
+	$(Q)for f in $(yobjs-list) $(mobjs-list) $(sobjs-list);do echo "    RM        $$f";done;
+	$(Q)$(OMIT)$(RM) $(yobjs-list) $(mobjs-list) $(sobjs-list)
+PHONY+=list-clean
+modules-clean:
+	$(Q)echo ''> $(mobjs-list);
+	$(Q)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR); do\
+	   $(MAKE) $(MAKEPARAM) -C $$d modules-clean;\
+     done
+drivers-clean:
+	$(Q)$(MAKE) $(MAKEPARAM) -C drivers clean 2>/dev/null
+PHONY+=drivers-clean
+kernel-clean:
+	$(Q)$(MAKE) $(MAKEPARAM) -C kernel clean 2>/dev/null
+PHONY+=kernel-clean
+fs-clean:
+	$(Q)$(MAKE) $(MAKEPARAM) -C fs clean 2>/dev/null
+PHONY+=fs-clean
 image:
 	$(Q)$(MAKE) $(MAKEPARAM) -C boot boot-img
 PHONY+=image
+arch-clean:
+	$(Q)$(MAKE) $(MAKEPARAM) -C $(ARCH) boot-img
+PHONY+=arch-clean
 debug:
 	$(Q)$(OMIT)virtualbox --startvm $(VMDIR) --dbg &
 	$(Q)$(OMIT)echo "Debuger starting....."
