@@ -1,5 +1,26 @@
 #include <drivers/pci.h>
 
+char *classname[]={
+ "Pre-2.0 PCI Specification Device",
+ "Mass storage controller",
+ "Network controller",
+ "Display controller",
+ "Multimedia device",
+ "Memory controller",
+ "Bridge device",
+ "Simple communication controllers",
+ "Base system peripherals",
+ "Input devices",
+ "Docking stations",
+ "Processors",
+ "Serial bus controllers",
+ "Wireless controller",
+ "Intelligent I/O controllers",
+ "Satellite communication controllers",
+ "Encryption/Decryption controllers",
+ "Data acquisition and signal processing controllers",
+};
+
 struct pci_class_struct pcs [] =
 {
 	{ 0x00, 0x00, 0x00, "Pre-2.0 PCI Specification Device", "Non-VGA","" } ,

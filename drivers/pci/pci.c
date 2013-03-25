@@ -11,7 +11,7 @@ static unsigned int pci_addr=0xFFFFFFFF;
 struct pci_bus* root_bus;
 
 #ifdef _PCI_DEBUG_
-void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned char n_func, unsigned int id)
+void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned char n_func, unsigned int id, unsigned int class)
 {
     unsigned int dw1=id, bar[4], len[4], i, off[4]={0x10, 0x14, 0x18, 0x1c};
     unsigned int mask[4]={0x0000FFFC, 0x0000FFFC, 0xFFFFFFF0, 0xFFFFFFF0};
@@ -21,7 +21,10 @@ void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned ch
     if ( PCI_INVALID_ID == dw1) return;
 #endif
 
-    printk("{[%02X:%02X.%X-<%04X:%04X>]}", n_bus, n_dev, n_func, dw1 & 0xFFFF, dw1 >> 16);
+    printk("{[%02X:%02X.%X-<%04X:%04X>]} %02X:%02X:%02X %s",
+       n_bus, n_dev, n_func, dw1 & 0xFFFF, dw1 >> 16, 
+       class>>16, (class>>8)&0x00FF, class & 0xFF, classname[0x1F&(class>>16)]);
+#if 0
     for (i=0; i<4; i++) {
         __pci_cfg_read_dw (n_bus, n_dev, n_func, off[i], &bar[i]);
         bar[i] &= mask[i];
@@ -44,6 +47,7 @@ void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned ch
             printk("    I/O BAR%d:   0x%08X, LEN: 0x%08X", i, bar[i], len[i]);
        }
     }
+#endif
 }
 #else
 #define pcidev_print_someinfo(bus, dev, func, id)
@@ -75,11 +79,6 @@ void pci_dev_scan(unsigned char n_bus, unsigned char n_dev)
 
 void pci_bridge_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
 {
-    unsigned int dw;
-#ifndef _PCI_DEBUG_
-    printk("Bridge Device.");
-#endif
-    __pci_cfg_write_dw(n_bus, n_dev, n_func, 0x18, 0xFFFF0000|n_bus );
 }
 
 int pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
@@ -91,7 +90,10 @@ int pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func
 
 #ifdef _PCI_DEBUG_
     id = __pci_get_classid(n_bus, n_dev, n_func);
-    printk("Device Class. %08X", id);
+    #if 0 
+    if ((id>>16) <= 17)
+    printk("Device Class. %02X:%02X:%02X %s",id>>16, (id>>8)&0x00FF, id & 0xFF, classname[0x1F&(id>>16)]);
+    #endif
 #endif
 
     if ( __pci_is_bridge(n_bus, n_dev, n_func) ) {
@@ -101,7 +103,7 @@ int pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func
         //return dw;
     }
 
-    pcidev_print_someinfo(n_bus, n_dev, n_func, dw);
+    pcidev_print_someinfo(n_bus, n_dev, n_func, dw, id);
     return dw;
 }
 
