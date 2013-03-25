@@ -24,10 +24,10 @@ boot-img: $(WORKDIR)/$(KERNELFILE)
 	$(Q)echo "+-----------------------------------------------------------------------------"
 
 boot-loader: 
-	$(Q)$(MAKE) -C old all 2>/dev/null
+	$(Q)$(MAKE) -C old all 2>/dev/null;
 
 cleanme:
-	$(Q)$(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE)
+	$(Q)$(OMIT) if [ -e $(WORKDIR)/$(KERNELFILE) ];then $(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE) 2>/dev/null;fi;
 
 $(WORKDIR)/$(KERNELFILE):cleanme
 	$(Q)echo "    LD        $(KERNELFILE)";
