@@ -62,6 +62,15 @@ all: _all
 
 PHONY+=all _all
 
+config:
+	$(Q)$(OMIT) chmod +x config.sh
+	$(Q)$(OMIT) ./config.sh 0
+PHONY+=config
+reconfig:
+	$(Q)$(OMIT) chmod +x config.sh
+	$(Q)$(OMIT) ./config.sh 1
+PHONY+=reconfig
+
 # FIXME: maybe there is a better way to refresh objects-list files.
 _all:
 	$(Q)echo ''> $(yobjs-list);echo ''> $(mobjs-list);echo ''> $(sobjs-list);
