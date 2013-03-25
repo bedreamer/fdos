@@ -31,7 +31,7 @@ cleanme:
 
 $(WORKDIR)/$(KERNELFILE):cleanme
 	$(Q)echo "    LD        $(KERNELFILE)";
-	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list)` `cat $(sobjs-list)`
+	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list) | uniq` `cat $(sobjs-list) | uniq`
 	$(Q)echo "> Build $(KERNELFILE) done. `date -R`"
 
 .PHONY : boot-loader boot-img cleanme
