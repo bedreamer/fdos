@@ -9,6 +9,10 @@
 #include <kernel/printk.h>
 #include <kernel/list.h>
 
+#define PCI_DEV_VEN_ID  0x00
+#define PCI_STAT_CMD    0x04
+#define PCI_CLASS_REV   0x08
+
 /**
   PCI Agent config registers.
 
@@ -87,16 +91,14 @@
  */
 struct pci_bus;
 
-struct pci_controller
-{
-};
-
 struct pci_config_struct
 {
     unsigned short id_vendor;
     unsigned short id_device;
     unsigned short cmd;
     unsigned short status;
+    unsigned int rev_id:8;
+    unsigned int class_id:24;
 }__align(char);
 
 struct pci_dev
@@ -172,14 +174,16 @@ static inline unsigned int __pci_get_id(unsigned char n_bus, unsigned char n_dev
     return dw;
 }
 
-static inline unsigned int __pci_get_classid(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
+static inline unsigned int __pci_get_classid_rev(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
 {
     unsigned int dw;
 
     __pci_cfg_read_dw(n_bus, n_dev, n_func, 0x08, &dw);
 
-    return dw >> 8;
+    return dw;
 }
+#define __pci_get_classid(n_bus, n_dev, n_func) ((__pci_get_classid_rev(n_bus, n_dev, n_func)) >> 8)
+#define __pci_get_revid(n_bus, n_dev, n_func)   ((__pci_get_classid_rev(n_bus, n_dev, n_func)) & 0xFF)
 
 static inline unsigned int __pci_is_bridge(unsigned char n_bus, unsigned char n_dev, unsigned char n_func)
 {

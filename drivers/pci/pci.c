@@ -9,6 +9,7 @@
 
 static unsigned int pci_addr=0xFFFFFFFF;
 struct pci_bus* root_bus;
+struct pci_config_struct cfg;
 
 #ifdef _PCI_DEBUG_
 void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned char n_func, unsigned int id, unsigned int class)
@@ -24,7 +25,7 @@ void pcidev_print_someinfo(unsigned char n_bus, unsigned char n_dev, unsigned ch
     printk("{[%02X:%02X.%X-<%04X:%04X>]} %02X:%02X:%02X %s",
        n_bus, n_dev, n_func, dw1 & 0xFFFF, dw1 >> 16, 
        class>>16, (class>>8)&0x00FF, class & 0xFF, classname[0x1F&(class>>16)]);
-#if 0
+#if 1
     for (i=0; i<4; i++) {
         __pci_cfg_read_dw (n_bus, n_dev, n_func, off[i], &bar[i]);
         bar[i] &= mask[i];
@@ -90,10 +91,6 @@ int pci_func_scan(unsigned char n_bus, unsigned char n_dev, unsigned char n_func
 
 #ifdef _PCI_DEBUG_
     id = __pci_get_classid(n_bus, n_dev, n_func);
-    #if 0 
-    if ((id>>16) <= 17)
-    printk("Device Class. %02X:%02X:%02X %s",id>>16, (id>>8)&0x00FF, id & 0xFF, classname[0x1F&(id>>16)]);
-    #endif
 #endif
 
     if ( __pci_is_bridge(n_bus, n_dev, n_func) ) {
