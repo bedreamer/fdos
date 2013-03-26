@@ -93,14 +93,13 @@ modules:
 	   $(MAKE) $(MAKEPARAM) -C $$d modules;\
      done
 PHONY+=modules
-clean:
-	$(Q)$(OMIT)rm $(WORKDIR)/$(KERNELFILE) $(yobjs-list) $(mobjs-list) $(sobjs-list) $(IMGFILE) $(BOOT_LOADER) 2>/dev/null;
-	$(Q)$(OMIT)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR); do\
-        $(MAKE) $(MAKEPARAM) -C $$d clean 2>/dev/null;done;
+clean:list-clean
+	$(Q)$(OMIT)for d in $(SEP-DIRS) $(SUB-DIRS) $(LAST-DIR);do $(MAKE) $(MAKEPARAM) -C $$d clean 2>/dev/null;done;
 PHONY+=clean
 list-clean:
 	$(Q)for f in $(yobjs-list) $(mobjs-list) $(sobjs-list);do echo "    RM        $$f";done;
-	$(Q)$(OMIT)$(RM) $(yobjs-list) $(mobjs-list) $(sobjs-list)
+	$(Q)$(OMIT)$(RM) $(yobjs-list) $(mobjs-list) $(sobjs-list) 2>/dev/null;
+	$(Q)true
 PHONY+=list-clean
 modules-clean:
 	$(Q)echo ''> $(mobjs-list);

@@ -16,6 +16,7 @@ boot-img: $(WORKDIR)/$(KERNELFILE)
 	$(Q)sudo mount -o loop $(IMGFILE) .tmp
 	$(Q)sudo cp $(loader-file) .tmp/FOOLLDR
 	$(Q)sudo cp $(WORKDIR)/$(KERNELFILE) .tmp/
+	$(Q)sync
 	$(Q)sudo umount .tmp
 	$(Q)true
 	$(Q)echo "+-----------------------------------------------------------------------------"
@@ -30,7 +31,7 @@ cleanme:
 	$(Q)$(OMIT) if [ -e $(WORKDIR)/$(KERNELFILE) ];then $(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE) 2>/dev/null;fi;
 	$(Q)$(OMIT) true
 
-$(WORKDIR)/$(KERNELFILE):cleanme
+$(WORKDIR)/$(KERNELFILE):$(yobjs-list) $(sobjs-list)
 	$(Q)echo "    LD        $(KERNELFILE)";
 	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list) | uniq` `cat $(sobjs-list) | uniq`
 	$(Q)echo "> Build $(KERNELFILE) done. `date -R`"
