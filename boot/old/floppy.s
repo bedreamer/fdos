@@ -1,6 +1,5 @@
 ; floopy.s
-; Copyright �0�8 2011 LiJie. All rights reserved.
-;��д���̵����غ���
+;
 read_floopy equ 02h
 write_floopy equ 03h
 floopopbufsection equ 0x1000
@@ -13,23 +12,7 @@ extern _asm_outputchar
 %endif ;OBJ_LIB
 
 ;16bit
-; ��д����
 ; readwritesector(word sction,word offset,word sectornum,word sectorcnt,word opp)
-;push sectornum
-;push offset
-;push address
-;�����Ĵ����ֳ�
-; ah = 02h
-; ch = ������ ���ŵ�ţ�
-; dh = ��ͷ��
-; es:bx���ݻ�������ַ
-; dl = 0h
-; al = Ҫ���������
-; cl = ��ʼ������
-; 		        		    |---> ������ch = �� >> 1
-;	        	|---��	al--|		
-;  ������ / 18 --|	        |---> ��ͷ��dh = �� & 1
-;	        	|---����	ah---> ��ʼ������cl = ���� + 1
 readwritesector:
 	push 	bp
 	mov 	bp,sp
@@ -37,21 +20,21 @@ readwritesector:
 	push 	bp
 	push 	es
 	pusha
-	mov 	ax,[bp+8] ;������
-	mov 	dl,012h;18������
-	div 	dl  ;�̴�����AL������������AH��
+	mov 	ax,[bp+8]
+	mov 	dl,012h
+	div 	dl
 	mov 	cl,ah
-	inc 	cl ;������ʼ������
+	inc 	cl
 	mov 	ch,al
-	shr 	ch,1;����������
+	shr 	ch,1
 	and 	al,1
-	mov 	dh,al ;���ô�ͷ��
-	mov 	es,[bp+4] ;�ε�ַ used with di
-	mov 	bx,[bp+6] ;ƫ�Ƶ�ַ
+	mov 	dh,al
+	mov 	es,[bp+4]
+	mov 	bx,[bp+6]
 	mov 	ah,02h
 	mov 	dl,0h
-RepeatRead: ;��ȡ�����͵�������¶�ȡ
-	cmp 	byte [bp-2],0x21	;�ݴ�32��
+RepeatRead:
+	cmp 	byte [bp-2],0x21
 	je 	READ_FLOOPY_ERROR
 	inc 	byte [bp-2]
 %if 0
