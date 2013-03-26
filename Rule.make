@@ -41,12 +41,12 @@ modules: $(m-objs) $(submodules)
 PHONY+=modules
 clean: $(subclean)
 	$(Q)$(OMIT)echo "    RM        `pwd`/*.(o|ko)"
-	$(Q)$(OMIT)rm build-in.a $(m-objs) $(m-deps) $(y-deps) $(s-deps);
+	$(Q)$(OMIT)$(RM) build-in.a $(m-objs) $(m-deps) $(y-deps) $(s-deps) 2>/dev/null;
 PHONY+=clean
 ifdef m-objs
 modules-clean:$(submodules-clean)
-	$(Q)$(OMIT)echo "    RM        `pwd`/*.ko"
-	$(Q)$(OMIT)$(RM) build-in.a $(m-objs) $(m-deps);
+	$(Q)$(OMIT)$(RM) "    RM        `pwd`/*.ko"
+	$(Q)$(OMIT)$(RM) build-in.a $(m-objs) $(m-deps) 2>/dev/null;
 PHONY+=modules-clean
 else
 modules-clean:$(submodules-clean)
@@ -68,7 +68,7 @@ endif
 # kernel module file is a share libary file.
 %.ko : $(m-deps) Makefile
 	$(Q)echo "    LD [M]    `pwd`/$@"
-	$(Q)$(LD) --shared $(m-deps) -o $@
+	$(Q)$(LD) -r $(m-deps) -o $@
 	$(Q)echo "`pwd`/$@" >> $(mobjs-list); done
 
 # used for multi level Makefile.
