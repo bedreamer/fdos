@@ -1,9 +1,22 @@
 # Makefile for boot image.
-use-boot:=old
-boot-files:=./$(use-boot)/boot.bin
-loader-file:=./$(use-boot)/loader.bin
-nothing:=boot-img
-sub-dirs:=old
+use-boot:=new
+boot-files:=./$(use-boot)/head.bin
+loader-file:=./$(use-boot)/setup.bin
+nothing:=this_make
+sub-dirs:=$(use-boot)
+
+this_make:$(WORKDIR)/setup $(WORKDIR)/vmfdos
+	$(Q)cat $(boot-files) $(loader-file) > $(WORKDIR)/setup.bin
+	$(Q)$(WORKDIR)/build $(WORKDIR)/setup.bin $(WORKDIR)/vmfdos > $(WORKDIR)/bzImage
+	$(Q)echo "    MAKE      bzImage";
+
+$(WORKDIR)/setup:./$(use-boot)/head.bin ./$(use-boot)/setup.bin
+	$(Q)echo "    MAKE      setup";
+	cat $^ > $@
+
+$(WORKDIR)/vmfdos:$(WORKDIR)/$(KERNELFILE)
+	$(Q)echo "    MAKE      vmfdos";
+	objcopy -O binary $^ $@
 
 # FIXME. You may need root permision.
 boot-img: $(WORKDIR)/$(KERNELFILE)
@@ -33,7 +46,7 @@ cleanme:
 
 $(WORKDIR)/$(KERNELFILE):$(yobjs-list) $(sobjs-list)
 	$(Q)echo "    LD        $(KERNELFILE)";
-	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) `cat $(yobjs-list) | uniq` `cat $(sobjs-list) | uniq`
+	$(Q)$(LD) -o $(WORKDIR)/$(KERNELFILE) -Ttext=0x00100000 -Map=../fdos.map `cat $(yobjs-list) | uniq` `cat $(sobjs-list) | uniq`
 	$(Q)echo "> Build $(KERNELFILE) done. `date -R`"
 
 .PHONY : boot-loader boot-img cleanme

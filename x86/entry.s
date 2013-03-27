@@ -40,6 +40,13 @@ kexpstacktop:
 [section .text]
 [BITS 32]
 _start:
+    mov     ax, 0x10
+    mov     ds, ax
+    mov     es, ax
+    mov     ss, ax
+    mov     gs, ax
+    mov     ebp, 0x9FFFE
+    mov     esp, ebp
     call    doshift
     lgdt    [gdt_ptr]
     jmp     dword 0x08:.1
