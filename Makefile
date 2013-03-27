@@ -52,7 +52,7 @@ EXPORTS+=KERNELFILE VERSION CC AS LD AR RM MAKE MAKEPARAM OMIT \
         PWD ARCH WORKDIR IMGFILE Q CFLAGS CCFLAGS CMODULE \
         CBUILDIN ASFLAGS BINASFLAGS CPFLAGS yobjs-list mobjs-list\
          sobjs-list
-SEP-DIRS=kernel lib $(ARCH)
+SEP-DIRS=$(ARCH) kernel lib
 # must be the last one.
 LAST-DIR=boot
 SUB-DIRS=drivers
