@@ -10,7 +10,7 @@ NEED
     debuger(VirtualBox, bochs).
     Internet.
 
-COMPILER
+COMPILING
 ========
 > make
 
