@@ -4,7 +4,7 @@
 # define `m-objs:=$(module)` to build a kernel module, depends on m-deps
 # so you need define the other value named`m-deps:=$(some-objects` also.
 include $(WORKDIR)/.config
-
+ 
 # this is for sub-dirs Make rule.
 ifdef sub-dirs
 suball:=sub_all
