@@ -1,22 +1,22 @@
 # Makefile for boot image.
-use-boot:=new
-boot-files:=./$(use-boot)/head.bin
-loader-file:=./$(use-boot)/setup.bin
-nothing:=this_make
+use-boot:=old
+boot-files:=./$(use-boot)/boot.bin
+loader-file:=./$(use-boot)/loader.bin
+#nothing:=this_make
 sub-dirs:=$(use-boot)
 
-this_make:$(WORKDIR)/setup $(WORKDIR)/vmfdos
-	$(Q)cat $(boot-files) $(loader-file) > $(WORKDIR)/setup.bin
-	$(Q)$(WORKDIR)/build $(WORKDIR)/setup.bin $(WORKDIR)/vmfdos > $(WORKDIR)/bzImage
-	$(Q)echo "    MAKE      bzImage";
-
-$(WORKDIR)/setup:./$(use-boot)/head.bin ./$(use-boot)/setup.bin
-	$(Q)echo "    MAKE      setup";
-	cat $^ > $@
-
-$(WORKDIR)/vmfdos:$(WORKDIR)/$(KERNELFILE)
-	$(Q)echo "    MAKE      vmfdos";
-	objcopy -O binary $^ $@
+#this_make:$(WORKDIR)/setup $(WORKDIR)/vmfdos
+#	$(Q)cat $(boot-files) $(loader-file) > $(WORKDIR)/setup.bin
+#	$(Q)$(WORKDIR)/build $(WORKDIR)/setup.bin $(WORKDIR)/vmfdos > $(WORKDIR)/bzImage
+#	$(Q)echo "    MAKE      bzImage";
+#
+#$(WORKDIR)/setup:./$(use-boot)/head.bin ./$(use-boot)/setup.bin
+#	$(Q)echo "    MAKE      setup";
+#	cat $^ > $@
+#
+#$(WORKDIR)/vmfdos:$(WORKDIR)/$(KERNELFILE)
+#	$(Q)echo "    MAKE      vmfdos";
+#	objcopy -O binary $^ $@
 
 # FIXME. You may need root permision.
 boot-img: $(WORKDIR)/$(KERNELFILE)
@@ -41,6 +41,8 @@ boot-loader:
 	$(Q)$(MAKE) -C old all 2>/dev/null;
 
 cleanme:
+	$(Q)$(OMIT) if [ -e $(boot-file) ];then $(OMIT)$(RM) $(boot-file) 2>/dev/null;fi;
+	$(Q)$(OMIT) if [ -e $(loader-file) ];then $(OMIT)$(RM) $(loader-file) 2>/dev/null;fi;
 	$(Q)$(OMIT) if [ -e $(WORKDIR)/$(KERNELFILE) ];then $(OMIT)$(RM) $(WORKDIR)/$(KERNELFILE) 2>/dev/null;fi;
 	$(Q)$(OMIT) true
 
